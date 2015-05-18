@@ -14,7 +14,16 @@
 		757F5BA11B0A96150046D37D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757F5BA01B0A96150046D37D /* Images.xcassets */; };
 		757F5BA41B0A96150046D37D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757F5BA21B0A96150046D37D /* LaunchScreen.xib */; };
 		757F5BB01B0A96150046D37D /* Future_ShockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F5BAF1B0A96150046D37D /* Future_ShockTests.m */; };
-		757F5BBB1B0A99DD0046D37D /* StoryDataTreeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F5BBA1B0A99DD0046D37D /* StoryDataTreeModel.m */; };
+		757F5BC71B0A9B2A0046D37D /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F5BC61B0A9B2A0046D37D /* InterfaceController.m */; };
+		757F5BCA1B0A9B2A0046D37D /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F5BC91B0A9B2A0046D37D /* NotificationController.m */; };
+		757F5BCD1B0A9B2A0046D37D /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F5BCC1B0A9B2A0046D37D /* GlanceController.m */; };
+		757F5BCF1B0A9B2A0046D37D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757F5BCE1B0A9B2A0046D37D /* Images.xcassets */; };
+		757F5BD31B0A9B2A0046D37D /* Future-Shock WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 757F5BD21B0A9B2A0046D37D /* Future-Shock WatchKit App.app */; };
+		757F5BDB1B0A9B2A0046D37D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757F5BD91B0A9B2A0046D37D /* Interface.storyboard */; };
+		757F5BDD1B0A9B2A0046D37D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757F5BDC1B0A9B2A0046D37D /* Images.xcassets */; };
+		757F5BE01B0A9B2A0046D37D /* Future-Shock WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 757F5BC01B0A9B2A0046D37D /* Future-Shock WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		757F5BEA1B0A9B5C0046D37D /* DataTreeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F5BE91B0A9B5C0046D37D /* DataTreeModel.m */; };
+		757F5BED1B0A9FC50046D37D /* NodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F5BEC1B0A9FC50046D37D /* NodeModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +34,35 @@
 			remoteGlobalIDString = 757F5B8F1B0A96150046D37D;
 			remoteInfo = "Future-Shock";
 		};
+		757F5BD41B0A9B2A0046D37D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 757F5B881B0A96150046D37D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 757F5BD11B0A9B2A0046D37D;
+			remoteInfo = "Future-Shock WatchKit App";
+		};
+		757F5BDE1B0A9B2A0046D37D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 757F5B881B0A96150046D37D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 757F5BBF1B0A9B2A0046D37D;
+			remoteInfo = "Future-Shock WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		757F5BE71B0A9B2A0046D37D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				757F5BE01B0A9B2A0046D37D /* Future-Shock WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		757F5B901B0A96150046D37D /* Future-Shock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Future-Shock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,8 +78,24 @@
 		757F5BA91B0A96150046D37D /* Future-ShockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Future-ShockTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757F5BAE1B0A96150046D37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		757F5BAF1B0A96150046D37D /* Future_ShockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Future_ShockTests.m; sourceTree = "<group>"; };
-		757F5BB91B0A99DD0046D37D /* StoryDataTreeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryDataTreeModel.h; sourceTree = "<group>"; };
-		757F5BBA1B0A99DD0046D37D /* StoryDataTreeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryDataTreeModel.m; sourceTree = "<group>"; };
+		757F5BC01B0A9B2A0046D37D /* Future-Shock WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Future-Shock WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		757F5BC31B0A9B2A0046D37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		757F5BC41B0A9B2A0046D37D /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		757F5BC51B0A9B2A0046D37D /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		757F5BC61B0A9B2A0046D37D /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		757F5BC81B0A9B2A0046D37D /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		757F5BC91B0A9B2A0046D37D /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		757F5BCB1B0A9B2A0046D37D /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		757F5BCC1B0A9B2A0046D37D /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		757F5BCE1B0A9B2A0046D37D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		757F5BD21B0A9B2A0046D37D /* Future-Shock WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Future-Shock WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		757F5BD81B0A9B2A0046D37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		757F5BDA1B0A9B2A0046D37D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		757F5BDC1B0A9B2A0046D37D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		757F5BE81B0A9B5C0046D37D /* DataTreeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTreeModel.h; sourceTree = "<group>"; };
+		757F5BE91B0A9B5C0046D37D /* DataTreeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTreeModel.m; sourceTree = "<group>"; };
+		757F5BEB1B0A9FC50046D37D /* NodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModel.h; sourceTree = "<group>"; };
+		757F5BEC1B0A9FC50046D37D /* NodeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +113,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		757F5BBD1B0A9B2A0046D37D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -68,6 +128,8 @@
 			children = (
 				757F5B921B0A96150046D37D /* Future-Shock */,
 				757F5BAC1B0A96150046D37D /* Future-ShockTests */,
+				757F5BC11B0A9B2A0046D37D /* Future-Shock WatchKit Extension */,
+				757F5BD61B0A9B2A0046D37D /* Future-Shock WatchKit App */,
 				757F5B911B0A96150046D37D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +139,8 @@
 			children = (
 				757F5B901B0A96150046D37D /* Future-Shock.app */,
 				757F5BA91B0A96150046D37D /* Future-ShockTests.xctest */,
+				757F5BC01B0A9B2A0046D37D /* Future-Shock WatchKit Extension.appex */,
+				757F5BD21B0A9B2A0046D37D /* Future-Shock WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,8 +152,7 @@
 				757F5B981B0A96150046D37D /* AppDelegate.m */,
 				757F5B9A1B0A96150046D37D /* ViewController.h */,
 				757F5B9B1B0A96150046D37D /* ViewController.m */,
-				757F5BB91B0A99DD0046D37D /* StoryDataTreeModel.h */,
-				757F5BBA1B0A99DD0046D37D /* StoryDataTreeModel.m */,
+				757F5BEE1B0A9FD60046D37D /* Data Structure Model */,
 				757F5B9D1B0A96150046D37D /* Main.storyboard */,
 				757F5BA01B0A96150046D37D /* Images.xcassets */,
 				757F5BA21B0A96150046D37D /* LaunchScreen.xib */,
@@ -124,6 +187,59 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		757F5BC11B0A9B2A0046D37D /* Future-Shock WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				757F5BC51B0A9B2A0046D37D /* InterfaceController.h */,
+				757F5BC61B0A9B2A0046D37D /* InterfaceController.m */,
+				757F5BC81B0A9B2A0046D37D /* NotificationController.h */,
+				757F5BC91B0A9B2A0046D37D /* NotificationController.m */,
+				757F5BCB1B0A9B2A0046D37D /* GlanceController.h */,
+				757F5BCC1B0A9B2A0046D37D /* GlanceController.m */,
+				757F5BCE1B0A9B2A0046D37D /* Images.xcassets */,
+				757F5BC21B0A9B2A0046D37D /* Supporting Files */,
+			);
+			path = "Future-Shock WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		757F5BC21B0A9B2A0046D37D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				757F5BC31B0A9B2A0046D37D /* Info.plist */,
+				757F5BC41B0A9B2A0046D37D /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		757F5BD61B0A9B2A0046D37D /* Future-Shock WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				757F5BD91B0A9B2A0046D37D /* Interface.storyboard */,
+				757F5BDC1B0A9B2A0046D37D /* Images.xcassets */,
+				757F5BD71B0A9B2A0046D37D /* Supporting Files */,
+			);
+			path = "Future-Shock WatchKit App";
+			sourceTree = "<group>";
+		};
+		757F5BD71B0A9B2A0046D37D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				757F5BD81B0A9B2A0046D37D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		757F5BEE1B0A9FD60046D37D /* Data Structure Model */ = {
+			isa = PBXGroup;
+			children = (
+				757F5BE81B0A9B5C0046D37D /* DataTreeModel.h */,
+				757F5BE91B0A9B5C0046D37D /* DataTreeModel.m */,
+				757F5BEB1B0A9FC50046D37D /* NodeModel.h */,
+				757F5BEC1B0A9FC50046D37D /* NodeModel.m */,
+			);
+			name = "Data Structure Model";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,10 +250,12 @@
 				757F5B8C1B0A96150046D37D /* Sources */,
 				757F5B8D1B0A96150046D37D /* Frameworks */,
 				757F5B8E1B0A96150046D37D /* Resources */,
+				757F5BE71B0A9B2A0046D37D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				757F5BDF1B0A9B2A0046D37D /* PBXTargetDependency */,
 			);
 			name = "Future-Shock";
 			productName = "Future-Shock";
@@ -162,6 +280,39 @@
 			productReference = 757F5BA91B0A96150046D37D /* Future-ShockTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		757F5BBF1B0A9B2A0046D37D /* Future-Shock WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 757F5BE41B0A9B2A0046D37D /* Build configuration list for PBXNativeTarget "Future-Shock WatchKit Extension" */;
+			buildPhases = (
+				757F5BBC1B0A9B2A0046D37D /* Sources */,
+				757F5BBD1B0A9B2A0046D37D /* Frameworks */,
+				757F5BBE1B0A9B2A0046D37D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				757F5BD51B0A9B2A0046D37D /* PBXTargetDependency */,
+			);
+			name = "Future-Shock WatchKit Extension";
+			productName = "Future-Shock WatchKit Extension";
+			productReference = 757F5BC01B0A9B2A0046D37D /* Future-Shock WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		757F5BD11B0A9B2A0046D37D /* Future-Shock WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 757F5BE11B0A9B2A0046D37D /* Build configuration list for PBXNativeTarget "Future-Shock WatchKit App" */;
+			buildPhases = (
+				757F5BD01B0A9B2A0046D37D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Future-Shock WatchKit App";
+			productName = "Future-Shock WatchKit App";
+			productReference = 757F5BD21B0A9B2A0046D37D /* Future-Shock WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -177,6 +328,12 @@
 					757F5BA81B0A96150046D37D = {
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = 757F5B8F1B0A96150046D37D;
+					};
+					757F5BBF1B0A9B2A0046D37D = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					757F5BD11B0A9B2A0046D37D = {
+						CreatedOnToolsVersion = 6.3.1;
 					};
 				};
 			};
@@ -195,6 +352,8 @@
 			targets = (
 				757F5B8F1B0A96150046D37D /* Future-Shock */,
 				757F5BA81B0A96150046D37D /* Future-ShockTests */,
+				757F5BBF1B0A9B2A0046D37D /* Future-Shock WatchKit Extension */,
+				757F5BD11B0A9B2A0046D37D /* Future-Shock WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -217,6 +376,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		757F5BBE1B0A9B2A0046D37D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757F5BD31B0A9B2A0046D37D /* Future-Shock WatchKit App.app in Resources */,
+				757F5BCF1B0A9B2A0046D37D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		757F5BD01B0A9B2A0046D37D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757F5BDB1B0A9B2A0046D37D /* Interface.storyboard in Resources */,
+				757F5BDD1B0A9B2A0046D37D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -225,9 +402,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				757F5B9C1B0A96150046D37D /* ViewController.m in Sources */,
+				757F5BEA1B0A9B5C0046D37D /* DataTreeModel.m in Sources */,
 				757F5B991B0A96150046D37D /* AppDelegate.m in Sources */,
 				757F5B961B0A96150046D37D /* main.m in Sources */,
-				757F5BBB1B0A99DD0046D37D /* StoryDataTreeModel.m in Sources */,
+				757F5BED1B0A9FC50046D37D /* NodeModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +417,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		757F5BBC1B0A9B2A0046D37D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757F5BCA1B0A9B2A0046D37D /* NotificationController.m in Sources */,
+				757F5BC71B0A9B2A0046D37D /* InterfaceController.m in Sources */,
+				757F5BCD1B0A9B2A0046D37D /* GlanceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -246,6 +434,16 @@
 			isa = PBXTargetDependency;
 			target = 757F5B8F1B0A96150046D37D /* Future-Shock */;
 			targetProxy = 757F5BAA1B0A96150046D37D /* PBXContainerItemProxy */;
+		};
+		757F5BD51B0A9B2A0046D37D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 757F5BD11B0A9B2A0046D37D /* Future-Shock WatchKit App */;
+			targetProxy = 757F5BD41B0A9B2A0046D37D /* PBXContainerItemProxy */;
+		};
+		757F5BDF1B0A9B2A0046D37D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 757F5BBF1B0A9B2A0046D37D /* Future-Shock WatchKit Extension */;
+			targetProxy = 757F5BDE1B0A9B2A0046D37D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -264,6 +462,14 @@
 				757F5BA31B0A96150046D37D /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		757F5BD91B0A9B2A0046D37D /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				757F5BDA1B0A9B2A0046D37D /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -403,6 +609,62 @@
 			};
 			name = Release;
 		};
+		757F5BE21B0A9B2A0046D37D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Future_Shock_WatchKit_Extension;
+				INFOPLIST_FILE = "Future-Shock WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		757F5BE31B0A9B2A0046D37D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = Future_Shock_WatchKit_Extension;
+				INFOPLIST_FILE = "Future-Shock WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		757F5BE51B0A9B2A0046D37D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Future-Shock WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		757F5BE61B0A9B2A0046D37D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Future-Shock WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -428,6 +690,22 @@
 			buildConfigurations = (
 				757F5BB71B0A96150046D37D /* Debug */,
 				757F5BB81B0A96150046D37D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		757F5BE11B0A9B2A0046D37D /* Build configuration list for PBXNativeTarget "Future-Shock WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				757F5BE21B0A9B2A0046D37D /* Debug */,
+				757F5BE31B0A9B2A0046D37D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		757F5BE41B0A9B2A0046D37D /* Build configuration list for PBXNativeTarget "Future-Shock WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				757F5BE51B0A9B2A0046D37D /* Debug */,
+				757F5BE61B0A9B2A0046D37D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
