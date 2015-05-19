@@ -24,6 +24,7 @@
 		757F5BE01B0A9B2A0046D37D /* Future-Shock WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 757F5BC01B0A9B2A0046D37D /* Future-Shock WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		757F5BEA1B0A9B5C0046D37D /* DataTreeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F5BE91B0A9B5C0046D37D /* DataTreeModel.m */; };
 		757F5BED1B0A9FC50046D37D /* NodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F5BEC1B0A9FC50046D37D /* NodeModel.m */; };
+		757F5BF11B0AEB4B0046D37D /* MessageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F5BF01B0AEB4B0046D37D /* MessageCellView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		757F5BE91B0A9B5C0046D37D /* DataTreeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTreeModel.m; sourceTree = "<group>"; };
 		757F5BEB1B0A9FC50046D37D /* NodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModel.h; sourceTree = "<group>"; };
 		757F5BEC1B0A9FC50046D37D /* NodeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModel.m; sourceTree = "<group>"; };
+		757F5BEF1B0AEB4B0046D37D /* MessageCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCellView.h; sourceTree = "<group>"; };
+		757F5BF01B0AEB4B0046D37D /* MessageCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCellView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 				757F5B981B0A96150046D37D /* AppDelegate.m */,
 				757F5B9A1B0A96150046D37D /* ViewController.h */,
 				757F5B9B1B0A96150046D37D /* ViewController.m */,
+				757F5BEF1B0AEB4B0046D37D /* MessageCellView.h */,
+				757F5BF01B0AEB4B0046D37D /* MessageCellView.m */,
 				757F5BEE1B0A9FD60046D37D /* Data Structure Model */,
 				757F5B9D1B0A96150046D37D /* Main.storyboard */,
 				757F5BA01B0A96150046D37D /* Images.xcassets */,
@@ -403,6 +408,7 @@
 			files = (
 				757F5B9C1B0A96150046D37D /* ViewController.m in Sources */,
 				757F5BEA1B0A9B5C0046D37D /* DataTreeModel.m in Sources */,
+				757F5BF11B0AEB4B0046D37D /* MessageCellView.m in Sources */,
 				757F5B991B0A96150046D37D /* AppDelegate.m in Sources */,
 				757F5B961B0A96150046D37D /* main.m in Sources */,
 				757F5BED1B0A9FC50046D37D /* NodeModel.m in Sources */,
