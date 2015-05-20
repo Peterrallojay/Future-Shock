@@ -6,16 +6,20 @@
 //  Copyright (c) 2015 Peter Woodrow. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "StoryViewController.h"
+#import "RoundController.h"
 
-@interface ViewController ()
+@interface StoryViewController ()
 
 @end
 
-@implementation ViewController
+@implementation StoryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [RoundController sharedInstance];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

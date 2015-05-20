@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Choices_Model" representedClassName="Choices_Model" syncable="YES">
+        <attribute name="destination" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="triggerCurrentLocationLatitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="triggerCurrentLocationLongitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="triggerDistanceFromOrigin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="triggerLatitude" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="triggerLongitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="triggerTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="choicesToRound" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Round_Model" inverseName="roundToChoices" inverseEntity="Round_Model" syncable="YES"/>
+    </entity>
+    <entity name="Message_Model" representedClassName="Message_Model" syncable="YES">
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="messageToRound" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Round_Model" inverseName="roundToMessage" inverseEntity="Round_Model" syncable="YES"/>
+    </entity>
+    <entity name="Round_Model" representedClassName="Round_Model" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="roundToChoices" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Choices_Model" inverseName="choicesToRound" inverseEntity="Choices_Model" syncable="YES"/>
+        <relationship name="roundToMessage" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Message_Model" inverseName="messageToRound" inverseEntity="Message_Model" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Round_Model" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Message_Model" positionX="-54" positionY="0" width="128" height="75"/>
+        <element name="Choices_Model" positionX="-36" positionY="18" width="128" height="195"/>
+    </elements>
+</model>
