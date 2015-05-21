@@ -11,5 +11,5 @@
 @import UIKit;
 
 @interface StoryTableViewDataSource : NSObject <UITableViewDataSource>
-
+@property NSInteger totalNumberOfCells;
 @end
