@@ -1,273 +1,337 @@
-[
- {
-    "identifier":1,
-    "messages": [
-      "ios_device_1288 attempting to connect.",
-      "Can anyone hear me? Anyone?",
-      "If you can hear me, respond!",
-      "Hello? Hello?"
-    ],
-    "choices": [
-      {
-        "identifier": 1,
-        "text": "Yes, I hear you, who are you?",
-        "destination":2,
-        "triggerTime": 1,
-        "triggerLocation": null,
-        "triggerDistance": null
-      },
-      {
-        "identifier": 2,
-        "text": "Loud and clear, where are you?",
-        "destination":3,
-        "triggerTime": 1,
-        "triggerLocation": null,
-        "triggerDistance": null
-      }
-    ]
-  },
- {
-    "identifier":2,
-    "messages": [
-      "My name is Ben Jackson. I'm a physicist from zone 6.",
-      "What zone are you in- I need to calibrate my device to maintain our connection"
-    ],
-    "choices": [
-      {
-        "identifier": 3,
-        "text": "What zone?",
-        "destination":4,
-        "triggerTime": 1,
-        "triggerLocation": null,
-        "triggerDistance": null
-      },
-      {
-        "identifier": 4,
-        "text": "Um... five!",
-        "destination":5,
-        "triggerTime": 5,
-        "triggerLocation": null,
-        "triggerDistance": null
-      }
-    ]
-  },
-
+ [
   {
-    "identifier":3,
-    "messages": [
-      "Well, I'm not really sure.",
-      "I think I hit my head in the crash",
-      "There's some blood running down the back of my neck"
-    ],
-    "choices": [
-      {
-        "identifier": 5,
-        "text": "Ok. Stay calm you need to take care of your injury",
-        "destination":6,
-        "triggerTime": 5,
-        "triggerLocation": null,
-        "triggerDistance": null
-      },
-      {
-        "identifier": 6,
-        "text": "What crash?",
-        "destination":7,
-        "triggerTime": 5,
-        "triggerLocation": null,
-        "triggerDistance": null
-      }
-    ]
-  },
-
-  {
-    "identifier":4,
-    "messages": [
-      "What zone? Like your area zone??",
-      "Area code??",
-      "...",
-      "How do you not know what zone you're in?"
-    ],
-    "choices": [
-      {
-        "identifier": 7,
-        "text": "I guess my zip code is <user_location_zip_code>",
-        "destination":8,
-        "triggerTime": 5,
-        "triggerLocation": null,
-        "triggerDistance": null
-      },
-      {
-        "identifier": 8,
-        "text": "You mean my country?",
-        "destination":8,
-        "triggerTime": 5,
-        "triggerLocation": null,
-        "triggerDistance": null
-      }
-    ]
-  },
-
-  {
-    "identifier":5,
-    "messages": [
-      "2015-05-19 10:19:43.7172015-05-19 10:19:43.717",
-      "Please wait... Acquiring time signal",
-      "Your signal is weak. Try moving 500 feet in any direction"
-    ],
-    "choices": [
-      {
-        "identifier": 9,
-        "text": "No",
-        "destination":9,
-        "triggerTime": 500,
-        "triggerLocation": null,
-        "triggerDistance": null
-      },
-      {
-        "identifier": 10,
-        "text": "<location-objective>",
-        "destination":10,
-        "triggerTime": null,
-        "triggerLocation": null,
-        "triggerDistance": 500
-      }
-    ]
-  },
-
-  {
-    "identifier":6,
-    "messages": [
-      "Ok- Give me a sec to look around",
-      "I found some gauze to patch up my head",
-      "Seems like the bleeding has pretty much stopped",
-      "Got pretty lucky there..."
-    ],
-    "choices": [
-      {
-        "identifier": 11,
-        "text": "Who are you",
-        "destination":2,
-        "triggerTime": 1,
-        "triggerLocation": null,
-        "triggerDistance": null
-      },
-      {
-        "identifier": null,
-        "text": "stopped",
-        "destination":null,
-        "triggerTime": null,
-        "triggerLocation": null,
-        "triggerDistance": null
-      }
-    ]
+  "identifier":1,
+  "messages": [
+               {
+               "text": "alpha_build_tachion_device_1288 attempting to connect.",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "Can anyone hear me? Anyone?",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "If you can hear me, respond!",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "Hello? Hello?",
+               "timeDelay":1,
+               "distanceDelay": null
+               }
+               ],
+  "choices": [
+              {
+              "identifier": 1,
+              "text": "Yes, I hear you, who are you?",
+              "destination":2
+              },
+              {
+              "identifier": 2,
+              "text": "Loud and clear, where are you?",
+              "destination":3
+              }
+              ]
   },
   {
-    "identifier":7,
-    "messages": [
-      "I'm not really sure, I guess my transporter had some issues",
-      "Getting this fixed is gonna be a hassle",
-      "Listen. This is important"
-    ],
-    "choices": [
-      {
-        "identifier": null,
-        "text": "STOPPED",
-        "destination":null,
-        "triggerTime": null,
-        "triggerLocation": null,
-        "triggerDistance": null
-      },
-      {
-        "identifier": null,
-        "text": "stopped",
-        "destination":null,
-        "triggerTime": null,
-        "triggerLocation": null,
-        "triggerDistance": null
-      }
-    ]
+  "identifier":2,
+  "messages": [
+               {
+               "text": "My name is Ben Jackson. I'm a physicist from zone 6.",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "What zone are you in- I need to calibrate my device to maintain our connection",
+               "timeDelay":1,
+               "distanceDelay": null
+               }
+               ],
+  "choices": [
+              {
+              "identifier": 3,
+              "text": "What zone?",
+              "destination":4
+              },
+              {
+              "identifier": 4,
+              "text": "Um... five!",
+              "destination":5
+              }
+              ]
   },
   {
-    "identifier":8,
-    "messages": [
-      "Country? Buddy, we haven't had countries in 170 years",
-      "Where have you been in the last two centuries?",
-      "My device seems to be malfunctioning",
-      "It says you're within five yards of me- that can't be right",
-      "Wait a minute... what year is it?"
-    ],
-    "choices": [
-      {
-        "identifier": null,
-        "text": "STOPPED",
-        "destination":null,
-        "triggerTime": null,
-        "triggerLocation": null,
-        "triggerDistance": null
-      },
-      {
-        "identifier": null,
-        "text": "stopped",
-        "destination":null,
-        "triggerTime": null,
-        "triggerLocation": null,
-        "triggerDistance": null
-      }
-    ]
+  "identifier":3,
+  "messages": [
+               {
+               "text": "Well, I'm not really sure.",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "I think I hit my head in the crash",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "There's some blood running down the back of my neck",
+               "timeDelay":1,
+               "distanceDelay": null
+               }
+               ],
+  "choices": [
+              {
+              "identifier": 5,
+              "text": "Ok. Stay calm you need to take care of your injury",
+              "destination":6
+              },
+              {
+              "identifier": 6,
+              "text": "What crash?",
+              "destination":7
+              }
+              ]
   },
-
   {
-    "identifier":9,
-    "messages": [
-      "No! I need your help",
-      "I'm stuck here",
-      "[Transmission lost]"
-    ],
-    "choices": [
-      {
-        "identifier": null,
-        "text": "STOPPED",
-        "destination":null,
-        "triggerTime": null,
-        "triggerLocation": null,
-        "triggerDistance": null
-      },
-      {
-        "identifier": null,
-        "text": "stopped",
-        "destination":null,
-        "triggerTime": null,
-        "triggerLocation": null,
-        "triggerDistance": null
-      }
-    ]
+  "identifier":4,
+  "messages": [
+               {
+               "text": "What zone? Like your area zone??",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "Area code??",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "...",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "How do you not know what zone you're in?",
+               "timeDelay":1,
+               "distanceDelay": null
+               }
+               ],
+  "choices": [
+              {
+              "identifier": 7,
+              "text": "I guess my zip code is <user_location_zip_code>",
+              "destination":8
+              },
+              {
+              "identifier": 8,
+              "text": "You mean my country?",
+              "destination":8
+              }
+              ]
   },
-
   {
-    "identifier":10,
-    "messages": [
-      "Ok, great",
-      "Now that's a step towards preventing this mess",
-      "[Transmission lost]"
-    ],
-    "choices": [
-      {
-        "identifier": null,
-        "text": "STOPPED",
-        "destination":null,
-        "triggerTime": null,
-        "triggerLocation": null,
-        "triggerDistance": null
-      },
-      {
-        "identifier": null,
-        "text": "stopped",
-        "destination":null,
-        "triggerTime": null,
-        "triggerLocation": null,
-        "triggerDistance": null
-      }
-    ]
+  "identifier":5,
+  "messages": [
+               {
+               "text": "2015-05-19 10:19:43.7172015-05-19 10:19:43.717",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "Please wait... Acquiring time signal",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "Your signal is weak. Try moving 500 feet in any direction",
+               "timeDelay":1,
+               "distanceDelay": null
+               }
+               ],
+  "choices": [
+              {
+              "identifier": 9,
+              "text": "No",
+              "destination":9
+              },
+              {
+              "identifier": 10,
+              "text": "<location-objective>",
+              "destination":10
+              }
+              ]
+  },
+  {
+  "identifier":6,
+  "messages": [
+               {
+               "text": "Ok- Give me a sec to look around",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "I found some gauze to patch up my head",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "Seems like the bleeding has pretty much stopped",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "Got pretty lucky there...",
+               "timeDelay":1,
+               "distanceDelay": null
+               }
+               ],
+  "choices": [
+              {
+              "identifier": 11,
+              "text": "Who are you",
+              "destination":2
+              },
+              {
+              "identifier": null,
+              "text": "stopped",
+              "destination":null
+              }
+              ]
+  },
+  {
+  "identifier":7,
+  "messages": [
+               {
+               "text": "I'm not really sure, I guess my transporter had some issues",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "Getting this fixed is gonna be a hassle",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "Listen. This is important",
+               "timeDelay":1,
+               "distanceDelay": null
+               }
+               ],
+  "choices": [
+              {
+              "identifier": null,
+              "text": "STOPPED",
+              "destination":null
+              },
+              {
+              "identifier": null,
+              "text": "stopped",
+              "destination":null
+              }
+              ]
+  },
+  {
+  "identifier":8,
+  "messages": [
+               {
+               "text": "Country? Buddy, we haven't had countries in 170 years",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "Where have you been in the last two centuries?",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "My device seems to be malfunctioning",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "It says you're within five yards of me- that can't be right",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "Wait a minute... what year is it?",
+               "timeDelay":1,
+               "distanceDelay": null
+               }
+               ],
+  "choices": [
+              {
+              "identifier": null,
+              "text": "STOPPED",
+              "destination":null
+              },
+              {
+              "identifier": null,
+              "text": "stopped",
+              "destination":null
+              }
+              ]
+  },
+  {
+  "identifier":9,
+  "messages": [
+               {
+               "text": "No! I need your help",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "I'm stuck here",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "[Transmission lost]",
+               "timeDelay":1,
+               "distanceDelay": null
+               }
+               ],
+  "choices": [
+              {
+              "identifier": null,
+              "text": "STOPPED",
+              "destination":null
+              },
+              {
+              "identifier": null,
+              "text": "stopped",
+              "destination":null
+              }
+              ]
+  },
+  {
+  "identifier":10,
+  "messages": [
+               {
+               "text": "Ok, great",
+               "timeDelay":1,
+               "distanceDelay": null
+               },
+               {
+               "text": "Now that's a step towards preventing this mess",
+               "timeDelay":1,
+               "distanceDelay": null
+               }
+               ],
+  "choices": [
+              {
+              "identifier": null,
+              "text": "STOPPED",
+              "destination":null
+              },
+              {
+              "identifier": null,
+              "text": "stopped",
+              "destination":null
+              }
+              ]
   }
-
-]
+  ]
