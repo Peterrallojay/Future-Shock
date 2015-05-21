@@ -16,6 +16,11 @@
 @property (nonatomic, retain) NSNumber * identifier;
 @property (nonatomic, retain) NSOrderedSet *roundToChoices;
 @property (nonatomic, retain) NSOrderedSet *roundToMessages;
+
+@property (nonatomic, strong) Message *message;
+@property (nonatomic, strong) Choice *choices;
+@property (nonatomic, strong) NSArray *messages;
+
 @end
 
 @interface Round (CoreDataGeneratedAccessors)
