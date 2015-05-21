@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "RoundController.h"
+#import "MessageCellView.h"
+
 @import UIKit;
 
 @interface StoryTableViewDataSource : NSObject <UITableViewDataSource>

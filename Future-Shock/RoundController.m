@@ -105,7 +105,7 @@ static NSString const *choicesTextKey = @"choicesText";
 - (NSArray *)messages
 {
     //fetch request (load data)
-    NSFetchRequest *fetchMessages = [[NSFetchRequest alloc] initWithEntityName:@"Message_Model"];
+    NSFetchRequest *fetchMessages = [[NSFetchRequest alloc] initWithEntityName:@"Message"];
     
     //add error handling as needed
     NSArray *allMessages = [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchMessages error:nil];

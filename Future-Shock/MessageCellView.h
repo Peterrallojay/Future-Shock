@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 IB_DESIGNABLE
-@interface MessageCellView : UIView
+@interface MessageCellView : UITableViewCell
 
 @end

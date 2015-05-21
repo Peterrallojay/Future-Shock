@@ -13,9 +13,9 @@ static NSString * const cellID = @"cellID";
 @implementation StoryTableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    MessageCellView *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
+        cell = [[MessageCellView alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
     cell.textLabel.text = [NSString stringWithFormat:@"Cell %ld", indexPath.row];
     return cell;
@@ -25,4 +25,8 @@ static NSString * const cellID = @"cellID";
 {
     return [RoundController sharedInstance].messages.count;
 }
+
+//- (void)registerTableView:(UITableView *)tableView {
+//    [tableView registerClass:[MessageCellView class] forCellReuseIdentifier:cellID];
+//}
 @end
