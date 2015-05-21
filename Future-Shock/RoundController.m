@@ -13,19 +13,24 @@ static NSString * const AllMessagesKey = @"AllMessages";
 
 //these are the keys for using the dictionary to access JSON story parts
 
-static NSString const *messageKey = @"message";
-static NSString const *choicesKey = @"choices";
+//NEED CLARIFICATION Ask Caleb - do we use messagesKey to iterate through message array for each individual message?
+static NSString const *messagesKey = @"messages";
+
+//NEED CLARIFICATION use this to set static delay based on user local time (if(nighttime){set delay of 8 hours})
 static NSString const *timestampKey = @"timeStamp";
 
-static NSString const *choicesDestinationKey = @"choicesDestination";
-static NSString const *choicesIdentifierKey = @"choicesIdentifier";
-static NSString const *choicesTextKey = @"choicesText";
-static NSString const *choicesTriggerDistancesKey = @"choicesTriggerDistance";
-static NSString const *choicesTriggerTimeKey = @"choicesTriggerTime";
 
 static NSString const *roundIdentifierKey = @"roundIdentifierKey";
 
-static NSString const *messagesKey = @"messages";
+static NSString const *messageKey = @"message";
+static NSString const *messageTextKey = @"messageText";
+static NSString const *messageDistanceDelayKey = @"messageDistanceDelay";
+static NSString const *messageTimeDelayKey = @"messageTimeDelay";
+
+static NSString const *choicesKey = @"choices";
+static NSString const *choicesDestinationKey = @"choicesDestination";
+static NSString const *choicesIdentifierKey = @"choicesIdentifier";
+static NSString const *choicesTextKey = @"choicesText";
 
 @interface RoundController ()
 
@@ -53,16 +58,20 @@ static NSString const *messagesKey = @"messages";
     self = [super init];
     if(self)
     {
+        self.round.identifier = dictionary[roundIdentifierKey];
+        
+        self.message.text = dictionary[messageTextKey];
+        self.message.timeDelay = dictionary[messageTimeDelayKey];
+        self.message.distanceDelay = dictionary[messageDistanceDelayKey];
+        
         self.choices.destination = dictionary[choicesDestinationKey];
         self.choices.identifier = dictionary[choicesIdentifierKey];
         self.choices.text = dictionary[choicesTextKey];
-        self.choices.triggerDistanceFromOrigin = dictionary[choicesTriggerDistancesKey];
-        self.choices.triggerTime = dictionary[choicesTriggerTimeKey];
-        
-        self.round.identifier = dictionary[roundIdentifierKey];
         
         self.messages = dictionary[messagesKey];
     }
+    
+    return self;
 }
 
 + (void)importIfNeeded {
@@ -109,9 +118,6 @@ static NSString const *messagesKey = @"messages";
 {
     [[Stack sharedInstance].managedObjectContext save:nil];
 }
-
-
-
 
 
 @end

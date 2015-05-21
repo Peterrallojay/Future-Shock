@@ -7,16 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Round_Model.h"
-#import "Choices_Model.h"
-#import "Message_Model.h"
+#import "Round.h"
+#import "Message.h"
+#import "Choice.h"
 
 @interface RoundController : NSObject
 
 @property (nonatomic) NSInteger *identifier;
-@property (nonatomic, strong) Round_Model *round;
-@property (nonatomic, strong) Message_Model *message;
-@property (nonatomic, strong) Choices_Model *choices;
+@property (nonatomic, strong) Round *round;
+@property (nonatomic, strong) Message *message;
+@property (nonatomic, strong) Choice *choices;
 
 @property (nonatomic, strong, readonly) NSArray *messages;
 

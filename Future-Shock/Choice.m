@@ -7,7 +7,7 @@
 //
 
 #import "Choice.h"
-#import "NSManagedObject.h"
+//#import "NSManagedObject.h"
 
 
 @implementation Choice

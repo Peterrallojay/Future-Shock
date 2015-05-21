@@ -7,7 +7,7 @@
 //
 
 #import "Message.h"
-#import "NSManagedObject.h"
+//#import "NSManagedObject.h"
 
 
 @implementation Message
