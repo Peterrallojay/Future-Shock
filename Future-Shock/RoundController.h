@@ -13,11 +13,13 @@
 
 @interface RoundController : NSObject
 
+@property (nonatomic) NSInteger *identifier;
+@property (nonatomic, strong) Round_Model *round;
+@property (nonatomic, strong) Message_Model *message;
+@property (nonatomic, strong) Choices_Model *choices;
+
 @property (nonatomic, strong, readonly) NSArray *messages;
 
 + (RoundController *)sharedInstance;
-
-
-
 
 @end

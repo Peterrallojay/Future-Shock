@@ -11,6 +11,12 @@
 
 static NSString * const AllMessagesKey = @"AllMessages";
 
+//these are the keys for using the dictionary to access JSON story parts
+
+static NSString const *messageKey = @"message";
+static NSString const *choicesKey = @"choices";
+static NSString const *timestampKey = @"timeStamp";
+
 @interface RoundController ()
 
 @property (nonatomic, strong) NSArray *messages;
@@ -30,6 +36,20 @@ static NSString * const AllMessagesKey = @"AllMessages";
     });
 
     return sharedInstance;
+}
+
+- (instancetype)initWithJSONDictionary:(NSDictionary *)dictionary
+{
+    self = [super init];
+
+    
+    //MIKE START HERE:
+//    if(self)
+//    {
+//        self.round.identifier = dictionary
+//        
+//        self.choices.identifier
+//    }
 }
 
 + (void)importIfNeeded {
@@ -54,7 +74,7 @@ static NSString * const AllMessagesKey = @"AllMessages";
     for (NSDictionary *dictionary in allRounds) {
         // convert rounds to core data objects and save the managed object context
         
-        
+        NSLog(@"%@", dictionary);
     }
 
 }
