@@ -17,6 +17,16 @@ static NSString const *messageKey = @"message";
 static NSString const *choicesKey = @"choices";
 static NSString const *timestampKey = @"timeStamp";
 
+static NSString const *choicesDestinationKey = @"choicesDestination";
+static NSString const *choicesIdentifierKey = @"choicesIdentifier";
+static NSString const *choicesTextKey = @"choicesText";
+static NSString const *choicesTriggerDistancesKey = @"choicesTriggerDistance";
+static NSString const *choicesTriggerTimeKey = @"choicesTriggerTime";
+
+static NSString const *roundIdentifierKey = @"roundIdentifierKey";
+
+static NSString const *messagesKey = @"messages";
+
 @interface RoundController ()
 
 @property (nonatomic, strong) NSArray *messages;
@@ -41,15 +51,18 @@ static NSString const *timestampKey = @"timeStamp";
 - (instancetype)initWithJSONDictionary:(NSDictionary *)dictionary
 {
     self = [super init];
-
-    
-    //MIKE START HERE:
-//    if(self)
-//    {
-//        self.round.identifier = dictionary
-//        
-//        self.choices.identifier
-//    }
+    if(self)
+    {
+        self.choices.destination = dictionary[choicesDestinationKey];
+        self.choices.identifier = dictionary[choicesIdentifierKey];
+        self.choices.text = dictionary[choicesTextKey];
+        self.choices.triggerDistanceFromOrigin = dictionary[choicesTriggerDistancesKey];
+        self.choices.triggerTime = dictionary[choicesTriggerTimeKey];
+        
+        self.round.identifier = dictionary[roundIdentifierKey];
+        
+        self.messages = dictionary[messagesKey];
+    }
 }
 
 + (void)importIfNeeded {
