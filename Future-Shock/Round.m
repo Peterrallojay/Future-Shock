@@ -56,7 +56,7 @@ static NSString const *choicesTextKey = @"choicesText";
 - (void)loadChoicesFromArray:(NSArray *)array {
     if(self) {
         for (NSDictionary *choiceDictionary in array) {
-            Choice *choice = [[Choice alloc] init];
+            Choice *choice = [NSEntityDescription insertNewObjectForEntityForName:@"Choice" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
             choice.identifier = choiceDictionary[choicesIdentifierKey];
             choice.text = choiceDictionary[choicesTextKey];
             choice.destination = choiceDictionary[choicesDestinationKey];
