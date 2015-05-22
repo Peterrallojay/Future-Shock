@@ -44,4 +44,7 @@
 - (void)removeRoundToMessagesObject:(Message *)value;
 - (void)addRoundToMessages:(NSOrderedSet *)values;
 - (void)removeRoundToMessages:(NSOrderedSet *)values;
+
+- (instancetype)initWithJSONRoundDictionary:(NSDictionary *)dictionary;
+
 @end

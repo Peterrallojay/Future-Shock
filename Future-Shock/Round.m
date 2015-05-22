@@ -9,6 +9,7 @@
 #import "Round.h"
 #import "Choice.h"
 #import "Message.h"
+#import "Stack.h"
 
 static NSString const *messagesKey = @"messages";
 static NSString const *timestampKey = @"timeStamp";
@@ -43,7 +44,7 @@ static NSString const *choicesTextKey = @"choicesText";
 - (void)loadMessagesFromArray:(NSArray *)array {
     if(self) {
         for (NSDictionary *messageDictionary in array) {
-            Message *message = [[Message alloc] init];
+            Message *message = [NSEntityDescription insertNewObjectForEntityForName:@"Message" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
             message.text = messageDictionary[messageTextKey];
             message.timeDelay = messageDictionary[messageTimeDelayKey];
             message.distanceDelay = messageDictionary[messageDistanceDelayKey];
@@ -63,5 +64,7 @@ static NSString const *choicesTextKey = @"choicesText";
         }
     }
 }
+
+
 
 @end

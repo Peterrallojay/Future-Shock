@@ -21,5 +21,6 @@
 @property (nonatomic, strong, readonly) NSArray *messages;
 
 + (RoundController *)sharedInstance;
+- (Round *)getNewRound:(NSArray *)arr WithIdentifier:(NSInteger)identifier;
 
 @end

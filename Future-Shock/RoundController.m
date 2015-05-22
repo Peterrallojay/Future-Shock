@@ -62,7 +62,7 @@ static NSString const *choicesTextKey = @"choicesText";
         self.message.distanceDelay = dictionary[messageDistanceDelayKey];
         self.message.timeDelay = dictionary[messageTimeDelayKey];
         
-        self.choices[0].destination = dictionary[choicesDestinationKey];
+        self.choices.destination = dictionary[choicesDestinationKey];
         self.choices.identifier = dictionary[choicesIdentifierKey];
         self.choices.text = dictionary[choicesTextKey];
         
@@ -96,8 +96,6 @@ static NSString const *choicesTextKey = @"choicesText";
 
 }
 
-// I THINK THAT THIS BELONGS IN ROUND.M.       - DANIEL
-//
 //- (NSArray *)messages
 //{
 //    //fetch request (load data)
@@ -109,6 +107,14 @@ static NSString const *choicesTextKey = @"choicesText";
 //    return allMessages;
 //    
 //}
+
+- (Round *)getNewRound:(NSArray *)arr WithIdentifier:(NSInteger)identifier {
+    NSDictionary *individualRound = [arr objectAtIndex:identifier];
+    Round *newRound = [[Round alloc] initWithJSONRoundDictionary:individualRound];
+    
+    return newRound;
+}
+
 
 - (void)save
 {
