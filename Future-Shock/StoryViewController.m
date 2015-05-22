@@ -7,9 +7,11 @@
 //
 
 #import "StoryViewController.h"
-#import "RoundController.h"
+#import "RoundLoader.h"
 
 @interface StoryViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -18,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [RoundController sharedInstance];
+    [RoundLoader sharedInstance];
     
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -27,5 +29,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    //PW: not sure if this is necessary since we're not pushing/popping between master/detail views
+    [self.tableView reloadData];
+}
+
 
 @end

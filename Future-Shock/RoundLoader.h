@@ -11,7 +11,7 @@
 #import "Message.h"
 #import "Choice.h"
 
-@interface RoundController : NSObject
+@interface RoundLoader : NSObject
 
 @property (nonatomic) NSInteger *identifier;
 @property (nonatomic, strong) Round *round;
@@ -20,7 +20,7 @@
 
 @property (nonatomic, strong, readonly) NSArray *messages;
 
-+ (RoundController *)sharedInstance;
++ (RoundLoader *)sharedInstance;
 - (Round *)getNewRound:(NSArray *)arr WithIdentifier:(NSInteger)identifier;
 
 @end

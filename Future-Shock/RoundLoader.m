@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Peter Woodrow. All rights reserved.
 //
 
-#import "RoundController.h"
+#import "RoundLoader.h"
 #import "Stack.h"
 
 static NSString * const AllMessagesKey = @"AllMessages";
@@ -29,19 +29,19 @@ static NSString const *choicesDestinationKey = @"choicesDestination";
 static NSString const *choicesIdentifierKey = @"choicesIdentifier";
 static NSString const *choicesTextKey = @"choicesText";
 
-@interface RoundController ()
+@interface RoundLoader ()
 
 @property (nonatomic, strong) NSArray *messages;
 
 @end
 
-@implementation RoundController
+@implementation RoundLoader
 
-+ (RoundController *)sharedInstance {
-    static RoundController *sharedInstance = nil;
++ (RoundLoader *)sharedInstance {
+    static RoundLoader *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [RoundController new];
+        sharedInstance = [RoundLoader new];
         [self importIfNeeded];
     });
     return sharedInstance;
@@ -95,18 +95,6 @@ static NSString const *choicesTextKey = @"choicesText";
     }
 
 }
-
-//- (NSArray *)messages
-//{
-//    //fetch request (load data)
-//    NSFetchRequest *fetchMessages = [[NSFetchRequest alloc] initWithEntityName:@"Message"];
-//    
-//    //add error handling as needed
-//    NSArray *allMessages = [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchMessages error:nil];
-//    
-//    return allMessages;
-//    
-//}
 
 - (Round *)getNewRound:(NSArray *)arr WithIdentifier:(NSInteger)identifier {
     NSDictionary *individualRound = [arr objectAtIndex:identifier];

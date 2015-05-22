@@ -8,22 +8,42 @@
 
 #import "StoryTableViewDataSource.h"
 
-static NSString * const cellID = @"cellID";
+static NSString * const messageCellID = @"messageCellID";
 
 @implementation StoryTableViewDataSource
-
+//getting data from round
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MessageCellView *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    
+    //Round *round = [RoundController sharedInstance].messages[indexPath.row];
+    
+    MessageCell *cell = [tableView dequeueReusableCellWithIdentifier:messageCellID];
+    
+    
+    
+    
+    
+    //this instantiates new cells by checking that they are uitableviewcells. These cells will contain Round objects.
     if (!cell) {
-        cell = [[MessageCellView alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
+        NSArray *cellObjects = [[NSBundle mainBundle] loadNibNamed:@"MessageCellView" owner:self options:nil];
+        for (id currentCellObject in cellObjects) {
+            if([currentCellObject isKindOfClass:[UITableViewCell class]]){
+                cell = (MessageCell *)currentCellObject;
+                break;
+            }
+        }
+        cell = [[MessageCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:messageCellID];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"Cell %ld", indexPath.row];
+    
+    //configure the cell (Round -> Messages ->Choices)
+    
+    
+    
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [RoundController sharedInstance].messages.count;
+    return [RoundLoader sharedInstance].messages.count;
 }
 
 //- (void)registerTableView:(UITableView *)tableView {
