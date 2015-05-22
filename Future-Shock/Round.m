@@ -10,6 +10,19 @@
 #import "Choice.h"
 #import "Message.h"
 
+static NSString const *messagesKey = @"messages";
+static NSString const *timestampKey = @"timeStamp";
+
+static NSString const *roundIdentifierKey = @"roundIdentifierKey";
+static NSString const *messageKey = @"message";
+static NSString const *messageTextKey = @"messageText";
+static NSString const *messageDistanceDelayKey = @"messageDistanceDelay";
+static NSString const *messageTimeDelayKey = @"messageTimeDelay";
+static NSString const *choicesKey = @"choices";
+static NSString const *choicesDestinationKey = @"choicesDestination";
+static NSString const *choicesIdentifierKey = @"choicesIdentifier";
+static NSString const *choicesTextKey = @"choicesText";
+
 
 @implementation Round
 
@@ -17,27 +30,37 @@
 @dynamic roundToChoices;
 @dynamic roundToMessages;
 @dynamic messages;
-@dynamic message;
 @dynamic choices;
 
-- (instancetype)initWithJSONDictionary:(NSDictionary *)dictionary {
+- (instancetype)initWithJSONRoundDictionary:(NSDictionary *)dictionary {
     self = [super init];
-    [self loadJSONDictionary:dictionary];
+    self.identifier = dictionary[roundIdentifierKey];
+    [self loadMessagesFromArray:dictionary[messagesKey]];
+    [self loadChoicesFromArray:dictionary[choicesKey]];
     return self;
 }
 
-- (void)loadJSONDictionary:(NSDictionary *)dictionary {
+- (void)loadMessagesFromArray:(NSArray *)array {
     if(self) {
-        
-        self.identifier = dictionary[@"roundIdentifierKey"];
-        self.messages = dictionary[@"messages"];
-        self.message.text = dictionary[@"messageText"];
-        self.message.distanceDelay = dictionary[@"messageDistanceDelay"];
-        self.message.timeDelay = dictionary[@"messageTimeDelay"];
-        self.choices.identifier = dictionary[@"choices"];
-        self.choices.destination = dictionary[@"choicesDestination"];
-        self.choices.identifier = dictionary[@"choicesIdentifier"];
-        self.choices.text = dictionary[@"choicesTextKey"];
+        for (NSDictionary *messageDictionary in array) {
+            Message *message = [[Message alloc] init];
+            message.text = messageDictionary[messageTextKey];
+            message.timeDelay = messageDictionary[messageTimeDelayKey];
+            message.distanceDelay = messageDictionary[messageDistanceDelayKey];
+            message.messgeToRound = self;
+            [self addRoundToMessagesObject:message];
+        }
+    }
+}
+- (void)loadChoicesFromArray:(NSArray *)array {
+    if(self) {
+        for (NSDictionary *choiceDictionary in array) {
+            Choice *choice = [[Choice alloc] init];
+            choice.identifier = choiceDictionary[choicesIdentifierKey];
+            choice.text = choiceDictionary[choicesTextKey];
+            choice.destination = choiceDictionary[choicesDestinationKey];
+            [self addRoundToChoicesObject:choice];
+        }
     }
 }
 

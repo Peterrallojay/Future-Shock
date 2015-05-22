@@ -17,8 +17,7 @@
 @property (nonatomic, retain) NSOrderedSet *roundToChoices;
 @property (nonatomic, retain) NSOrderedSet *roundToMessages;
 
-@property (nonatomic, strong) Message *message;
-@property (nonatomic, strong) Choice *choices;
+@property (nonatomic, strong) NSArray *choices;
 @property (nonatomic, strong) NSArray *messages;
 
 @end
