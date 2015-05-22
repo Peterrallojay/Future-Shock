@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RoundController.h"
+#import "RoundLoader.h"
 #import "Round.h"
 #import "Message.h"
 #import "Choice.h"
 
 IB_DESIGNABLE
-@interface MessageCellView : UITableViewCell
+@interface MessageCell : UITableViewCell
 
 
 

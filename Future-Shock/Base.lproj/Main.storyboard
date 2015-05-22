@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellID" id="UbK-PB-Whn" customClass="MessageCellView">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="messageCellID" id="UbK-PB-Whn" customClass="MessageCell">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UbK-PB-Whn" id="xxK-ay-m49">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -56,7 +56,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cyv-cX-rAI" customClass="MessageCellView">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cyv-cX-rAI" customClass="MessageCell">
                                 <rect key="frame" x="175" y="277" width="250" height="63"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Does anyone read me?" translatesAutoresizingMaskIntoConstraints="NO" id="3Aa-qB-RKB">
@@ -68,7 +68,7 @@
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.43137258290000002" green="0.46666669849999998" blue="0.12549020350000001" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="7"/>
@@ -76,7 +76,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yPc-RN-491" customClass="MessageCellView">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yPc-RN-491" customClass="MessageCell">
                                 <rect key="frame" x="175" y="104" width="250" height="63"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Establishing connection..." translatesAutoresizingMaskIntoConstraints="NO" id="ATo-3P-hHu">
@@ -88,7 +88,7 @@
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.43137258290000002" green="0.46666669849999998" blue="0.12549020350000001" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="7"/>
@@ -96,7 +96,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j84-Lh-RZ1" customClass="MessageCellView">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j84-Lh-RZ1" customClass="MessageCell">
                                 <rect key="frame" x="175" y="191" width="250" height="63"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Hello? Is... is anyone there?" translatesAutoresizingMaskIntoConstraints="NO" id="PEP-aA-iaF">
@@ -108,7 +108,7 @@
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.43137258291244507" green="0.46666669845581055" blue="0.12549020349979401" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="7"/>
@@ -116,7 +116,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ioc-kw-weM" customClass="MessageCellView">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ioc-kw-weM" customClass="MessageCell">
                                 <rect key="frame" x="175" y="20" width="250" height="63"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="iOS_Device_1288 attempting to connect" translatesAutoresizingMaskIntoConstraints="NO" id="krj-b6-XIY">
@@ -128,7 +128,7 @@
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.43137258290000002" green="0.46666669849999998" blue="0.12549020350000001" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="7"/>

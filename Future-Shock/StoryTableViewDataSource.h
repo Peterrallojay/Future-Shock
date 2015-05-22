@@ -7,11 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RoundController.h"
-#import "MessageCellView.h"
+#import "RoundLoader.h"
+#import "MessageCell.h"
+#import "Round.h"
+#import "Message.h"
 
 @import UIKit;
 
 @interface StoryTableViewDataSource : NSObject <UITableViewDataSource>
 @property NSInteger totalNumberOfCells;
+
+@property (strong, nonatomic) Round *round;
+
 @end

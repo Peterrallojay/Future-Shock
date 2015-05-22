@@ -6,9 +6,13 @@
 //  Copyright (c) 2015 Peter Woodrow. All rights reserved.
 //
 
-#import "MessageCellView.h"
+#import "MessageCell.h"
 
-@implementation MessageCellView
+static NSString * const messageCellID = @"messageCellID";
+
+@implementation MessageCell
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

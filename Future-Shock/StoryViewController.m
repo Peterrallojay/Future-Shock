@@ -7,7 +7,7 @@
 //
 
 #import "StoryViewController.h"
-#import "RoundController.h"
+#import "RoundLoader.h"
 
 @interface StoryViewController ()
 
@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [RoundController sharedInstance];
+    [RoundLoader sharedInstance];
     
     // Do any additional setup after loading the view, typically from a nib.
 }
