@@ -15,6 +15,6 @@
 @dynamic text;
 @dynamic timeDelay;
 @dynamic distanceDelay;
-@dynamic messgeToRound;
+@dynamic round;
 
 @end

@@ -10,8 +10,7 @@
 
 @interface StoryViewController : UIViewController
 
-//tells datasource to add round messages
-- (void)updateWithRound:
+- (void)updateWithRound;
 
 @end
 

@@ -2,19 +2,19 @@
 //  Choice.m
 //  Future-Shock
 //
-//  Created by Michael Sacks on 5/20/15.
+//  Created by Peter Woodrow on 5/23/15.
 //  Copyright (c) 2015 Peter Woodrow. All rights reserved.
 //
 
 #import "Choice.h"
-//#import "NSManagedObject.h"
+#import "Round.h"
 
 
 @implementation Choice
 
-@dynamic text;
-@dynamic destination;
 @dynamic identifier;
-@dynamic choicesToRound;
+@dynamic text;
+@dynamic round;
+@dynamic destinationRound;
 
 @end
