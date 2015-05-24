@@ -41,7 +41,7 @@ static NSString const *choicesTextKey = @"choicesText";
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [RoundLoader new];
-        //FIX[self importIfNeeded];
+        //[self importIfNeeded];
     });
     return sharedInstance;
 }
