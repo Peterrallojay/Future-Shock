@@ -16,6 +16,6 @@
 @property (nonatomic, retain) NSString * text;
 @property (nonatomic, retain) NSNumber * timeDelay;
 @property (nonatomic, retain) NSNumber * distanceDelay;
-@property (nonatomic, retain) NSManagedObject *messgeToRound;
+@property (nonatomic, retain) NSManagedObject *round;
 
 @end

@@ -43,10 +43,10 @@ static NSString * const messageCellID = @"messageCellID";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [RoundLoader sharedInstance].messages.count;
+    return [RoundLoader sharedInstance].round.count;
 }
 
-//- (void)registerTableView:(UITableView *)tableView {
-//    [tableView registerClass:[MessageCellView class] forCellReuseIdentifier:cellID];
-//}
+- (void)registerTableView:(UITableView *)tableView {
+    [tableView registerClass:[MessageCellView class] forCellReuseIdentifier:cellID];
+}
 @end

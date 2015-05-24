@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Choice" representedClassName="Choice" syncable="YES">
-        <attribute name="destination" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="identifier" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="choicesToRound" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Round" inverseName="roundToChoices" inverseEntity="Round" syncable="YES"/>
+        <relationship name="destinationRound" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Round" inverseName="sourceChoice" inverseEntity="Round" syncable="YES"/>
+        <relationship name="round" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Round" inverseName="choices" inverseEntity="Round" syncable="YES"/>
     </entity>
     <entity name="Message" representedClassName="Message" syncable="YES">
         <attribute name="distanceDelay" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timeDelay" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="messgeToRound" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Round" inverseName="roundToMessages" inverseEntity="Round" syncable="YES"/>
+        <relationship name="round" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Round" inverseName="messages" inverseEntity="Round" syncable="YES"/>
     </entity>
     <entity name="Round" representedClassName="Round" syncable="YES">
         <attribute name="identifier" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="roundToChoices" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Choice" inverseName="choicesToRound" inverseEntity="Choice" syncable="YES"/>
-        <relationship name="roundToMessages" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Message" inverseName="messgeToRound" inverseEntity="Message" syncable="YES"/>
+        <relationship name="choices" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Choice" inverseName="round" inverseEntity="Choice" syncable="YES"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Message" inverseName="round" inverseEntity="Message" syncable="YES"/>
+        <relationship name="sourceChoice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Choice" inverseName="destinationRound" inverseEntity="Choice" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Choice" positionX="-36" positionY="9" width="128" height="105"/>
-        <element name="Message" positionX="0" positionY="81" width="128" height="105"/>
-        <element name="Round" positionX="27" positionY="99" width="128" height="90"/>
+        <element name="Choice" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="Message" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="Round" positionX="0" positionY="0" width="128" height="105"/>
     </elements>
 </model>

@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "Round.h"
 #import "Choice.h"
+#import "RoundLoader.h"
 
 @interface RoundServer : NSObject
+@property (strong, nonatomic, readonly) NSArray *completedRounds;
 
-@property (strong, nonatomic) NSArray *completedRounds;
+@property (strong, nonatomic) NSNumber *roundIdentifier;
+@property (nonatomic, assign) NSNumber *choiceKey;
 
 - (Round*) completedRound:(Round*)round withChoice:(Choice *)choice;
 

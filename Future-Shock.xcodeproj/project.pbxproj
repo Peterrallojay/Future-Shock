@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7524C3311B0FB1D900B5A31B /* RoundServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7524C3301B0FB1D900B5A31B /* RoundServer.m */; };
+		7524C3371B112F6E00B5A31B /* Choice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7524C3361B112F6E00B5A31B /* Choice.m */; };
+		7524C33A1B112F6E00B5A31B /* Round.m in Sources */ = {isa = PBXBuildFile; fileRef = 7524C3391B112F6E00B5A31B /* Round.m */; };
 		757F5B961B0A96150046D37D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F5B951B0A96150046D37D /* main.m */; };
 		757F5B991B0A96150046D37D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F5B981B0A96150046D37D /* AppDelegate.m */; };
 		757F5B9C1B0A96150046D37D /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F5B9B1B0A96150046D37D /* StoryViewController.m */; };
@@ -30,9 +32,7 @@
 		759410A91B0D3B9A0092CC3D /* StoryTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 759410A81B0D3B9A0092CC3D /* StoryTableViewDataSource.m */; };
 		759410AB1B0D45CE0092CC3D /* story.json in Resources */ = {isa = PBXBuildFile; fileRef = 759410AA1B0D45CE0092CC3D /* story.json */; };
 		8C69EDCE1B0D8573000012D7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C69EDCC1B0D8573000012D7 /* Model.xcdatamodeld */; };
-		8C69EDD11B0D8A71000012D7 /* Choice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C69EDD01B0D8A71000012D7 /* Choice.m */; };
 		8C69EDD41B0D8A71000012D7 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C69EDD31B0D8A71000012D7 /* Message.m */; };
-		8C69EDD71B0D8A71000012D7 /* Round.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C69EDD61B0D8A71000012D7 /* Round.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +76,10 @@
 /* Begin PBXFileReference section */
 		7524C32F1B0FB1D800B5A31B /* RoundServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundServer.h; sourceTree = "<group>"; };
 		7524C3301B0FB1D900B5A31B /* RoundServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundServer.m; sourceTree = "<group>"; };
+		7524C3351B112F6E00B5A31B /* Choice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Choice.h; path = ../Choice.h; sourceTree = "<group>"; };
+		7524C3361B112F6E00B5A31B /* Choice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Choice.m; path = ../Choice.m; sourceTree = "<group>"; };
+		7524C3381B112F6E00B5A31B /* Round.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Round.h; path = ../Round.h; sourceTree = "<group>"; };
+		7524C3391B112F6E00B5A31B /* Round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Round.m; path = ../Round.m; sourceTree = "<group>"; };
 		757F5B901B0A96150046D37D /* Future-Shock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Future-Shock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		757F5B941B0A96150046D37D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		757F5B951B0A96150046D37D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -114,12 +118,8 @@
 		759410A81B0D3B9A0092CC3D /* StoryTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryTableViewDataSource.m; sourceTree = "<group>"; };
 		759410AA1B0D45CE0092CC3D /* story.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = story.json; sourceTree = "<group>"; };
 		8C69EDCD1B0D8573000012D7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		8C69EDCF1B0D8A71000012D7 /* Choice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Choice.h; sourceTree = "<group>"; };
-		8C69EDD01B0D8A71000012D7 /* Choice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Choice.m; sourceTree = "<group>"; };
 		8C69EDD21B0D8A71000012D7 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		8C69EDD31B0D8A71000012D7 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
-		8C69EDD51B0D8A71000012D7 /* Round.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Round.h; sourceTree = "<group>"; };
-		8C69EDD61B0D8A71000012D7 /* Round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Round.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,12 +269,12 @@
 				8C69EDCC1B0D8573000012D7 /* Model.xcdatamodeld */,
 				759410961B0D2C5B0092CC3D /* Stack.h */,
 				759410971B0D2C5B0092CC3D /* Stack.m */,
-				8C69EDD51B0D8A71000012D7 /* Round.h */,
-				8C69EDD61B0D8A71000012D7 /* Round.m */,
+				7524C3381B112F6E00B5A31B /* Round.h */,
+				7524C3391B112F6E00B5A31B /* Round.m */,
 				8C69EDD21B0D8A71000012D7 /* Message.h */,
 				8C69EDD31B0D8A71000012D7 /* Message.m */,
-				8C69EDCF1B0D8A71000012D7 /* Choice.h */,
-				8C69EDD01B0D8A71000012D7 /* Choice.m */,
+				7524C3351B112F6E00B5A31B /* Choice.h */,
+				7524C3361B112F6E00B5A31B /* Choice.m */,
 				759410AA1B0D45CE0092CC3D /* story.json */,
 			);
 			name = "Core Data and Models";
@@ -445,12 +445,12 @@
 				7594109B1B0D31730092CC3D /* RoundLoader.m in Sources */,
 				759410981B0D2C5B0092CC3D /* Stack.m in Sources */,
 				757F5B9C1B0A96150046D37D /* StoryViewController.m in Sources */,
-				8C69EDD11B0D8A71000012D7 /* Choice.m in Sources */,
 				757F5BF11B0AEB4B0046D37D /* MessageCell.m in Sources */,
-				8C69EDD71B0D8A71000012D7 /* Round.m in Sources */,
 				759410A91B0D3B9A0092CC3D /* StoryTableViewDataSource.m in Sources */,
 				7524C3311B0FB1D900B5A31B /* RoundServer.m in Sources */,
+				7524C33A1B112F6E00B5A31B /* Round.m in Sources */,
 				757F5B991B0A96150046D37D /* AppDelegate.m in Sources */,
+				7524C3371B112F6E00B5A31B /* Choice.m in Sources */,
 				8C69EDD41B0D8A71000012D7 /* Message.m in Sources */,
 				757F5B961B0A96150046D37D /* main.m in Sources */,
 				8C69EDCE1B0D8573000012D7 /* Model.xcdatamodeld in Sources */,
