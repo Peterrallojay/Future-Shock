@@ -23,6 +23,24 @@
     [RoundLoader sharedInstance];
     
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [self fireNotification];
+}
+
+
+- (void)fireNotification{
+    UILocalNotification *notification = [UILocalNotification new];
+    if (notification) {
+        notification.fireDate = [[NSDate new] dateByAddingTimeInterval:1];
+        notification.timeZone = [NSTimeZone defaultTimeZone];
+        notification.repeatInterval = 0;
+        notification.soundName = UILocalNotificationDefaultSoundName;
+        notification.applicationIconBadgeNumber = 1;
+        notification.alertBody = @"Ben is waiting for you";
+        
+        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    }    
+    
 }
 
 
