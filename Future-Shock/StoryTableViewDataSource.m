@@ -40,9 +40,13 @@ static NSString * const messageCellID = @"messageCellID";
     
     Round *roundForCell = [RoundServer allRounds][indexPath.section];
     
-    Message *message = [roundForCell messages][indexPath.row];
-    
-    cell.textLabel.text = message.text;
+    if ([roundForCell messages].count > indexPath.row) {
+        Message *message = [roundForCell messages][indexPath.row];
+        cell.textLabel.text = message.text;
+    }else{
+        Choice *choice = [roundForCell choices][indexPath.row - [roundForCell messages].count];
+        cell.textLabel.text = choice.text;
+    }
     
     return cell;
 }
@@ -50,7 +54,7 @@ static NSString * const messageCellID = @"messageCellID";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return [[(Round *)([RoundServer allRounds][section]) messages] count];
+    return [[(Round *)([RoundServer allRounds][section]) messages] count] + 2;
     //return [RoundServer allmessagesForRound:(Round *)];
 }
 
