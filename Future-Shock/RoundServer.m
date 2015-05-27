@@ -7,6 +7,7 @@
 //
 
 #import "RoundServer.h"
+#import "Stack.h"
 
 @interface RoundServer ()
 @property (strong, nonatomic) NSArray *completedRounds;
@@ -14,6 +15,12 @@
 @end
 
 @implementation RoundServer
+
+- (NSArray *)allRounds {
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Round"];
+    
+    return [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:nil];
+}
 
 - (BOOL)isRoundComplete:(Round *)round
 {
@@ -37,14 +44,14 @@
     return NO;
 }
 //gives next round based on completed choice
-- (Round*) completedRound:(Round*)round withChoice:(Choice *)choice {
-    
-    
-    if ([self isRoundComplete:round]) {
-        if (choice == ) {
-            <#statements#>
-        }
-    }
-}
+//- (Round*) completedRound:(Round*)round withChoice:(Choice *)choice {
+//    
+//    
+////    if ([self isRoundComplete:round]) {
+////        if (choice == ) {
+////            <#statements#>
+////        }
+////    }
+//}
 
 @end

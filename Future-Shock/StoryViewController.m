@@ -20,7 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     [RoundLoader sharedInstance];
+    //NSLog(@"%@", [RoundLoader sharedInstance]);
     
     // Do any additional setup after loading the view, typically from a nib.
 }

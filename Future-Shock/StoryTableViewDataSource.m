@@ -7,6 +7,7 @@
 //
 
 #import "StoryTableViewDataSource.h"
+#import "MessageCell.h"
 
 static NSString * const messageCellID = @"messageCellID";
 
@@ -17,9 +18,6 @@ static NSString * const messageCellID = @"messageCellID";
     //Round *round = [RoundController sharedInstance].messages[indexPath.row];
     
     MessageCell *cell = [tableView dequeueReusableCellWithIdentifier:messageCellID];
-    
-    
-    
     
     
     //this instantiates new cells by checking that they are uitableviewcells. These cells will contain Round objects.
@@ -43,10 +41,10 @@ static NSString * const messageCellID = @"messageCellID";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [RoundLoader sharedInstance].round.count;
+    return 5;
 }
 
 - (void)registerTableView:(UITableView *)tableView {
-    [tableView registerClass:[MessageCellView class] forCellReuseIdentifier:cellID];
+
 }
 @end

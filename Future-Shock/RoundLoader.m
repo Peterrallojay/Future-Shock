@@ -9,23 +9,17 @@
 #import "RoundLoader.h"
 #import "Stack.h"
 
-static NSString * const AllMessagesKey = @"AllMessages";
-
-//these are the keys for using the dictionary to access JSON story parts
-
-
 //NEED CLARIFICATION use this to set static delay based on user local time (if(nighttime){set delay of 8 hours})
 static NSString const *timestampKey = @"timeStamp";
 
-static NSString const *roundIdentifierKey = @"roundIdentifierKey";
+static NSString const *roundIdentifierKey = @"identifier";
 static NSString const *messagesKey = @"messages";
-static NSString const *messageTextKey = @"messageText";
-static NSString const *messageDistanceDelayKey = @"messageDistanceDelay";
-static NSString const *messageTimeDelayKey = @"messageTimeDelay";
+static NSString const *distanceDelayKey = @"distanceDelay";
+static NSString const *timeDelayKey = @"timeDelay";
 static NSString const *choicesKey = @"choices";
-static NSString const *choicesDestinationKey = @"choicesDestination";
-static NSString const *choicesIdentifierKey = @"choicesIdentifier";
-static NSString const *choicesTextKey = @"choicesText";
+static NSString const *choicesDestinationKey = @"destination";
+static NSString const *choicesIdentifierKey = @"identifier";
+static NSString const *textKey = @"text";
 
 @interface RoundLoader ()
 
@@ -41,7 +35,7 @@ static NSString const *choicesTextKey = @"choicesText";
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [RoundLoader new];
-        //[self importIfNeeded];
+        [sharedInstance importIfNeeded];
     });
     return sharedInstance;
 }
@@ -71,59 +65,75 @@ static NSString const *choicesTextKey = @"choicesText";
     
     NSLog(@"%@", error.description);
     
-    for (NSDictionary *dictionary in allRounds) {
-        [self loadJSONDictionary:dictionary];
-        NSLog(@"%@", dictionary);
+    for (NSDictionary *dictionary in allRounds.reverseObjectEnumerator) {
+        [self createRoundWithDictionary:dictionary];
+        [self save];
     }
-    
 }
 
 //assigns model object properties based on JSON dictionary
-- (void)loadJSONDictionary:(NSDictionary *)dictionary {
-    if(self) {
+- (Round *)createRoundWithDictionary:(NSDictionary *)dictionary {
+    
+    Round *round = [NSEntityDescription insertNewObjectForEntityForName:@"Round" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+    
+    round.identifier = dictionary[@"indentifier"];
+    
+    // set up messages
+    
+    NSArray *messageDictionaries = dictionary[@"messages"];
+    
+    for (NSDictionary *messageDictionary in messageDictionaries) {
+        Message *message = [NSEntityDescription insertNewObjectForEntityForName:@"Message" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
         
-        //sets the values of the round keys to roundLoader array properties. Note same string values as messages/choices key declared as statics
-        [dictionary setValue:self.choicesArray forKey:@"choices"];
-        [dictionary setValue:self.messagesArray forKey:@"messages"];
+        message.text = messageDictionary[@"text"];
         
-        //sets up round + properties
-        self.round = [NSEntityDescription insertNewObjectForEntityForName:@"Round" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
-        
-        self.round.identifier = dictionary[roundIdentifierKey];
-        self.round.choices = dictionary[choicesKey];
-        self.round.messages = dictionary[messagesKey];
-        self.round.sourceChoice = self.sourceChoice;
-        
-        //sets up choices for round
-        for (NSDictionary *choicesDictionary in self.round.choices) {
-            self.choice = [NSEntityDescription insertNewObjectForEntityForName:@"Choice" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
-            self.choice.identifier = choicesDictionary[choicesIdentifierKey];
-            self.choice.text = choicesDictionary[choicesTextKey];
-            
-            //this sets an instance of round that the choice will point to.
-            self.choice.destinationRound = choicesDictionary[choicesDestinationKey];
-            
-            //this sets which round the choice lives in.
-            self.choice.round = self.round;
+        if (messageDictionary[@"timeDelay"] != [NSNull null]) {
+            message.timeDelay = messageDictionary[@"timeDelay"];
         }
         
-        //sets up messages for round
-        for (NSDictionary *messagesDictionary in self.round.messages) {
-            self.message = [NSEntityDescription insertNewObjectForEntityForName:@"Message" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
-            self.message.text = messagesDictionary[messageTextKey];
-            self.message.distanceDelay = messagesDictionary[messageDistanceDelayKey];
-            self.message.timeDelay = messagesDictionary[messageTimeDelayKey];
-            self.message.round = self.round;
+        if (messageDictionary[@"distanceDelay"] != [NSNull null]) {
+            message.distanceDelay = messageDictionary[@"distanceDelay"];
         }
+        
+        message.round = round;
+    }
+    
+    // set up choices
+    
+    NSArray *choiceDictionaries = dictionary[@"choices"];
+    
+    for (NSDictionary *choiceDictionary in choiceDictionaries) {
+        Choice *choice = [NSEntityDescription insertNewObjectForEntityForName:@"Choice" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+
+        choice.text = choiceDictionary[@"text"];
+        choice.identifier = choiceDictionary[@"identifier"];
+        
+        choice.round = round;
+        
+        NSInteger destinationRoundIdentifier = [choiceDictionary[@"identifier"] integerValue];
+        
+        choice.destinationRound = [self roundFromRoundIdentifier:destinationRoundIdentifier];
+    }
+    
+    return round;
+}
+
+- (Round *)roundFromRoundIdentifier:(NSInteger)identifier {
+    
+    NSError *error;
+        
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Round"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", [NSNumber numberWithInteger:identifier]];
+    fetchRequest.predicate = predicate;
+    
+    NSArray *array = [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (array.firstObject) {
+        return array.firstObject;
+    } else {
+        return nil;
     }
 }
-
-//PW5.25.15 - REST OF IMPLEMENTATION NEEDED
-- (Round *)getNewRound:(NSDictionary *)dict WithIdentifier:(NSInteger)identifier {
-    Round *newRound = [NSEntityDescription insertNewObjectForEntityForName:@"Round" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
-    
-}
-
 
 
 - (void)save

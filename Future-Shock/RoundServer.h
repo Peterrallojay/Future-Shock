@@ -14,6 +14,8 @@
 @interface RoundServer : NSObject
 @property (strong, nonatomic, readonly) NSArray *completedRounds;
 
+@property (strong, nonatomic, readonly) NSArray *allRounds;
+
 @property (strong, nonatomic) NSNumber *roundIdentifier;
 @property (nonatomic, assign) NSNumber *choiceKey;
 

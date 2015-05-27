@@ -13,7 +13,7 @@
 
 @interface Round : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * identifier;
+@property (nonatomic, retain) NSNumber *identifier;
 @property (nonatomic, retain) NSOrderedSet *choices;
 @property (nonatomic, retain) NSOrderedSet *messages;
 @property (nonatomic, retain) Choice *sourceChoice;
