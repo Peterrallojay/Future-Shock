@@ -9,8 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "RoundLoader.h"
 #import "MessageCell.h"
-#import "Round.h"
-#import "Message.h"
+#import "RoundServer.h"
 
 @import UIKit;
 

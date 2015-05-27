@@ -12,13 +12,19 @@
 #import "RoundLoader.h"
 
 @interface RoundServer : NSObject
+
 @property (strong, nonatomic, readonly) NSArray *completedRounds;
 
-@property (strong, nonatomic, readonly) NSArray *allRounds;
+//@property (strong, nonatomic, readonly) NSArray *allRounds;
 
 @property (strong, nonatomic) NSNumber *roundIdentifier;
 @property (nonatomic, assign) NSNumber *choiceKey;
 
++ (NSArray *)allRounds;
+//+ (NSArray *)allmessagesForRound:(Round *)round;
+
 - (Round*) completedRound:(Round*)round withChoice:(Choice *)choice;
+
+
 
 @end

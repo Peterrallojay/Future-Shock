@@ -8,10 +8,25 @@
 
 #import "StoryTableViewDataSource.h"
 #import "MessageCell.h"
+#import "Round.h"
 
 static NSString * const messageCellID = @"messageCellID";
 
 @implementation StoryTableViewDataSource
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    //RoundServer *roundServer = [RoundServer new];
+    
+    
+    //NSLog(@"%lu", (unsigned long)roundServer.completedRounds.count);
+    
+//    return roundServer.completedRounds.count;
+    
+    return [RoundServer allRounds].count;
+
+}
+
+
 //getting data from round
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -19,32 +34,29 @@ static NSString * const messageCellID = @"messageCellID";
     
     MessageCell *cell = [tableView dequeueReusableCellWithIdentifier:messageCellID];
     
-    
-    //this instantiates new cells by checking that they are uitableviewcells. These cells will contain Round objects.
-    if (!cell) {
-        NSArray *cellObjects = [[NSBundle mainBundle] loadNibNamed:@"MessageCellView" owner:self options:nil];
-        for (id currentCellObject in cellObjects) {
-            if([currentCellObject isKindOfClass:[UITableViewCell class]]){
-                cell = (MessageCell *)currentCellObject;
-                break;
-            }
-        }
-        cell = [[MessageCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:messageCellID];
+    if(!cell){
+        cell = [[MessageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:messageCellID];
     }
     
-    //configure the cell (Round -> Messages ->Choices)
+    Round *roundForCell = [RoundServer allRounds][indexPath.section];
     
+    Message *message = [roundForCell messages][indexPath.row];
     
+    cell.textLabel.text = message.text;
     
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    
+    return [[(Round *)([RoundServer allRounds][section]) messages] count];
+    //return [RoundServer allmessagesForRound:(Round *)];
 }
 
 - (void)registerTableView:(UITableView *)tableView {
 
 }
+
+
 @end

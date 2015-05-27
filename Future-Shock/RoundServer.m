@@ -16,11 +16,23 @@
 
 @implementation RoundServer
 
-- (NSArray *)allRounds {
++ (NSArray *)allRounds {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Round"];
     
     return [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:nil];
 }
+
+//+ (NSArray *)allmessagesForRound:(Round *)round {
+//    NSMutableArray *messages = [NSMutableArray new];
+//    
+//    for (Message *message in round.messages) {
+//        [messages addObject:message];
+//    }
+//    NSArray *finalMessages = messages;
+//    
+//    return finalMessages;
+//    
+//}
 
 - (BOOL)isRoundComplete:(Round *)round
 {
