@@ -9,6 +9,7 @@
 #import "StoryTableViewDataSource.h"
 #import "MessageCell.h"
 #import "Round.h"
+@import UIKit;
 
 static NSString * const messageCellID = @"messageCellID";
 
@@ -42,10 +43,13 @@ static NSString * const messageCellID = @"messageCellID";
     
     if ([roundForCell messages].count > indexPath.row) {
         Message *message = [roundForCell messages][indexPath.row];
+        UIImageView *borderImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlackBorder.png"]];
+        cell.messageTextBorder = borderImageView;
         cell.messageLabel.text = message.text;
         
-        UIImageView *borderImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlackBorder.png"]];
-        [borderImageView setFrame:cell.messageTextBorder.frame];
+
+        
+//        [cell.messageTextBorder setImage:borderImageView];
         
         
         //cell.textLabel.text = message.text;
