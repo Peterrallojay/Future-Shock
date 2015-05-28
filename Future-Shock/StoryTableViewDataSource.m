@@ -10,6 +10,7 @@
 #import "MessageCell.h"
 #import "ChoiceCell.h"
 #import "Round.h"
+@import UIKit;
 
 static NSString * const messageCellID = @"messageCellID";
 static NSString * const choiceCellID = @"choiceCellID";
@@ -35,7 +36,16 @@ static NSString * const choiceCellID = @"choiceCellID";
     {
         cell = [tableView dequeueReusableCellWithIdentifier:messageCellID];
         Message *message = [roundForCell messages][indexPath.row];
-        cell.textLabel.text = message.text;
+        UIImageView *borderImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlackBorder.png"]];
+        cell.messageTextBorder = borderImageView;
+        cell.messageLabel.text = message.text;
+        
+
+        
+//        [cell.messageTextBorder setImage:borderImageView];
+        
+        
+        //cell.textLabel.text = message.text;
     }
     else
     {
@@ -43,6 +53,7 @@ static NSString * const choiceCellID = @"choiceCellID";
         [((ChoiceCell *)cell).leftChoiceButton setTitle:[[roundForCell choices][0] text] forState:UIControlStateNormal];
         [((ChoiceCell *)cell).rightChoiceButton setTitle:[[roundForCell choices][1] text] forState:UIControlStateNormal];
     }
+    
     
     return cell;
 }
@@ -53,6 +64,7 @@ static NSString * const choiceCellID = @"choiceCellID";
     return [[(Round *)([RoundServer allRounds][section]) messages] count] + 1;
     //return [RoundServer allmessagesForRound:(Round *)];
 }
+
 
 - (void)registerTableView:(UITableView *)tableView {
 

@@ -10,7 +10,13 @@
 
 static NSString * const messageCellID = @"messageCellID";
 
+@interface MessageCell ()
+
+
+@end
+
 @implementation MessageCell
+
 
 
 
