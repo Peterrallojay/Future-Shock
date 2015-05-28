@@ -17,51 +17,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="77" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fUM-QP-oz7">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="101" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fUM-QP-oz7">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="messageCellID" rowHeight="77" id="UbK-PB-Whn" customClass="MessageCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="messageCellID" rowHeight="101" id="UbK-PB-Whn" customClass="MessageCell">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UbK-PB-Whn" id="xxK-ay-m49">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uhz-iW-eff">
-                                                    <rect key="frame" x="8" y="8" width="584" height="61"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tc-Lh-8Ad">
+                                                    <rect key="frame" x="49" y="20" width="280" height="61"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tc-Lh-8Ad">
-                                                    <rect key="frame" x="26" y="8" width="537" height="61"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="537" id="8fX-Uu-kqg"/>
-                                                        <constraint firstAttribute="height" constant="61" id="v4L-Bm-ezn"/>
+                                                        <constraint firstAttribute="height" constant="61" id="9an-2K-0qW"/>
+                                                        <constraint firstAttribute="width" constant="280" id="wHs-Vh-722"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="11"/>
                                                     <color key="textColor" red="0.13333334028720856" green="0.59215688705444336" blue="0.22352942824363708" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlackBorder.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bv3-wo-2hN">
-                                                    <rect key="frame" x="0.0" y="8" width="584" height="61"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CellBorderV1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bv3-wo-2hN">
+                                                    <rect key="frame" x="19" y="20" width="562" height="61"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="6tc-Lh-8Ad" firstAttribute="leading" secondItem="xxK-ay-m49" secondAttribute="leadingMargin" constant="18" id="8bG-tD-ovv"/>
-                                                <constraint firstItem="uhz-iW-eff" firstAttribute="trailing" secondItem="6tc-Lh-8Ad" secondAttribute="trailing" constant="29" id="LIk-Qi-VeG"/>
-                                                <constraint firstItem="Bv3-wo-2hN" firstAttribute="top" secondItem="uhz-iW-eff" secondAttribute="top" id="Pdc-vD-kn7"/>
-                                                <constraint firstItem="6tc-Lh-8Ad" firstAttribute="top" secondItem="xxK-ay-m49" secondAttribute="topMargin" id="Wdo-vq-P8I"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Bv3-wo-2hN" secondAttribute="trailing" constant="8" id="ZVc-sV-gwv"/>
+                                                <constraint firstItem="6tc-Lh-8Ad" firstAttribute="leading" secondItem="xxK-ay-m49" secondAttribute="leadingMargin" constant="41" id="8bG-tD-ovv"/>
+                                                <constraint firstItem="6tc-Lh-8Ad" firstAttribute="top" secondItem="xxK-ay-m49" secondAttribute="topMargin" constant="12" id="Wdo-vq-P8I"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Bv3-wo-2hN" secondAttribute="trailing" constant="11" id="ZVc-sV-gwv"/>
                                                 <constraint firstItem="Bv3-wo-2hN" firstAttribute="top" secondItem="6tc-Lh-8Ad" secondAttribute="top" id="aCb-6l-01e"/>
-                                                <constraint firstItem="uhz-iW-eff" firstAttribute="bottom" secondItem="6tc-Lh-8Ad" secondAttribute="bottom" id="eh7-jF-JX3"/>
                                                 <constraint firstItem="Bv3-wo-2hN" firstAttribute="bottom" secondItem="6tc-Lh-8Ad" secondAttribute="bottom" id="qY8-l1-sG2"/>
-                                                <constraint firstItem="Bv3-wo-2hN" firstAttribute="leading" secondItem="xxK-ay-m49" secondAttribute="leading" id="vPR-Td-gNe"/>
+                                                <constraint firstItem="Bv3-wo-2hN" firstAttribute="leading" secondItem="xxK-ay-m49" secondAttribute="leading" constant="19" id="vPR-Td-gNe"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="messageLabel" destination="6tc-Lh-8Ad" id="wdV-ib-sXV"/>
-                                            <outlet property="messageTextBorder" destination="uhz-iW-eff" id="Oom-9f-Chk"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -108,6 +101,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BlackBorder.png" width="783" height="440"/>
+        <image name="CellBorderV1.png" width="783" height="440"/>
     </resources>
 </document>
