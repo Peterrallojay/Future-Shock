@@ -45,7 +45,7 @@ static NSString * const messageCellID = @"messageCellID";
         cell.textLabel.text = message.text;
     }else{
         Choice *choice = [roundForCell choices][indexPath.row - [roundForCell messages].count];
-        cell.textLabel.text = choice.text;
+        cell.textLabel.text = [NSString stringWithFormat:@"CHOICE: %@", choice.text];
     }
     
     return cell;
