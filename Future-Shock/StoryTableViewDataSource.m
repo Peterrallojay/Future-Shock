@@ -8,44 +8,40 @@
 
 #import "StoryTableViewDataSource.h"
 #import "MessageCell.h"
+#import "ChoiceCell.h"
 #import "Round.h"
 
 static NSString * const messageCellID = @"messageCellID";
+static NSString * const choiceCellID = @"choiceCellID";
+
+@interface StoryTableViewDataSource ()
+
+@end
 
 @implementation StoryTableViewDataSource
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    //RoundServer *roundServer = [RoundServer new];
-    
-    
-    //NSLog(@"%lu", (unsigned long)roundServer.completedRounds.count);
-    
-//    return roundServer.completedRounds.count;
-    
     return [RoundServer allRounds].count;
-
 }
 
 
 //getting data from round
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    //Round *round = [RoundController sharedInstance].messages[indexPath.row];
-    
-    MessageCell *cell = [tableView dequeueReusableCellWithIdentifier:messageCellID];
-    
-    if(!cell){
-        cell = [[MessageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:messageCellID];
-    }
-    
+    UITableViewCell *cell;
     Round *roundForCell = [RoundServer allRounds][indexPath.section];
     
-    if ([roundForCell messages].count > indexPath.row) {
+    if ([roundForCell messages].count > indexPath.row)
+    {
+        cell = [tableView dequeueReusableCellWithIdentifier:messageCellID];
         Message *message = [roundForCell messages][indexPath.row];
         cell.textLabel.text = message.text;
-    }else{
-        Choice *choice = [roundForCell choices][indexPath.row - [roundForCell messages].count];
-        cell.textLabel.text = [NSString stringWithFormat:@"CHOICE: %@", choice.text];
+    }
+    else
+    {
+        cell = [tableView dequeueReusableCellWithIdentifier:choiceCellID];
+        [((ChoiceCell *)cell).leftChoiceButton setTitle:[[roundForCell choices][0] text] forState:UIControlStateNormal];
+        [((ChoiceCell *)cell).rightChoiceButton setTitle:[[roundForCell choices][1] text] forState:UIControlStateNormal];
     }
     
     return cell;
@@ -54,7 +50,7 @@ static NSString * const messageCellID = @"messageCellID";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return [[(Round *)([RoundServer allRounds][section]) messages] count] + 2;
+    return [[(Round *)([RoundServer allRounds][section]) messages] count] + 1;
     //return [RoundServer allmessagesForRound:(Round *)];
 }
 
