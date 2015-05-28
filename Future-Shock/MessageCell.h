@@ -15,6 +15,6 @@
 IB_DESIGNABLE
 @interface MessageCell : UITableViewCell
 
-
+@property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 
 @end

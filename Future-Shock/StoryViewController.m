@@ -22,7 +22,13 @@
     
     
     [RoundLoader sharedInstance];
-    //NSLog(@"%@", [RoundLoader sharedInstance]);
+    
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FSBackgroundAlpha1.png"]];
+    [tempImageView setFrame:self.tableView.frame];
+
+    self.tableView.backgroundView = tempImageView;
+//    self.tableView.layoutMargins = UIEdgeInsetsZero;
+    
     
     // Do any additional setup after loading the view, typically from a nib.
     

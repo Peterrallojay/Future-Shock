@@ -42,11 +42,14 @@ static NSString * const messageCellID = @"messageCellID";
     
     if ([roundForCell messages].count > indexPath.row) {
         Message *message = [roundForCell messages][indexPath.row];
-        cell.textLabel.text = message.text;
-    }else{
-        Choice *choice = [roundForCell choices][indexPath.row - [roundForCell messages].count];
-        cell.textLabel.text = [NSString stringWithFormat:@"CHOICE: %@", choice.text];
+        cell.messageLabel.text = message.text;
+        //cell.textLabel.text = message.text;
     }
+//    else{
+//        Choice *choice = [roundForCell choices][indexPath.row - [roundForCell messages].count];
+//        cell.textLabel.text = [NSString stringWithFormat:@"CHOICE: %@", choice.text];
+//    }
+    
     
     return cell;
 }
@@ -57,6 +60,7 @@ static NSString * const messageCellID = @"messageCellID";
     return [[(Round *)([RoundServer allRounds][section]) messages] count] + 2;
     //return [RoundServer allmessagesForRound:(Round *)];
 }
+
 
 - (void)registerTableView:(UITableView *)tableView {
 
