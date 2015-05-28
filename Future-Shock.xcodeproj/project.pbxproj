@@ -32,6 +32,7 @@
 		759410A91B0D3B9A0092CC3D /* StoryTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 759410A81B0D3B9A0092CC3D /* StoryTableViewDataSource.m */; };
 		759410AB1B0D45CE0092CC3D /* story.json in Resources */ = {isa = PBXBuildFile; fileRef = 759410AA1B0D45CE0092CC3D /* story.json */; };
 		75A21AE41B16D5A20044E9E1 /* FSBackgroundAlpha1.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A21AE31B16D5A20044E9E1 /* FSBackgroundAlpha1.png */; };
+		75A21AE61B16E7EE0044E9E1 /* BlackBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A21AE51B16E7EE0044E9E1 /* BlackBorder.png */; };
 		8C69EDCE1B0D8573000012D7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C69EDCC1B0D8573000012D7 /* Model.xcdatamodeld */; };
 		8C69EDD41B0D8A71000012D7 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C69EDD31B0D8A71000012D7 /* Message.m */; };
 /* End PBXBuildFile section */
@@ -119,6 +120,7 @@
 		759410A81B0D3B9A0092CC3D /* StoryTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryTableViewDataSource.m; sourceTree = "<group>"; };
 		759410AA1B0D45CE0092CC3D /* story.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = story.json; sourceTree = "<group>"; };
 		75A21AE31B16D5A20044E9E1 /* FSBackgroundAlpha1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FSBackgroundAlpha1.png; sourceTree = "<group>"; };
+		75A21AE51B16E7EE0044E9E1 /* BlackBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlackBorder.png; sourceTree = "<group>"; };
 		8C69EDCD1B0D8573000012D7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		8C69EDD21B0D8A71000012D7 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		8C69EDD31B0D8A71000012D7 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				757F5BEE1B0A9FD60046D37D /* Core Data and Models */,
 				757F5BA01B0A96150046D37D /* Images.xcassets */,
 				75A21AE31B16D5A20044E9E1 /* FSBackgroundAlpha1.png */,
+				75A21AE51B16E7EE0044E9E1 /* BlackBorder.png */,
 				757F5BA21B0A96150046D37D /* LaunchScreen.xib */,
 				757F5B931B0A96150046D37D /* Supporting Files */,
 			);
@@ -411,6 +414,7 @@
 				757F5BA41B0A96150046D37D /* LaunchScreen.xib in Resources */,
 				757F5BA11B0A96150046D37D /* Images.xcassets in Resources */,
 				759410AB1B0D45CE0092CC3D /* story.json in Resources */,
+				75A21AE61B16E7EE0044E9E1 /* BlackBorder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

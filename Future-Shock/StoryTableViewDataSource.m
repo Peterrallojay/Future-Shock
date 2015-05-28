@@ -43,6 +43,11 @@ static NSString * const messageCellID = @"messageCellID";
     if ([roundForCell messages].count > indexPath.row) {
         Message *message = [roundForCell messages][indexPath.row];
         cell.messageLabel.text = message.text;
+        
+        UIImageView *borderImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlackBorder.png"]];
+        [borderImageView setFrame:cell.messageTextBorder.frame];
+        
+        
         //cell.textLabel.text = message.text;
     }
 //    else{

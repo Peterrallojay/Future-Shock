@@ -27,17 +27,21 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UbK-PB-Whn" id="xxK-ay-m49">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tc-Lh-8Ad">
-                                                    <rect key="frame" x="8" y="8" width="40" height="13"/>
-                                                    <color key="backgroundColor" red="0.83891256219999999" green="0.91413467859999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tc-Lh-8Ad">
+                                                    <rect key="frame" x="8" y="8" width="584" height="61"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="249" id="8fX-Uu-kqg"/>
+                                                        <constraint firstAttribute="width" constant="584" id="8fX-Uu-kqg"/>
                                                         <constraint firstAttribute="height" constant="61" id="v4L-Bm-ezn"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.13333334028720856" green="0.59215688705444336" blue="0.22352942824363708" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uhz-iW-eff">
+                                                    <rect key="frame" x="8" y="8" width="584" height="61"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="6tc-Lh-8Ad" firstAttribute="leading" secondItem="xxK-ay-m49" secondAttribute="leadingMargin" id="8bG-tD-ovv"/>
@@ -47,6 +51,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="messageLabel" destination="6tc-Lh-8Ad" id="wdV-ib-sXV"/>
+                                            <outlet property="messageTextBorder" destination="uhz-iW-eff" id="Oom-9f-Chk"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
