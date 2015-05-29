@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750EC5FD1B17A67D0056C069 /* ChoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 750EC5FC1B17A67D0056C069 /* ChoiceCell.m */; };
 		7524C3311B0FB1D900B5A31B /* RoundServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7524C3301B0FB1D900B5A31B /* RoundServer.m */; };
 		7524C3371B112F6E00B5A31B /* Choice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7524C3361B112F6E00B5A31B /* Choice.m */; };
 		7524C33A1B112F6E00B5A31B /* Round.m in Sources */ = {isa = PBXBuildFile; fileRef = 7524C3391B112F6E00B5A31B /* Round.m */; };
@@ -77,6 +78,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		750EC5FB1B17A6750056C069 /* ChoiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceCell.h; sourceTree = "<group>"; };
+		750EC5FC1B17A67D0056C069 /* ChoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceCell.m; sourceTree = "<group>"; };
 		7524C32F1B0FB1D800B5A31B /* RoundServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundServer.h; sourceTree = "<group>"; };
 		7524C3301B0FB1D900B5A31B /* RoundServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundServer.m; sourceTree = "<group>"; };
 		7524C3351B112F6E00B5A31B /* Choice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Choice.h; path = ../Choice.h; sourceTree = "<group>"; };
@@ -191,6 +194,8 @@
 				757F5BF01B0AEB4B0046D37D /* MessageCell.m */,
 				7524C32F1B0FB1D800B5A31B /* RoundServer.h */,
 				7524C3301B0FB1D900B5A31B /* RoundServer.m */,
+				750EC5FB1B17A6750056C069 /* ChoiceCell.h */,
+				750EC5FC1B17A67D0056C069 /* ChoiceCell.m */,
 				759410991B0D31730092CC3D /* RoundLoader.h */,
 				7594109A1B0D31730092CC3D /* RoundLoader.m */,
 				757F5BEE1B0A9FD60046D37D /* Core Data and Models */,
@@ -456,6 +461,7 @@
 			files = (
 				7594109B1B0D31730092CC3D /* RoundLoader.m in Sources */,
 				759410981B0D2C5B0092CC3D /* Stack.m in Sources */,
+				750EC5FD1B17A67D0056C069 /* ChoiceCell.m in Sources */,
 				757F5B9C1B0A96150046D37D /* StoryViewController.m in Sources */,
 				757F5BF11B0AEB4B0046D37D /* MessageCell.m in Sources */,
 				759410A91B0D3B9A0092CC3D /* StoryTableViewDataSource.m in Sources */,

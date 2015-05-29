@@ -29,6 +29,10 @@ static NSString * const choiceCellID = @"choiceCellID";
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    [self.leftChoiceButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
+    [self.rightChoiceButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -37,8 +37,8 @@ static NSString * const choiceCellID = @"choiceCellID";
         cell = [tableView dequeueReusableCellWithIdentifier:messageCellID];
         Message *message = [roundForCell messages][indexPath.row];
         UIImageView *borderImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlackBorder.png"]];
-        cell.messageTextBorder = borderImageView;
-        cell.messageLabel.text = message.text;
+        ((MessageCell *)cell).messageTextBorder = borderImageView;
+        ((MessageCell *)cell).messageLabel.text = message.text;
         
 
         
