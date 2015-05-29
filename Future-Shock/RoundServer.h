@@ -14,7 +14,7 @@
 @interface RoundServer : NSObject
 
 @property (strong, nonatomic, readonly) NSArray *completedRounds;
-
+@property (nonatomic , assign) int currentRound;
 //@property (strong, nonatomic, readonly) NSArray *allRounds;
 
 @property (strong, nonatomic) NSNumber *roundIdentifier;
@@ -23,6 +23,7 @@
 + (NSArray *)allRounds;
 //+ (NSArray *)allmessagesForRound:(Round *)round;
 
++ (RoundServer *)sharedInstance;
 - (Round*) completedRound:(Round*)round withChoice:(Choice *)choice;
 
 
