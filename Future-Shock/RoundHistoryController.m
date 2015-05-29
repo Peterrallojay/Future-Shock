@@ -28,7 +28,7 @@
 -(NSArray *)choiceHistory {
     // create fetch request
     //executed by managed object. go to the stack for the choiceHistory
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Choice"];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"ChoiceHistory"];
     
     NSArray *allChoices = [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:nil];
     
@@ -59,16 +59,12 @@
 - (void)addChoicesMade:(NSNumber *)choicemade withRound:(Round *)round {
     //record how many choices were made by user
     
-    ChoiceHistory *choiceHistoryObj = [ChoiceHistory new];
+    ChoiceHistory *choiceHistoryObj = [NSEntityDescription insertNewObjectForEntityForName:@"ChoiceHistory" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+    
     
     choiceHistoryObj.choiceMade = choicemade;
     choiceHistoryObj.round = round;
     
-    NSMutableArray *mutablechoiceHistoryArray = [self.choiceHistory mutableCopy];
-    
-    [mutablechoiceHistoryArray addObject:choiceHistoryObj];
-    
-    self.choiceHistory = mutablechoiceHistoryArray;
     [self save];
     
 }

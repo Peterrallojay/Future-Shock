@@ -80,6 +80,8 @@ static NSString * const choiceCellID = @"choiceCellID";
         [((ChoiceCell *)cell).rightChoiceButton setTitle:[[roundForCell choices][1] text] forState:UIControlStateNormal];
         ((ChoiceCell *)cell).delegate = self;
     }
+    
+    //integrate roundstraversed array
     return cell;
 }
 
