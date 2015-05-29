@@ -131,7 +131,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="fUM-QP-oz7" secondAttribute="trailing" constant="-16" id="q2c-u1-xQ2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="xO0-JC-ydm"/>
+                    <navigationItem key="navigationItem" id="xO0-JC-ydm">
+                        <barButtonItem key="rightBarButtonItem" image="settings" id="BBM-zT-JTV">
+                            <color key="tintColor" red="0.035294119268655777" green="0.0078431377187371254" blue="0.0078431377187371254" alpha="1" colorSpace="deviceRGB"/>
+                            <connections>
+                                <action selector="settingButtonClicked:" destination="vXZ-lx-hvc" id="N6N-Yy-Lev"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="fUM-QP-oz7" id="1X1-hE-msG"/>
                     </connections>
@@ -141,14 +148,154 @@
             </objects>
             <point key="canvasLocation" x="1092" y="337"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="tef-Ui-8DW">
+            <objects>
+                <viewController storyboardIdentifier="settings" id="JYm-pw-cb8" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dM5-73-8if"/>
+                        <viewControllerLayoutGuide type="bottom" id="Idh-t2-TyW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RDn-lj-jQP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fwu-I9-Ha8">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HLc-jF-vt6">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uk3-sL-lVC">
+                                <rect key="frame" x="84" y="142" width="432" height="317"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFW-Ps-ENs">
+                                        <rect key="frame" x="8" y="33" width="127" height="54"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="127" id="AjP-Oy-Mfo"/>
+                                            <constraint firstAttribute="height" constant="54" id="OBi-ey-IcW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="15"/>
+                                        <state key="normal" title="Turn music off">
+                                            <color key="titleColor" red="0.15686275059999999" green="0.392156899" blue="0.1019607931" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dqn-om-IHl">
+                                        <rect key="frame" x="140" y="235" width="153" height="54"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="153" id="C9I-h9-Otg"/>
+                                            <constraint firstAttribute="height" constant="54" id="aSJ-wc-s4w"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="15"/>
+                                        <state key="normal" title="Rate the game">
+                                            <color key="titleColor" red="0.15686275059999999" green="0.392156899" blue="0.1019607931" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1t-1v-GWZ">
+                                        <rect key="frame" x="117" y="132" width="199" height="54"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="5zO-b9-ODa"/>
+                                            <constraint firstAttribute="width" constant="199" id="zwN-lv-H0S"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="15"/>
+                                        <state key="normal" title="Notification Settings">
+                                            <color key="titleColor" red="0.15686275059999999" green="0.392156899" blue="0.1019607931" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3D-zn-u2H">
+                                        <rect key="frame" x="297" y="33" width="127" height="54"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="DH8-sV-t9j"/>
+                                            <constraint firstAttribute="width" constant="127" id="ynN-GA-H95"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="15"/>
+                                        <state key="normal" title="Turn sound off">
+                                            <color key="titleColor" red="0.15686275059999999" green="0.392156899" blue="0.1019607931" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="G1t-1v-GWZ" firstAttribute="leading" secondItem="WFW-Ps-ENs" secondAttribute="trailing" constant="-18" id="1Qk-7n-z1F"/>
+                                    <constraint firstItem="G1t-1v-GWZ" firstAttribute="top" secondItem="uk3-sL-lVC" secondAttribute="top" constant="132" id="24r-eM-qhP"/>
+                                    <constraint firstItem="WFW-Ps-ENs" firstAttribute="top" secondItem="uk3-sL-lVC" secondAttribute="top" constant="33" id="Bzb-gR-k01"/>
+                                    <constraint firstAttribute="width" constant="432" id="GhM-o6-a7I"/>
+                                    <constraint firstItem="Dqn-om-IHl" firstAttribute="leading" secondItem="G1t-1v-GWZ" secondAttribute="trailing" constant="-176" id="HsC-aI-UC4"/>
+                                    <constraint firstItem="Dqn-om-IHl" firstAttribute="top" secondItem="uk3-sL-lVC" secondAttribute="top" constant="235" id="Iac-Gn-mhj"/>
+                                    <constraint firstItem="Dqn-om-IHl" firstAttribute="leading" secondItem="uk3-sL-lVC" secondAttribute="leading" constant="140" id="JTR-wo-6yS"/>
+                                    <constraint firstItem="J3D-zn-u2H" firstAttribute="leading" secondItem="WFW-Ps-ENs" secondAttribute="trailing" constant="162" id="KHh-5J-V21"/>
+                                    <constraint firstAttribute="trailing" secondItem="G1t-1v-GWZ" secondAttribute="trailing" constant="116" id="ZiS-5S-0vG"/>
+                                    <constraint firstItem="WFW-Ps-ENs" firstAttribute="leading" secondItem="uk3-sL-lVC" secondAttribute="leading" constant="8" id="l4w-eV-ind"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dqn-om-IHl" secondAttribute="trailing" constant="139" id="qwY-EZ-DK8"/>
+                                    <constraint firstAttribute="height" constant="317" id="uVr-cn-4Do"/>
+                                    <constraint firstItem="J3D-zn-u2H" firstAttribute="top" secondItem="uk3-sL-lVC" secondAttribute="top" constant="33" id="v2L-C1-yaD"/>
+                                    <constraint firstItem="G1t-1v-GWZ" firstAttribute="leading" secondItem="uk3-sL-lVC" secondAttribute="leading" constant="117" id="ypZ-qy-Iyh"/>
+                                    <constraint firstAttribute="trailing" secondItem="J3D-zn-u2H" secondAttribute="trailing" constant="8" id="zTn-EG-oQ7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uk3-sL-lVC" firstAttribute="top" secondItem="dM5-73-8if" secondAttribute="bottom" constant="122" id="0Ej-8s-as6"/>
+                            <constraint firstAttribute="centerX" secondItem="Fwu-I9-Ha8" secondAttribute="centerX" id="8RF-V5-A98"/>
+                            <constraint firstItem="Fwu-I9-Ha8" firstAttribute="top" secondItem="dM5-73-8if" secondAttribute="bottom" constant="-20" id="BSq-Nd-0eX"/>
+                            <constraint firstItem="Fwu-I9-Ha8" firstAttribute="bottom" secondItem="Idh-t2-TyW" secondAttribute="top" id="IU8-Uw-7y9"/>
+                            <constraint firstItem="Fwu-I9-Ha8" firstAttribute="leading" secondItem="RDn-lj-jQP" secondAttribute="leadingMargin" constant="-16" id="NSw-ro-Mco"/>
+                            <constraint firstAttribute="centerY" secondItem="Fwu-I9-Ha8" secondAttribute="centerY" id="VBT-do-tqz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fwu-I9-Ha8" secondAttribute="trailing" constant="-16" id="aga-6h-evg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uk3-sL-lVC" secondAttribute="trailing" constant="68" id="dSu-gz-Wfm"/>
+                            <constraint firstItem="uk3-sL-lVC" firstAttribute="leading" secondItem="RDn-lj-jQP" secondAttribute="leadingMargin" constant="68" id="jtN-Zn-OA6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G3v-SI-Vt7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1783" y="337"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="CTa-Hj-p8U">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AGA-SY-cp5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2EU-A6-MX5">
+                    <navigationBar key="navigationBar" alpha="0.14999999999999999" contentMode="scaleToFill" id="2EU-A6-MX5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -162,5 +309,6 @@
     </scenes>
     <resources>
         <image name="CellBorderV1.png" width="783" height="440"/>
+        <image name="settings" width="25" height="25"/>
     </resources>
 </document>
