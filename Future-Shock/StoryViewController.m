@@ -8,6 +8,7 @@
 
 #import "StoryViewController.h"
 #import "RoundLoader.h"
+#import "SettingsViewController.h"
 
 @interface StoryViewController ()
 
@@ -25,6 +26,8 @@
     
     UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FSBackgroundAlpha1.png"]];
     [tempImageView setFrame:self.tableView.frame];
+    
+    self.navigationController.navigationBar.translucent = YES;
 
     self.tableView.backgroundView = tempImageView;
 //    self.tableView.layoutMargins = UIEdgeInsetsZero;
@@ -48,6 +51,15 @@
         
         [[UIApplication sharedApplication] scheduleLocalNotification:notification];
     }    
+    
+}
+- (IBAction)settingButtonClicked:(id)sender {
+    SettingsViewController *settingsViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"settings"];
+    [self addChildViewController:settingsViewController];
+    [self.view addSubview:settingsViewController.view];
+    [settingsViewController didMoveToParentViewController:self];
+    settingsViewController.view.alpha = 1.0;
+    
     
 }
 
