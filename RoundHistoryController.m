@@ -10,4 +10,21 @@
 
 @implementation RoundHistoryController
 
++ (RoundHistoryController *)sharedInstance {
+    
+    static RoundHistoryController *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[RoundHistoryController alloc] init];
+    });
+    return sharedInstance;
+}
+
+- (void)addChoicesMade
+
+//method to add messages via choicesmade
+- (NSArray *)persistedMessages:()
+
+
+
 @end

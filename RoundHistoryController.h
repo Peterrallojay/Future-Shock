@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ChoiceHistory.h"
 
 @interface RoundHistoryController : NSObject
+
+@property (strong, nonatomic) NSArray *choiceHistory;
+@property (strong, nonatomic) NSArray *roundsUserTraversed;
 
 @end

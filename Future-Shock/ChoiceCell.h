@@ -18,17 +18,12 @@
 @interface ChoiceCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIButton *rightChoiceButton;
 @property (weak, nonatomic) IBOutlet UIButton *leftChoiceButton;
-
-
 @property (weak, nonatomic) id<ChoiceButtonTableViewCellDelegate> delegate;
-
+@property (assign, nonatomic) NSInteger choiceIdentifier;
 @end
 
 @protocol ChoiceButtonTableViewCellDelegate <NSObject>
-
 @required
-
 - (void)leftButtonTapped:(ChoiceCell *)cell;
 - (void)rightButtonTapped:(ChoiceCell *)cell;
-
 @end

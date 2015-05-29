@@ -10,12 +10,15 @@
 #import "RoundLoader.h"
 #import "MessageCell.h"
 #import "RoundServer.h"
+#import "ChoiceCell.h"
 
 @import UIKit;
 
 @interface StoryTableViewDataSource : NSObject <UITableViewDataSource>
-@property NSInteger totalNumberOfCells;
 
+@property NSInteger totalNumberOfCells;
 @property (strong, nonatomic) Round *round;
+- (Round *)roundFromChoiceIdentifier:(NSInteger)choiceID;
+- (void)registerTableView:(UITableView *)tableView;
 
 @end
