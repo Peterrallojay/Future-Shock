@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "ChoiceHistory.h"
+#import "Round.h"
+
 
 @interface RoundHistoryController : NSObject
 

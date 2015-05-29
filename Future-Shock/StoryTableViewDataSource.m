@@ -84,7 +84,7 @@ static NSString * const choiceCellID = @"choiceCellID";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[(Round *)([RoundServer allRounds][section]) messages] count] + 1;
+    return [[(Round *)[RoundServer allRounds][section] messages] count] + 1;
     //return [RoundServer allmessagesForRound:(Round *)];
 }
 
@@ -97,7 +97,6 @@ static NSString * const choiceCellID = @"choiceCellID";
     Round *destinationRound = ((Choice *)[self.round.choices objectAtIndex:choiceID]).destinationRound;
     return destinationRound;
 }
-
 
 -(void)leftButtonTapped:(ChoiceCell *)cell {
     [self addRoundToStoryTableView:[self roundFromChoiceIdentifier:cell.choiceIdentifier]];
@@ -112,6 +111,8 @@ static NSString * const choiceCellID = @"choiceCellID";
 //        [self.tableView insertRowsAtIndexPaths:<#(NSArray *)#> withRowAnimation:UITableViewAnimation];
 //    }
 //    [self.tableView insertRowsAtIndexPaths:<#(NSArray *)#> withRowAnimation:UITableViewAnimation];
+        
+        
 }
 }
 

@@ -11,6 +11,7 @@
 #import "MessageCell.h"
 #import "RoundServer.h"
 #import "ChoiceCell.h"
+#import "ChoiceHistory.h"
 
 @import UIKit;
 

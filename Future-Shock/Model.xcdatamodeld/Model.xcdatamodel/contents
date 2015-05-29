@@ -8,7 +8,7 @@
     </entity>
     <entity name="ChoiceHistory" representedClassName="ChoiceHistory" syncable="YES">
         <attribute name="choiceMade" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="round" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Round" syncable="YES"/>
+        <relationship name="round" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Round" inverseName="choiceHistory" inverseEntity="Round" syncable="YES"/>
     </entity>
     <entity name="Message" representedClassName="Message" syncable="YES">
         <attribute name="distanceDelay" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -18,14 +18,15 @@
     </entity>
     <entity name="Round" representedClassName="Round" syncable="YES">
         <attribute name="identifier" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="choiceHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChoiceHistory" inverseName="round" inverseEntity="ChoiceHistory" syncable="YES"/>
         <relationship name="choices" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Choice" inverseName="round" inverseEntity="Choice" syncable="YES"/>
         <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Message" inverseName="round" inverseEntity="Message" syncable="YES"/>
         <relationship name="sourceChoice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Choice" inverseName="destinationRound" inverseEntity="Choice" syncable="YES"/>
     </entity>
     <elements>
         <element name="Choice" positionX="0" positionY="0" width="128" height="105"/>
-        <element name="Message" positionX="0" positionY="0" width="128" height="105"/>
-        <element name="Round" positionX="0" positionY="0" width="128" height="105"/>
         <element name="ChoiceHistory" positionX="9" positionY="36" width="128" height="75"/>
+        <element name="Message" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="Round" positionX="0" positionY="0" width="128" height="120"/>
     </elements>
 </model>

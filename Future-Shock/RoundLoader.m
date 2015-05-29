@@ -76,7 +76,7 @@ static NSString const *textKey = @"text";
     
     Round *round = [NSEntityDescription insertNewObjectForEntityForName:@"Round" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
     
-    round.identifier = dictionary[@"indentifier"];
+    round.identifier = dictionary[@"identifier"];
     
     // set up messages
     
