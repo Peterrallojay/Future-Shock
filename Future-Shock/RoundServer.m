@@ -16,10 +16,48 @@
 
 @implementation RoundServer
 
+@synthesize currentRound = _currentRound;
+
++ (RoundServer *)sharedInstance {
+    
+    static RoundServer *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[RoundServer alloc] init];
+        
+    });
+    return sharedInstance;
+}
+
+-(int)currentRound {
+    NSNumber *returnedNumber = [[NSUserDefaults standardUserDefaults] objectForKey:@"currentRound"];
+    _currentRound = [returnedNumber intValue];
+    return _currentRound;
+}
+
+-(void)addNewRound {
+    self.currentRound++;
+    NSNumber *conversionNumber = [[NSNumber alloc]initWithInt:self.currentRound];
+    [[NSUserDefaults standardUserDefaults] setObject:conversionNumber forKey:@"currentRound"];
+}
+
 + (NSArray *)allRounds {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Round"];
+    NSArray *arrayOfRounds = [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:nil];
     
-    return [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    NSArray *sortedArray = [[RoundServer sharedInstance] sortThisArray:arrayOfRounds];
+    
+    NSLog(@"%@", arrayOfRounds);
+    return sortedArray;
+}
+
+-(NSArray *)sortThisArray:(NSArray *)array
+{
+    //possible problem = fetch takes too long.
+    NSLog(@"%@",array);
+    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"identifier" ascending:YES];
+    NSArray *sortedArray = [array sortedArrayUsingDescriptors:@[descriptor]];
+    return sortedArray;
 }
 
 //+ (NSArray *)allmessagesForRound:(Round *)round {
