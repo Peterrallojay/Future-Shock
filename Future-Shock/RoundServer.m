@@ -94,14 +94,12 @@
     return NO;
 }
 //gives next round based on completed choice
-//- (Round*) completedRound:(Round*)round withChoice:(Choice *)choice {
-//    
-//    
-////    if ([self isRoundComplete:round]) {
-////        if (choice == ) {
-////            <#statements#>
-////        }
-////    }
-//}
+- (Round *) completedRound:(Round*)round withChoice:(Choice *)choice {
+   
+    [[RoundHistoryController sharedInstance] addChoicesMade:choice withRound:choice.destinationRound];
+    
+    return [[RoundLoader sharedInstance] roundFromRoundIdentifier:[choice.identifier integerValue]];
+    
+}
 
 @end

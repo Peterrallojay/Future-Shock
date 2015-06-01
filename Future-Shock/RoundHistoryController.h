@@ -13,8 +13,10 @@
 
 @interface RoundHistoryController : NSObject
 
-@property (strong, nonatomic) NSArray *choiceHistory;
-@property (strong, nonatomic) NSArray *roundsUserTraversed;
+@property (strong, nonatomic, readonly) NSArray *choiceHistory;
+
+- (void)addChoicesMade:(Choice *)choicemade withRound:(Round *)round;
+
 + (RoundHistoryController *)sharedInstance; //DD added
 
 @end

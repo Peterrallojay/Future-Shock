@@ -10,6 +10,7 @@
 #import "Round.h"
 #import "Choice.h"
 #import "RoundLoader.h"
+#import "RoundHistoryController.h"
 
 @interface RoundServer : NSObject
 

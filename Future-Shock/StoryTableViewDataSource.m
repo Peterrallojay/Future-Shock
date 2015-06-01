@@ -58,13 +58,13 @@ static NSString * const choiceCellID = @"choiceCellID";
 @implementation StoryTableViewDataSource
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return [RoundHistoryController sharedInstance].roundsUserTraversed.count +1;
+    return [RoundHistoryController sharedInstance].choiceHistory.count;
 }
 
 
 //getting data from round
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSArray *roundsInTable = [RoundHistoryController sharedInstance].roundsUserTraversed;
+    NSArray *roundsInTable = [RoundHistoryController sharedInstance].choiceHistory;
     UITableViewCell *cell;
     Round *roundForSection =(Round *)roundsInTable[indexPath.section];
     cell = [tableView dequeueReusableCellWithIdentifier:messageCellID];
@@ -72,6 +72,7 @@ static NSString * const choiceCellID = @"choiceCellID";
     UIImageView *borderImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlackBorder.png"]];
     ((MessageCell *)cell).messageTextBorder = borderImageView;
     ((MessageCell *)cell).messageLabel.text = message.text;
+    
 //    }
 //    if ([roundForSection messages].count > indexPath.row) {
 //        cell = [tableView dequeueReusableCellWithIdentifier:messageCellID];
@@ -92,10 +93,11 @@ static NSString * const choiceCellID = @"choiceCellID";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"Loading row from section %ld. Current round history:%@",(long)section,[RoundHistoryController sharedInstance].roundsUserTraversed);
-    return ((Round *)[RoundHistoryController sharedInstance].roundsUserTraversed[section]).messages.count;
-//    return [[(Round *)[RoundServer allRounds][section] messages] count] + 1;
-    //return [RoundServer allmessagesForRound:(Round *)];
+    
+    ChoiceHistory *history = [[RoundHistoryController sharedInstance].choiceHistory objectAtIndex:section];
+    
+    return history.round.messages.count;
+
 }
 
 
@@ -113,8 +115,10 @@ static NSString * const choiceCellID = @"choiceCellID";
     [cell.leftChoiceButton setHighlighted:YES];
     [cell.rightChoiceButton setEnabled:NO];
     NSLog(@"Adding round from left button...");
-    NSLog(@"Destination Round Identifier: %@",((Choice *)((Round *)([RoundServer allRounds] [[RoundServer sharedInstance].currentRound])).choices[0]).destinationRound);
-    [self addToTableViewStartingAtSection:0 withRound:((Choice *)((Round *)([RoundServer allRounds] [[RoundServer sharedInstance].currentRound])).choices[0]).destinationRound];
+    
+    Round *currentRound = [[RoundHistoryController sharedInstance].choiceHistory lastObject];
+    
+    [[RoundServer sharedInstance] completedRound:currentRound withChoice:currentRound.choices[0]];
     
 }
 
@@ -123,8 +127,10 @@ static NSString * const choiceCellID = @"choiceCellID";
     [cell.rightChoiceButton setHighlighted:YES];
     [cell.leftChoiceButton setEnabled:NO];
     NSLog(@"Adding round from right button...");
-    NSLog(@"Destination Round Identifier: %@",((Choice *)((Round *)([RoundServer allRounds] [[RoundServer sharedInstance].currentRound])).choices[1]).destinationRound.choices);
-    [self addToTableViewStartingAtSection:2 withRound:((Choice *)((Round *)([RoundServer allRounds] [[RoundServer sharedInstance].currentRound])).choices[1]).destinationRound];
+    
+    Round *currentRound = [[RoundHistoryController sharedInstance].choiceHistory lastObject];
+    
+    [[RoundServer sharedInstance] completedRound:currentRound withChoice:currentRound.choices[1]];
 }
 
 - (void)addToTableViewStartingAtSection:(NSInteger)section withRound:(Round *)round {

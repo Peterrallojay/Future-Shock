@@ -19,8 +19,6 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[RoundHistoryController alloc] init];
-        sharedInstance.roundsUserTraversed = [sharedInstance loadFirstRoundIfNeeded];
-        
     });
     return sharedInstance;
 }
@@ -34,7 +32,6 @@
     
     NSMutableArray *allChoicesMutable = [allChoices mutableCopy];
     
-    //NSMutableArray *sortedArray = [[NSMutableArray alloc] init];
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]initWithKey:@"dateCreatedAt" ascending:YES];
     
@@ -42,46 +39,19 @@
     
     allChoices = allChoicesMutable;
     
-    
-    
-    
     return allChoices;
     
 }
 
-- (NSArray *)loadFirstRoundIfNeeded {
-    NSMutableArray *mutableRoundsUserTraversed = [self.roundsUserTraversed mutableCopy];
-    
-    //adds first round here:
-    [mutableRoundsUserTraversed addObject:[[RoundLoader sharedInstance] roundFromRoundIdentifier:0]];
-    
-    for (ChoiceHistory *choiceHistory in self.choiceHistory) {
-        
-        //supposed to add rounds to roundsUserTraversed array based on choiceHistroy objects
-        
-        int choiceMadeIndex = [choiceHistory.choiceMade intValue];
-        Choice *choiceMade = [choiceHistory.round.choices objectAtIndex:choiceMadeIndex];
-        [mutableRoundsUserTraversed addObject:choiceMade.destinationRound];
-    }
-    
-    self.roundsUserTraversed = mutableRoundsUserTraversed;
-    NSLog(@"Rounds user traversed: %@",self.roundsUserTraversed);
-    [self save];
-    return self.roundsUserTraversed;
-}
-
-
-- (void)addChoicesMade:(NSNumber *)choicemade withRound:(Round *)round {
+- (void)addChoicesMade:(Choice *)choicemade withRound:(Round *)round {
     //record how many choices were made by user
     
     ChoiceHistory *choiceHistoryObj = [NSEntityDescription insertNewObjectForEntityForName:@"ChoiceHistory" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
-    
     
     choiceHistoryObj.choiceMade = choicemade;
     choiceHistoryObj.round = round;
     
     [self save];
-    
 }
 
 - (void)save
