@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		750EC5FD1B17A67D0056C069 /* ChoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 750EC5FC1B17A67D0056C069 /* ChoiceCell.m */; };
 		7524C3311B0FB1D900B5A31B /* RoundServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7524C3301B0FB1D900B5A31B /* RoundServer.m */; };
+		756A56951B1CFF1500FCE8F2 /* Choice.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A56941B1CFF1500FCE8F2 /* Choice.m */; };
+		756A56981B1CFF1500FCE8F2 /* ChoiceHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A56971B1CFF1500FCE8F2 /* ChoiceHistory.m */; };
 		757183731B18D2DC00750490 /* Settings-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 757183721B18D2DC00750490 /* Settings-50.png */; };
 		757183761B18D43900750490 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 757183751B18D43900750490 /* SettingsViewController.m */; };
 		757183821B192BB500750490 /* RoundHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 757183811B192BB500750490 /* RoundHistoryController.m */; };
-		757183891B192BC900750490 /* Choice.m in Sources */ = {isa = PBXBuildFile; fileRef = 757183841B192BC900750490 /* Choice.m */; };
-		7571838A1B192BC900750490 /* ChoiceHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 757183861B192BC900750490 /* ChoiceHistory.m */; };
 		7571838B1B192BC900750490 /* Round.m in Sources */ = {isa = PBXBuildFile; fileRef = 757183881B192BC900750490 /* Round.m */; };
 		757F5B961B0A96150046D37D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F5B951B0A96150046D37D /* main.m */; };
 		757F5B991B0A96150046D37D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 757F5B981B0A96150046D37D /* AppDelegate.m */; };
@@ -86,15 +86,15 @@
 		750EC5FC1B17A67D0056C069 /* ChoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceCell.m; sourceTree = "<group>"; };
 		7524C32F1B0FB1D800B5A31B /* RoundServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundServer.h; sourceTree = "<group>"; };
 		7524C3301B0FB1D900B5A31B /* RoundServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundServer.m; sourceTree = "<group>"; };
+		756A56931B1CFF1500FCE8F2 /* Choice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Choice.h; sourceTree = "<group>"; };
+		756A56941B1CFF1500FCE8F2 /* Choice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Choice.m; sourceTree = "<group>"; };
+		756A56961B1CFF1500FCE8F2 /* ChoiceHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceHistory.h; sourceTree = "<group>"; };
+		756A56971B1CFF1500FCE8F2 /* ChoiceHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceHistory.m; sourceTree = "<group>"; };
 		757183721B18D2DC00750490 /* Settings-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-50.png"; sourceTree = "<group>"; };
 		757183741B18D43900750490 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		757183751B18D43900750490 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		757183801B192BB500750490 /* RoundHistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundHistoryController.h; sourceTree = "<group>"; };
 		757183811B192BB500750490 /* RoundHistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundHistoryController.m; sourceTree = "<group>"; };
-		757183831B192BC900750490 /* Choice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Choice.h; sourceTree = "<group>"; };
-		757183841B192BC900750490 /* Choice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Choice.m; sourceTree = "<group>"; };
-		757183851B192BC900750490 /* ChoiceHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceHistory.h; sourceTree = "<group>"; };
-		757183861B192BC900750490 /* ChoiceHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceHistory.m; sourceTree = "<group>"; };
 		757183871B192BC900750490 /* Round.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Round.h; sourceTree = "<group>"; };
 		757183881B192BC900750490 /* Round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Round.m; sourceTree = "<group>"; };
 		757F5B901B0A96150046D37D /* Future-Shock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Future-Shock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -322,13 +322,13 @@
 			children = (
 				8C69EDCC1B0D8573000012D7 /* Model.xcdatamodeld */,
 				759410961B0D2C5B0092CC3D /* Stack.h */,
-				757183831B192BC900750490 /* Choice.h */,
-				757183841B192BC900750490 /* Choice.m */,
-				757183851B192BC900750490 /* ChoiceHistory.h */,
-				757183861B192BC900750490 /* ChoiceHistory.m */,
+				759410971B0D2C5B0092CC3D /* Stack.m */,
+				756A56961B1CFF1500FCE8F2 /* ChoiceHistory.h */,
+				756A56971B1CFF1500FCE8F2 /* ChoiceHistory.m */,
+				756A56931B1CFF1500FCE8F2 /* Choice.h */,
+				756A56941B1CFF1500FCE8F2 /* Choice.m */,
 				757183871B192BC900750490 /* Round.h */,
 				757183881B192BC900750490 /* Round.m */,
-				759410971B0D2C5B0092CC3D /* Stack.m */,
 				8C69EDD21B0D8A71000012D7 /* Message.h */,
 				8C69EDD31B0D8A71000012D7 /* Message.m */,
 				759410AA1B0D45CE0092CC3D /* story.json */,
@@ -505,13 +505,13 @@
 				7594109B1B0D31730092CC3D /* RoundLoader.m in Sources */,
 				757183821B192BB500750490 /* RoundHistoryController.m in Sources */,
 				759410981B0D2C5B0092CC3D /* Stack.m in Sources */,
+				756A56951B1CFF1500FCE8F2 /* Choice.m in Sources */,
 				750EC5FD1B17A67D0056C069 /* ChoiceCell.m in Sources */,
 				757F5B9C1B0A96150046D37D /* StoryViewController.m in Sources */,
 				757F5BF11B0AEB4B0046D37D /* MessageCell.m in Sources */,
+				756A56981B1CFF1500FCE8F2 /* ChoiceHistory.m in Sources */,
 				759410A91B0D3B9A0092CC3D /* StoryTableViewDataSource.m in Sources */,
 				7524C3311B0FB1D900B5A31B /* RoundServer.m in Sources */,
-				757183891B192BC900750490 /* Choice.m in Sources */,
-				7571838A1B192BC900750490 /* ChoiceHistory.m in Sources */,
 				7571838B1B192BC900750490 /* Round.m in Sources */,
 				757F5B991B0A96150046D37D /* AppDelegate.m in Sources */,
 				8C69EDD41B0D8A71000012D7 /* Message.m in Sources */,

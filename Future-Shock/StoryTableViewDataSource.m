@@ -58,7 +58,7 @@ static NSString * const choiceCellID = @"choiceCellID";
 @implementation StoryTableViewDataSource
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return [RoundHistoryController sharedInstance].roundsUserTraversed.count +3;
+    return [RoundHistoryController sharedInstance].roundsUserTraversed.count +1;
 }
 
 
