@@ -61,43 +61,32 @@ static NSString * const choiceCellID = @"choiceCellID";
     return [RoundHistoryController sharedInstance].choiceHistory.count;
 }
 
-
-//getting data from round
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSArray *roundsInTable = [RoundHistoryController sharedInstance].choiceHistory;
+    NSArray *choiceHistoryArray = [RoundHistoryController sharedInstance].choiceHistory;
     UITableViewCell *cell;
-    Round *roundForSection =(Round *)roundsInTable[indexPath.section];
-    cell = [tableView dequeueReusableCellWithIdentifier:messageCellID];
-    Message *message = [roundForSection messages][indexPath.row];
-    UIImageView *borderImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlackBorder.png"]];
-    ((MessageCell *)cell).messageTextBorder = borderImageView;
-    ((MessageCell *)cell).messageLabel.text = message.text;
-    
-//    }
-//    if ([roundForSection messages].count > indexPath.row) {
-//        cell = [tableView dequeueReusableCellWithIdentifier:messageCellID];
-//        Message *message = [roundForSection messages][indexPath.row];
-//        UIImageView *borderImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlackBorder.png"]];
-//        ((MessageCell *)cell).messageTextBorder = borderImageView;
-//        ((MessageCell *)cell).messageLabel.text = message.text;
-//    }
-//    else {
-//        cell = [tableView dequeueReusableCellWithIdentifier:choiceCellID];
-//        [((ChoiceCell *)cell).leftChoiceButton setTitle:[[roundForSection choices][0] text] forState:UIControlStateNormal];
-//        [((ChoiceCell *)cell).rightChoiceButton setTitle:[[roundForSection choices][1] text] forState:UIControlStateNormal];
-//        ((ChoiceCell *)cell).delegate = self;
-//    }
-    
-    //integrate roundstraversed array
+    ChoiceHistory *currentHistory =(ChoiceHistory *)choiceHistoryArray[indexPath.section];
+    Round *currentRound = currentHistory.round;
+    if ([currentRound messages].count > indexPath.row) {
+        Message *message = [currentRound messages][indexPath.row];
+        cell = [tableView dequeueReusableCellWithIdentifier:messageCellID];
+        UIImageView *borderImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlackBorder.png"]];
+        ((MessageCell *)cell).messageTextBorder = borderImageView;
+        ((MessageCell *)cell).messageLabel.text = message.text;
+        NSLog(@"Created Message");
+    } else {
+        cell = [tableView dequeueReusableCellWithIdentifier:choiceCellID];
+        [((ChoiceCell *)cell).leftChoiceButton setTitle:[[currentRound choices][0] text] forState:UIControlStateNormal];
+        [((ChoiceCell *)cell).rightChoiceButton setTitle:[[currentRound choices][1] text] forState:UIControlStateNormal];
+        ((ChoiceCell *)cell).delegate = self;
+        NSLog(@"Created Choice");
+
+    }
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
     ChoiceHistory *history = [[RoundHistoryController sharedInstance].choiceHistory objectAtIndex:section];
-    
-    return history.round.messages.count;
-
+    return history.round.messages.count + 1;
 }
 
 

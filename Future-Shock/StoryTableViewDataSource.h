@@ -20,6 +20,5 @@
 @property NSInteger totalNumberOfCells;
 @property (strong, nonatomic) Round *round;
 - (Round *)roundFromChoiceIdentifier:(NSInteger)choiceID;
-- (void)registerTableView:(UITableView *)tableView;
 
 @end

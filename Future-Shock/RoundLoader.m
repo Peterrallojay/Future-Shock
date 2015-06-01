@@ -40,12 +40,16 @@ static NSString const *textKey = @"text";
     return sharedInstance;
 }
 
+
+//    *** DO WE NEED THIS??? *****
+
+
 //loads JSON dictionary to self
-- (instancetype)initWithJSONDictionary:(NSDictionary *)dictionary {
-    self = [super init];
-    [self loadJSONDictionary:dictionary];
-    return self;
-}
+//- (instancetype)initWithJSONDictionary:(NSDictionary *)dictionary {
+//    self = [super init];
+//    [self loadJSONDictionary:dictionary];
+//    return self;
+//}
 
 //only loads the first time the app is launched and if app is not in background
 - (void)importIfNeeded {
