@@ -15,5 +15,6 @@
 
 @property (strong, nonatomic) NSArray *choiceHistory;
 @property (strong, nonatomic) NSArray *roundsUserTraversed;
++ (RoundHistoryController *)sharedInstance; //DD added
 
 @end

@@ -38,20 +38,15 @@
 
 - (NSArray *)loadFirstRoundIfNeeded {
     NSMutableArray *mutableRoundsUserTraversed = [self.roundsUserTraversed mutableCopy];
-    
     [mutableRoundsUserTraversed addObject:[[RoundLoader sharedInstance] roundFromRoundIdentifier:0]];
-    
     for (ChoiceHistory *choiceHistory in self.choiceHistory) {
-        
         int choiceMadeIndex = [choiceHistory.choiceMade intValue];
-        
         Choice *choiceMade = [choiceHistory.round.choices objectAtIndex:choiceMadeIndex];
-        
         [mutableRoundsUserTraversed addObject:choiceMade.destinationRound];
     }
-    
-    self.roundsUserTraversed = [mutableRoundsUserTraversed copy];
-    
+    self.roundsUserTraversed = mutableRoundsUserTraversed;
+    NSLog(@"Rounds user traversed: %@",self.roundsUserTraversed);
+    [self save];
     return self.roundsUserTraversed;
 }
 

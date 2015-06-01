@@ -47,14 +47,14 @@
     
     NSArray *sortedArray = [[RoundServer sharedInstance] sortThisArray:arrayOfRounds];
     
-    NSLog(@"%@", arrayOfRounds);
+//    NSLog(@"%@", arrayOfRounds);
     return sortedArray;
 }
 
 -(NSArray *)sortThisArray:(NSArray *)array
 {
     //possible problem = fetch takes too long.
-    NSLog(@"%@",array);
+//    NSLog(@"%@",array);
     NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"identifier" ascending:YES];
     NSArray *sortedArray = [array sortedArrayUsingDescriptors:@[descriptor]];
     return sortedArray;
