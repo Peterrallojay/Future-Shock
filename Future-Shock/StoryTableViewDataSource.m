@@ -62,6 +62,7 @@ static NSString * const choiceCellID = @"choiceCellID";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"\n\nWB4: Loading Round Stuff From RHC...");
     NSArray *choiceHistoryArray = [RoundHistoryController sharedInstance].choiceHistory;
     UITableViewCell *cell;
     ChoiceHistory *currentHistory =(ChoiceHistory *)choiceHistoryArray[indexPath.section];
@@ -104,35 +105,38 @@ static NSString * const choiceCellID = @"choiceCellID";
     [cell.leftChoiceButton setEnabled:NO];
     [cell.leftChoiceButton setHighlighted:YES];
     [cell.rightChoiceButton setEnabled:NO];
-    NSLog(@"Adding round from left button...");
+    NSLog(@"TDS: Adding round from left button...");
     
-    Round *currentRound = ((ChoiceHistory *)([[RoundHistoryController sharedInstance].choiceHistory lastObject])).round;
-    [self addToTableViewStartingAtSection:[RoundHistoryController sharedInstance].choiceHistory.count withRound:currentRound];
-    [[RoundServer sharedInstance] completedRound:currentRound withChoice:currentRound.choices[0]];
+    ChoiceHistory *choiceHistory = [RoundHistoryController sharedInstance].choiceHistory.lastObject;
     
+    [self addToTableViewStartingAtSection:[RoundHistoryController sharedInstance].choiceHistory.count withRound:choiceHistory.round];
+    [[RoundServer sharedInstance] completedRound:choiceHistory.round withChoice:choiceHistory.round.choices[0]];
 }
 
 -(void)rightButtonTapped:(ChoiceCell *)cell {
     [cell.rightChoiceButton setEnabled:NO];
     [cell.rightChoiceButton setHighlighted:YES];
     [cell.leftChoiceButton setEnabled:NO];
-    NSLog(@"Adding round from right button...");
+    NSLog(@"TDS: Adding round from right button...");
     
-    Round *currentRound = ((ChoiceHistory *)([[RoundHistoryController sharedInstance].choiceHistory lastObject])).round;
-    [self addToTableViewStartingAtSection:[RoundHistoryController sharedInstance].choiceHistory.count withRound:currentRound];
-    [[RoundServer sharedInstance] completedRound:currentRound withChoice:currentRound.choices[1]];
+    ChoiceHistory *choiceHistory = [RoundHistoryController sharedInstance].choiceHistory.lastObject;
+    
+    [self addToTableViewStartingAtSection:[RoundHistoryController sharedInstance].choiceHistory.count withRound:choiceHistory.round];
+    [[RoundServer sharedInstance] completedRound:choiceHistory.round withChoice:choiceHistory.round.choices[0]];
 }
 
 - (void)addToTableViewStartingAtSection:(NSInteger)section withRound:(Round *)round {
     NSMutableArray *arrayOfIndexPaths = [[NSMutableArray alloc] init];
     for (int messageCount = 0; messageCount <= round.messages.count; messageCount++) {
-        NSLog(@"looping");
+        NSLog(@"TDS: Adding message to indexpath array...");
         NSIndexPath *pathForCell = [NSIndexPath indexPathForRow:messageCount inSection:section];
         [arrayOfIndexPaths addObject:pathForCell];
     }
+    [self.tableView beginUpdates];
     [self.tableView insertRowsAtIndexPaths:arrayOfIndexPaths withRowAnimation:UITableViewRowAnimationBottom];
+    [self.tableView endUpdates];
     [self.tableView reloadData];
-    NSLog(@"Round added.");
+    NSLog(@"TDS: Round added.");
     
 //    }
 //    [self.tableView insertRowsAtIndexPaths: withRowAnimation:UITableViewAnimation];

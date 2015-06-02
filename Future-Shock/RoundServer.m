@@ -53,8 +53,7 @@
 
 -(NSArray *)sortThisArray:(NSArray *)array
 {
-    //possible problem = fetch takes too long.
-//    NSLog(@"%@",array);
+    NSLog(@"\n\nWB2: Loading Rounds Array...");
     NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"identifier" ascending:YES];
     NSArray *sortedArray = [array sortedArrayUsingDescriptors:@[descriptor]];
     return sortedArray;
@@ -95,10 +94,14 @@
 //}
 //gives next round based on completed choice
 - (Round *) completedRound:(Round*)round withChoice:(Choice *)choice {
-   
+    NSLog(@"\n\nWB3: Adding Round to History Controller...");
     [[RoundHistoryController sharedInstance] addChoicesMade:choice withRound:choice.destinationRound];
     
-    return [[RoundLoader sharedInstance] roundFromRoundIdentifier:[choice.destinationRound.identifier integerValue]];
+    if (!round) {
+        return [[RoundLoader sharedInstance] roundFromRoundIdentifier:1];
+    } else {
+        return choice.destinationRound;
+    }
     
 }
 
