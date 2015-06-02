@@ -30,25 +30,11 @@
     // executed by managed object. go to the stack for the choiceHistory
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"ChoiceHistory"];
     
-    NSArray *allChoices = [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:nil];
-    
-    NSMutableArray *allChoicesMutable = [allChoices mutableCopy];
-    if (allChoicesMutable.count == 0) {
-        ChoiceHistory *firstChoiceHistory = [NSEntityDescription insertNewObjectForEntityForName:@"ChoiceHistory" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
-        firstChoiceHistory.round = [[RoundServer allRounds] firstObject];
-        NSLog(@"RHC: First history object: %@",firstChoiceHistory.round);
-        firstChoiceHistory.choiceCreatedAt = [NSDate date];
-        [allChoicesMutable addObject:firstChoiceHistory];
-        NSLog(@"RHC: Added first choice: %@", allChoicesMutable[0]);
-    }
-    
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]initWithKey:@"choiceCreatedAt" ascending:YES];
     
-    [allChoicesMutable sortUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    fetchRequest.sortDescriptors = @[sortDescriptor];
     
-    allChoices = allChoicesMutable;
-    return allChoices;
-    
+    return [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:nil];
 }
 
 - (void)addChoicesMade:(Choice *)choicemade withRound:(Round *)round {
@@ -56,6 +42,7 @@
     
     ChoiceHistory *choiceHistoryObj = [NSEntityDescription insertNewObjectForEntityForName:@"ChoiceHistory" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
     
+    choiceHistoryObj.choiceCreatedAt = [NSDate date];
     choiceHistoryObj.choiceMade = choicemade;
     choiceHistoryObj.round = round;
     NSLog(@"RHC: Created new history object: %@",choiceHistoryObj);

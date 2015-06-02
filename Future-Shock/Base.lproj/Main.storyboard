@@ -84,7 +84,7 @@
                                                         <action selector="buttonTapped:" destination="RaD-Z7-G2f" eventType="touchUpInside" id="TkC-3L-1b3"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBp-rK-wGz">
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBp-rK-wGz">
                                                     <rect key="frame" x="326" y="28" width="255" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="QFZ-4G-QZK"/>

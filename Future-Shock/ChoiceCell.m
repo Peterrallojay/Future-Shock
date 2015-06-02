@@ -17,15 +17,17 @@ static NSString * const choiceCellID = @"choiceCellID";
 @implementation ChoiceCell
 
 - (IBAction)buttonTapped:(UIButton *)sender {
-    if (sender == self.leftChoiceButton) {
-        [self.delegate leftButtonTapped:self];
-    }
-    else if (sender == self.rightChoiceButton){
-        [self.delegate rightButtonTapped:self];
-    }
+    [self.delegate buttonTappedWithIndex:self.tag andSender:self];
 }
 
-
+- (void)updateWithRound:(Round *)round {
+    
+    Choice *firstChoice = round.choices[0];
+    Choice *secondChoice = round.choices[1];
+    
+    [self.leftChoiceButton setTitle:firstChoice.text forState:UIControlStateNormal];
+    [self.rightChoiceButton setTitle:secondChoice.text forState:UIControlStateNormal];
+}
 
 - (void)awakeFromNib {
     // Initialization code

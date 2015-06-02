@@ -20,10 +20,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *leftChoiceButton;
 @property (weak, nonatomic) id<ChoiceButtonTableViewCellDelegate> delegate;
 @property (assign, nonatomic) NSInteger choiceIdentifier;
+
+- (void)updateWithRound:(Round *)round;
+
 @end
 
 @protocol ChoiceButtonTableViewCellDelegate <NSObject>
 @required
-- (void)leftButtonTapped:(ChoiceCell *)cell;
-- (void)rightButtonTapped:(ChoiceCell *)cell;
+- (void)buttonTappedWithIndex:(NSInteger)index andSender:(ChoiceCell *)cell;
 @end
