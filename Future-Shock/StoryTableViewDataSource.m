@@ -117,8 +117,9 @@ static NSString * const choiceCellID = @"choiceCellID";
     [cell.rightChoiceButton setHighlighted:YES];
     [cell.leftChoiceButton setEnabled:NO];
     NSLog(@"Adding round from right button...");
-    Round *currentRound = [[RoundHistoryController sharedInstance].choiceHistory lastObject];
     
+    Round *currentRound = ((ChoiceHistory *)([[RoundHistoryController sharedInstance].choiceHistory lastObject])).round;
+    [self addToTableViewStartingAtSection:[RoundHistoryController sharedInstance].choiceHistory.count withRound:currentRound];
     [[RoundServer sharedInstance] completedRound:currentRound withChoice:currentRound.choices[1]];
 }
 

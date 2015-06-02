@@ -42,7 +42,7 @@
         NSLog(@"RHC: Added first choice: %@", allChoicesMutable[0]);
     }
     
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]initWithKey:@"dateCreatedAt" ascending:YES];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]initWithKey:@"choiceCreatedAt" ascending:YES];
     
     [allChoicesMutable sortUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     

@@ -16,7 +16,7 @@
 
 @implementation RoundServer
 
-@synthesize currentRound = _currentRound;
+//@synthesize currentRound = _currentRound;
 
 + (RoundServer *)sharedInstance {
     
@@ -29,17 +29,17 @@
     return sharedInstance;
 }
 
--(int)currentRound {
-    NSNumber *returnedNumber = [[NSUserDefaults standardUserDefaults] objectForKey:@"currentRound"];
-    _currentRound = [returnedNumber intValue];
-    return _currentRound;
-}
+//-(int)currentRound {
+//    NSNumber *returnedNumber = [[NSUserDefaults standardUserDefaults] objectForKey:@"currentRound"];
+//    _currentRound = [returnedNumber intValue];
+//    return _currentRound;
+//}
 
--(void)addNewRound {
-    self.currentRound++;
-    NSNumber *conversionNumber = [[NSNumber alloc]initWithInt:self.currentRound];
-    [[NSUserDefaults standardUserDefaults] setObject:conversionNumber forKey:@"currentRound"];
-}
+//-(void)addNewRound {
+//    self.currentRound++;
+//    NSNumber *conversionNumber = [[NSNumber alloc]initWithInt:self.currentRound];
+//    [[NSUserDefaults standardUserDefaults] setObject:conversionNumber forKey:@"currentRound"];
+//}
 
 + (NSArray *)allRounds {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Round"];
@@ -72,33 +72,33 @@
 //    
 //}
 
-- (BOOL)isRoundComplete:(Round *)round
-{
-    NSNumber *completedRoundKey;
-    
-    //PW: NEED logic here to define how to use completed round key.
-    
-    if (round.identifier == completedRoundKey) {
-        
-        //first safely adds the round to completedRounds array
-        NSMutableArray *mutablecompletedRounds = [self.completedRounds mutableCopy];
-        [mutablecompletedRounds addObject:round];
-        
-        self.completedRounds = mutablecompletedRounds;
-        
-        //then returns yes
-        return  YES;
-    }
-    
-    
-    return NO;
-}
+//- (BOOL)isRoundComplete:(Round *)round
+//{
+//    NSNumber *completedRoundKey;
+//    
+//    //PW: NEED logic here to define how to use completed round key.
+//    
+//    if (round.identifier == completedRoundKey) {
+//        
+//        //first safely adds the round to completedRounds array
+//        NSMutableArray *mutablecompletedRounds = [self.completedRounds mutableCopy];
+//        [mutablecompletedRounds addObject:round];
+//        
+//        self.completedRounds = mutablecompletedRounds;
+//        
+//        //then returns yes
+//        return  YES;
+//    }
+//    
+//    
+//    return NO;
+//}
 //gives next round based on completed choice
 - (Round *) completedRound:(Round*)round withChoice:(Choice *)choice {
    
     [[RoundHistoryController sharedInstance] addChoicesMade:choice withRound:choice.destinationRound];
     
-    return [[RoundLoader sharedInstance] roundFromRoundIdentifier:[choice.identifier integerValue]];
+    return [[RoundLoader sharedInstance] roundFromRoundIdentifier:[choice.destinationRound.identifier integerValue]];
     
 }
 
