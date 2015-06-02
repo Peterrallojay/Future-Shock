@@ -7,6 +7,8 @@
 //
 
 #import "RoundLoader.h"
+#import "RoundServer.h"
+#import "RoundHistoryController.h"
 #import "Stack.h"
 
 //NEED CLARIFICATION use this to set static delay based on user local time (if(nighttime){set delay of 8 hours})

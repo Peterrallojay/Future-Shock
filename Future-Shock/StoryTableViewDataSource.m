@@ -72,13 +72,13 @@ static NSString * const choiceCellID = @"choiceCellID";
         UIImageView *borderImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlackBorder.png"]];
         ((MessageCell *)cell).messageTextBorder = borderImageView;
         ((MessageCell *)cell).messageLabel.text = message.text;
-        NSLog(@"Created Message");
+//        NSLog(@"Created Message");
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:choiceCellID];
         [((ChoiceCell *)cell).leftChoiceButton setTitle:[[currentRound choices][0] text] forState:UIControlStateNormal];
         [((ChoiceCell *)cell).rightChoiceButton setTitle:[[currentRound choices][1] text] forState:UIControlStateNormal];
         ((ChoiceCell *)cell).delegate = self;
-        NSLog(@"Created Choice");
+//        NSLog(@"Created Choice");
 
     }
     return cell;
@@ -99,24 +99,24 @@ static NSString * const choiceCellID = @"choiceCellID";
     return destinationRound;
 }
 
--(void)leftButtonTapped:(ChoiceCell *)cell { //DD: Gets currentRound from RoundServer to determine it's choices and sends the destination to addRoundToStoryTableView for loading.
+-(void)leftButtonTapped:(ChoiceCell *)cell {
+    
     [cell.leftChoiceButton setEnabled:NO];
     [cell.leftChoiceButton setHighlighted:YES];
     [cell.rightChoiceButton setEnabled:NO];
     NSLog(@"Adding round from left button...");
     
-    Round *currentRound = [[RoundHistoryController sharedInstance].choiceHistory lastObject];
-    
+    Round *currentRound = ((ChoiceHistory *)([[RoundHistoryController sharedInstance].choiceHistory lastObject])).round;
+    [self addToTableViewStartingAtSection:[RoundHistoryController sharedInstance].choiceHistory.count withRound:currentRound];
     [[RoundServer sharedInstance] completedRound:currentRound withChoice:currentRound.choices[0]];
     
 }
 
--(void)rightButtonTapped:(ChoiceCell *)cell { //DD: Gets currentRound from RoundServer to determine it's choices and sends the destination to addRoundToStoryTableView for loading.
+-(void)rightButtonTapped:(ChoiceCell *)cell {
     [cell.rightChoiceButton setEnabled:NO];
     [cell.rightChoiceButton setHighlighted:YES];
     [cell.leftChoiceButton setEnabled:NO];
     NSLog(@"Adding round from right button...");
-    
     Round *currentRound = [[RoundHistoryController sharedInstance].choiceHistory lastObject];
     
     [[RoundServer sharedInstance] completedRound:currentRound withChoice:currentRound.choices[1]];
@@ -125,6 +125,7 @@ static NSString * const choiceCellID = @"choiceCellID";
 - (void)addToTableViewStartingAtSection:(NSInteger)section withRound:(Round *)round {
     NSMutableArray *arrayOfIndexPaths = [[NSMutableArray alloc] init];
     for (int messageCount = 0; messageCount <= round.messages.count; messageCount++) {
+        NSLog(@"looping");
         NSIndexPath *pathForCell = [NSIndexPath indexPathForRow:messageCount inSection:section];
         [arrayOfIndexPaths addObject:pathForCell];
     }

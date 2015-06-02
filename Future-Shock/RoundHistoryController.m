@@ -8,8 +8,10 @@
 
 #import "RoundHistoryController.h"
 #import "RoundLoader.h"
+#import "RoundServer.h"
 #import "Choice.h"
 #import "Stack.h"
+#import "Round.h"
 
 @implementation RoundHistoryController
 
@@ -25,20 +27,26 @@
 
 -(NSArray *)choiceHistory {
     // create fetch request
-    //executed by managed object. go to the stack for the choiceHistory
+    // executed by managed object. go to the stack for the choiceHistory
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"ChoiceHistory"];
     
     NSArray *allChoices = [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:nil];
     
     NSMutableArray *allChoicesMutable = [allChoices mutableCopy];
-    
+    if (allChoicesMutable.count == 0) {
+        ChoiceHistory *firstChoiceHistory = [NSEntityDescription insertNewObjectForEntityForName:@"ChoiceHistory" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+        firstChoiceHistory.round = [[RoundServer allRounds] firstObject];
+        NSLog(@"RHC: First history object: %@",firstChoiceHistory.round);
+        firstChoiceHistory.choiceCreatedAt = [NSDate date];
+        [allChoicesMutable addObject:firstChoiceHistory];
+        NSLog(@"RHC: Added first choice: %@", allChoicesMutable[0]);
+    }
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]initWithKey:@"dateCreatedAt" ascending:YES];
     
     [allChoicesMutable sortUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     
     allChoices = allChoicesMutable;
-    
     return allChoices;
     
 }
@@ -50,6 +58,7 @@
     
     choiceHistoryObj.choiceMade = choicemade;
     choiceHistoryObj.round = round;
+    NSLog(@"RHC: Created new history object: %@",choiceHistoryObj);
     
     [self save];
 }
