@@ -9,10 +9,12 @@
 #import "StoryViewController.h"
 #import "RoundLoader.h"
 #import "SettingsViewController.h"
+#import "StoryTableViewDataSource.h"
 
 @interface StoryViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) StoryTableViewDataSource *dataSource;
 
 @end
 
@@ -30,6 +32,9 @@
     self.navigationController.navigationBar.translucent = YES;
 
     self.tableView.backgroundView = tempImageView;
+    self.dataSource = [StoryTableViewDataSource new];
+    self.dataSource.tableView = self.tableView;
+    self.tableView.dataSource = self.dataSource;
 //    self.tableView.layoutMargins = UIEdgeInsetsZero;
     
     
@@ -62,6 +67,12 @@
     
     
 }
+
+//SettingsViewController *settingsViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"settings"];
+//[self addChildViewController:settingsViewController];
+//[self.view addSubview:settingsViewController.view];
+//[settingsViewController didMoveToParentViewController:self];
+//settingsViewController.view.alpha = 1.0;
 
 
 //"based on choice, I completed a round... what's next?"
