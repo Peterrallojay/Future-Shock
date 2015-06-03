@@ -63,6 +63,12 @@
     
 }
 
+//SettingsViewController *settingsViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:NULL] instantiateViewControllerWithIdentifier:@"settings"];
+//[self addChildViewController:settingsViewController];
+//[self.view addSubview:settingsViewController.view];
+//[settingsViewController didMoveToParentViewController:self];
+//settingsViewController.view.alpha = 1.0;
+
 
 //"based on choice, I completed a round... what's next?"
 - (void)updateWithRound {
