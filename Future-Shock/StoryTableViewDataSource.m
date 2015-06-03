@@ -51,8 +51,6 @@ static NSString * const choiceCellID = @"choiceCellID";
 
 @interface StoryTableViewDataSource () <ChoiceButtonTableViewCellDelegate>
 
-@property (strong, nonatomic) UITableView *tableView;
-
 @end
 
 @implementation StoryTableViewDataSource
@@ -127,6 +125,8 @@ static NSString * const choiceCellID = @"choiceCellID";
     Round *destinationRound = [[RoundServer sharedInstance] completedRound:round withChoice:round.choices[index]];
     
     [self addRoundToTableView:destinationRound];
+    
+    [self.tableView reloadData];
 }
 
 - (void)addRoundToTableView:(Round *)round {

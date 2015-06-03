@@ -17,6 +17,7 @@
 
 @interface StoryTableViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) UITableView *tableView;
 @property NSInteger totalNumberOfCells;
 @property (strong, nonatomic) Round *round;
 - (Round *)roundFromChoiceIdentifier:(NSInteger)choiceID;

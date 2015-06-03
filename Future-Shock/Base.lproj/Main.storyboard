@@ -35,7 +35,7 @@
                                                         <constraint firstAttribute="width" constant="280" id="wHs-Vh-722"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="11"/>
-                                                    <color key="textColor" red="0.13333334028720856" green="0.59215688705444336" blue="0.22352942824363708" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CellBorderV1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bv3-wo-2hN">
@@ -77,7 +77,7 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="11"/>
                                                     <state key="normal" title="Button">
-                                                        <color key="titleColor" red="0.13333334029999999" green="0.59215688710000003" blue="0.22352942819999999" alpha="1" colorSpace="deviceRGB"/>
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -91,7 +91,7 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="11"/>
                                                     <state key="normal" title="Button">
-                                                        <color key="titleColor" red="0.13333334029999999" green="0.59215688710000003" blue="0.22352942819999999" alpha="1" colorSpace="deviceRGB"/>
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -118,9 +118,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="52N-Jh-3Ji" id="8kF-Rq-kyU"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -144,7 +141,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <customObject id="52N-Jh-3Ji" customClass="StoryTableViewDataSource"/>
             </objects>
             <point key="canvasLocation" x="1092" y="337"/>
         </scene>
@@ -156,7 +152,7 @@
                         <viewControllerLayoutGuide type="top" id="vNm-oB-des"/>
                         <viewControllerLayoutGuide type="bottom" id="wQL-7H-Abu"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Jzv-Mt-wRE">
+                    <view key="view" alpha="0.80000000000000004" contentMode="scaleToFill" id="Jzv-Mt-wRE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
