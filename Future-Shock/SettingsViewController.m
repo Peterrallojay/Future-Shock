@@ -24,6 +24,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)soundButtonTapped:(id)sender {
+    //toggles sound on/off.
+    //button changes from 'Sound On' to 'Sound Off' accordingly
+    
+}
+
+- (IBAction)musicButtonTapped:(id)sender {
+    //toggles music on/off.
+    //button changes from 'Music On' to 'Music Off' accordingly
+    
+    
+}
+
+- (IBAction)notificationSettingsButtonTapped:(id)sender {
+    //pushes summary view controller. tells user what FutureShock is
+    
+    
+}
+
+- (IBAction)rateButtonTapped:(id)sender {
+    //links to app store ratings page
+    
+}
+
+
+
 /*
 #pragma mark - Navigation
 
