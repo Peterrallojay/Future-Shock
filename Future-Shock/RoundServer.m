@@ -95,7 +95,11 @@
 //gives next round based on completed choice
 - (Round *) completedRound:(Round*)round withChoice:(Choice *)choice {
     NSLog(@"\n\nWB3: Adding Round to History Controller...");
-    [[RoundHistoryController sharedInstance] addChoicesMade:choice withRound:choice.destinationRound];
+//    
+//    if (!choice) {
+//        choice = XXXX;
+//    }
+        [[RoundHistoryController sharedInstance] addChoicesMade:choice withRound:choice.destinationRound];
     
     if (!round) {
         return [[RoundLoader sharedInstance] roundFromRoundIdentifier:1];

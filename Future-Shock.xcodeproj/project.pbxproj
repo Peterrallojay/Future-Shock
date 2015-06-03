@@ -238,11 +238,7 @@
 				757183781B19252100750490 /* Settings View */,
 				757183771B1924DF00750490 /* Round Creation */,
 				757F5BEE1B0A9FD60046D37D /* Core Data and Models */,
-				757F5BA01B0A96150046D37D /* Images.xcassets */,
-				757183721B18D2DC00750490 /* Settings-50.png */,
-				75A611651B17818800B0E80A /* CellBorderV1.png */,
-				75A21AE51B16E7EE0044E9E1 /* BlackBorder.png */,
-				75A21AE31B16D5A20044E9E1 /* FSBackgroundAlpha1.png */,
+				8CC7DB0B1B1E7358003A62A4 /* Images */,
 				757F5BA21B0A96150046D37D /* LaunchScreen.xib */,
 				757F5B931B0A96150046D37D /* Supporting Files */,
 			);
@@ -334,6 +330,18 @@
 				759410AA1B0D45CE0092CC3D /* story.json */,
 			);
 			name = "Core Data and Models";
+			sourceTree = "<group>";
+		};
+		8CC7DB0B1B1E7358003A62A4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				757F5BA01B0A96150046D37D /* Images.xcassets */,
+				757183721B18D2DC00750490 /* Settings-50.png */,
+				75A611651B17818800B0E80A /* CellBorderV1.png */,
+				75A21AE51B16E7EE0044E9E1 /* BlackBorder.png */,
+				75A21AE31B16D5A20044E9E1 /* FSBackgroundAlpha1.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
