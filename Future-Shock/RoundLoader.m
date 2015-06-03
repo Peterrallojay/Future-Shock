@@ -108,6 +108,7 @@ static NSString const *textKey = @"text";
         
         NSInteger destinationRoundIdentifier = [choiceDictionary[@"destination"] integerValue];
         
+        
         choice.destinationRound = [self roundFromRoundIdentifier:destinationRoundIdentifier];
     }
     

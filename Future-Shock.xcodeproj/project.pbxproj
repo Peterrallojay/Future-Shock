@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		644FF2D11B1FB7870053973F /* story.json in Resources */ = {isa = PBXBuildFile; fileRef = 644FF2D01B1FB7870053973F /* story.json */; };
 		750EC5FD1B17A67D0056C069 /* ChoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 750EC5FC1B17A67D0056C069 /* ChoiceCell.m */; };
 		7524C3311B0FB1D900B5A31B /* RoundServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7524C3301B0FB1D900B5A31B /* RoundServer.m */; };
 		756A56951B1CFF1500FCE8F2 /* Choice.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A56941B1CFF1500FCE8F2 /* Choice.m */; };
@@ -35,7 +36,6 @@
 		7594109B1B0D31730092CC3D /* RoundLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7594109A1B0D31730092CC3D /* RoundLoader.m */; };
 		7594109D1B0D31B20092CC3D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7594109C1B0D31B20092CC3D /* CoreData.framework */; };
 		759410A91B0D3B9A0092CC3D /* StoryTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 759410A81B0D3B9A0092CC3D /* StoryTableViewDataSource.m */; };
-		759410AB1B0D45CE0092CC3D /* story.json in Resources */ = {isa = PBXBuildFile; fileRef = 759410AA1B0D45CE0092CC3D /* story.json */; };
 		75A21AE41B16D5A20044E9E1 /* FSBackgroundAlpha1.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A21AE31B16D5A20044E9E1 /* FSBackgroundAlpha1.png */; };
 		75A21AE61B16E7EE0044E9E1 /* BlackBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A21AE51B16E7EE0044E9E1 /* BlackBorder.png */; };
 		75A611661B17818800B0E80A /* CellBorderV1.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A611651B17818800B0E80A /* CellBorderV1.png */; };
@@ -82,6 +82,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		644FF2D01B1FB7870053973F /* story.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = story.json; sourceTree = "<group>"; };
 		750EC5FB1B17A6750056C069 /* ChoiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceCell.h; sourceTree = "<group>"; };
 		750EC5FC1B17A67D0056C069 /* ChoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceCell.m; sourceTree = "<group>"; };
 		7524C32F1B0FB1D800B5A31B /* RoundServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundServer.h; sourceTree = "<group>"; };
@@ -133,7 +134,6 @@
 		7594109C1B0D31B20092CC3D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		759410A71B0D3B9A0092CC3D /* StoryTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryTableViewDataSource.h; sourceTree = "<group>"; };
 		759410A81B0D3B9A0092CC3D /* StoryTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryTableViewDataSource.m; sourceTree = "<group>"; };
-		759410AA1B0D45CE0092CC3D /* story.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = story.json; sourceTree = "<group>"; };
 		75A21AE31B16D5A20044E9E1 /* FSBackgroundAlpha1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FSBackgroundAlpha1.png; sourceTree = "<group>"; };
 		75A21AE51B16E7EE0044E9E1 /* BlackBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlackBorder.png; sourceTree = "<group>"; };
 		75A611651B17818800B0E80A /* CellBorderV1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellBorderV1.png; sourceTree = "<group>"; };
@@ -327,7 +327,7 @@
 				757183881B192BC900750490 /* Round.m */,
 				8C69EDD21B0D8A71000012D7 /* Message.h */,
 				8C69EDD31B0D8A71000012D7 /* Message.m */,
-				759410AA1B0D45CE0092CC3D /* story.json */,
+				644FF2D01B1FB7870053973F /* story.json */,
 			);
 			name = "Core Data and Models";
 			sourceTree = "<group>";
@@ -470,10 +470,10 @@
 				757F5B9F1B0A96150046D37D /* Main.storyboard in Resources */,
 				75A21AE41B16D5A20044E9E1 /* FSBackgroundAlpha1.png in Resources */,
 				75A611661B17818800B0E80A /* CellBorderV1.png in Resources */,
+				644FF2D11B1FB7870053973F /* story.json in Resources */,
 				757F5BA41B0A96150046D37D /* LaunchScreen.xib in Resources */,
 				757F5BA11B0A96150046D37D /* Images.xcassets in Resources */,
 				757183731B18D2DC00750490 /* Settings-50.png in Resources */,
-				759410AB1B0D45CE0092CC3D /* story.json in Resources */,
 				75A21AE61B16E7EE0044E9E1 /* BlackBorder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

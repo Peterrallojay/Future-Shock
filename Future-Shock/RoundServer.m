@@ -99,7 +99,7 @@
 //    if (!choice) {
 //        choice = XXXX;
 //    }
-        [[RoundHistoryController sharedInstance] addChoicesMade:choice withRound:choice.destinationRound];
+    [[RoundHistoryController sharedInstance] addChoicesMade:choice withRound:round];
     
     if (!round) {
         return [[RoundLoader sharedInstance] roundFromRoundIdentifier:1];

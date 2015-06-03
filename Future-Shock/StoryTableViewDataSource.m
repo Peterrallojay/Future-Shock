@@ -119,12 +119,22 @@ static NSString * const choiceCellID = @"choiceCellID";
 - (void)buttonTappedWithIndex:(NSInteger)index andSender:(ChoiceCell *)cell {
     
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-//doesn't the round server give us the rounds, don't we want the round based on the choice made, not the next section? actually i think i figured it out -trm
-    Round *round = [[RoundLoader sharedInstance] roundFromRoundIdentifier:indexPath.section + 1];
     
-    Round *destinationRound = [[RoundServer sharedInstance] completedRound:round withChoice:round.choices[index]];
     
-    [self addRoundToTableView:destinationRound];
+    Round *round;
+    
+    if (((ChoiceHistory *)[RoundHistoryController sharedInstance].choiceHistory[indexPath.section]).round)
+    {
+        round = ((ChoiceHistory *)[RoundHistoryController sharedInstance].choiceHistory[indexPath.section]).round;
+    }
+    else
+    {
+        round = [[RoundLoader sharedInstance] roundFromRoundIdentifier:1];
+    }
+    
+    [[RoundServer sharedInstance] completedRound:round withChoice:round.choices[index]];
+    
+//    [self addRoundToTableView:destinationRound];
     
     [self.tableView reloadData];
 }
