@@ -1,337 +1,3461 @@
- [
-  {
-  "identifier":1,
-  "messages": [
-               {
-               "text": "alpha_build_tachion_device_1288 attempting to connect.",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "Can anyone hear me? Anyone?",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "If you can hear me, respond!",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "Hello? Hello?",
-               "timeDelay":1,
-               "distanceDelay": null
-               }
-               ],
-  "choices": [
-              {
-              "identifier": 1,
-              "text": "Yes, I hear you, who are you?",
-              "destination":2
-              },
-              {
-              "identifier": 2,
-              "text": "Loud and clear, where are you?",
-              "destination":3
-              }
-              ]
-  },
-  {
-  "identifier":2,
-  "messages": [
-               {
-               "text": "My name is Ben Jackson. I'm a physicist from zone 6.",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "What zone are you in- I need to calibrate my device to maintain our connection",
-               "timeDelay":1,
-               "distanceDelay": null
-               }
-               ],
-  "choices": [
-              {
-              "identifier": 3,
-              "text": "What zone?",
-              "destination":4
-              },
-              {
-              "identifier": 4,
-              "text": "Um... five!",
-              "destination":5
-              }
-              ]
-  },
-  {
-  "identifier":3,
-  "messages": [
-               {
-               "text": "Well, I'm not really sure.",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "I think I hit my head in the crash",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "There's some blood running down the back of my neck",
-               "timeDelay":1,
-               "distanceDelay": null
-               }
-               ],
-  "choices": [
-              {
-              "identifier": 5,
-              "text": "Ok. Stay calm you need to take care of your injury",
-              "destination":6
-              },
-              {
-              "identifier": 6,
-              "text": "What crash?",
-              "destination":7
-              }
-              ]
-  },
-  {
-  "identifier":4,
-  "messages": [
-               {
-               "text": "What zone? Like your area zone??",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "Area code??",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "...",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "How do you not know what zone you're in?",
-               "timeDelay":1,
-               "distanceDelay": null
-               }
-               ],
-  "choices": [
-              {
-              "identifier": 7,
-              "text": "I guess my zip code is <user_location_zip_code>",
-              "destination":8
-              },
-              {
-              "identifier": 8,
-              "text": "You mean my country?",
-              "destination":8
-              }
-              ]
-  },
-  {
-  "identifier":5,
-  "messages": [
-               {
-               "text": "2015-05-19 10:19:43.7172015-05-19 10:19:43.717",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "Please wait... Acquiring time signal",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "Your signal is weak. Try moving 500 feet in any direction",
-               "timeDelay":1,
-               "distanceDelay": null
-               }
-               ],
-  "choices": [
-              {
-              "identifier": 9,
-              "text": "No",
-              "destination":9
-              },
-              {
-              "identifier": 10,
-              "text": "<location-objective>",
-              "destination":10
-              }
-              ]
-  },
-  {
-  "identifier":6,
-  "messages": [
-               {
-               "text": "Ok- Give me a sec to look around",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "I found some gauze to patch up my head",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "Seems like the bleeding has pretty much stopped",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "Got pretty lucky there...",
-               "timeDelay":1,
-               "distanceDelay": null
-               }
-               ],
-  "choices": [
-              {
-              "identifier": 11,
-              "text": "Who are you",
-              "destination":2
-              },
-              {
-              "identifier": 1000,
-              "text": "stopped",
-              "destination":10
-              }
-              ]
-  },
-  {
-  "identifier":7,
-  "messages": [
-               {
-               "text": "I'm not really sure, I guess my transporter had some issues",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "Getting this fixed is gonna be a hassle",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "Listen. This is important",
-               "timeDelay":1,
-               "distanceDelay": null
-               }
-               ],
-  "choices": [
-              {
-              "identifier": 1000,
-              "text": "STOPPED",
-              "destination":10
-              },
-              {
-              "identifier": 1000,
-              "text": "stopped",
-              "destination":10
-              }
-              ]
-  },
-  {
-  "identifier":8,
-  "messages": [
-               {
-               "text": "Country? Buddy, we haven't had countries in 170 years",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "Where have you been in the last two centuries?",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "My device seems to be malfunctioning",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "It says you're within five yards of me- that can't be right",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "Wait a minute... what year is it?",
-               "timeDelay":1,
-               "distanceDelay": null
-               }
-               ],
-  "choices": [
-              {
-              "identifier": 1000,
-              "text": "STOPPED",
-              "destination":10
-              },
-              {
-              "identifier": 1000,
-              "text": "stopped",
-              "destination":10
-              }
-              ]
-  },
-  {
-  "identifier":9,
-  "messages": [
-               {
-               "text": "No! I need your help",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "I'm stuck here",
-               "timeDelay":1,
-               "distanceDelay": null
-               },
-               {
-               "text": "[Transmission lost]",
-               "timeDelay":1,
-               "distanceDelay": null
-               }
-               ],
-  "choices": [
-              {
-              "identifier": 1000,
-              "text": "STOPPED",
-              "destination":10
-              },
-              {
-              "identifier": 1000,
-              "text": "stopped",
-              "destination":10
-              }
-              ]
-  },
-  {
-  "identifier":10,
-  "messages": [
-               {
-               "text": "Ok, great",
-               "timeDelay":1,
-               "distanceDelay": 1000
-               },
-               {
-               "text": "Now that's a step towards preventing this mess",
-               "timeDelay":1,
-               "distanceDelay": 1000
-               }
-               ],
-  "choices": [
-              {
-              "identifier": 1000,
-              "text": "STOPPED",
-              "destination":10
-              },
-              {
-              "identifier": 1000,
-              "text": "stopped",
-              "destination":10
-              }
-              ]
-  }
-  ]
+[
+    {
+        "identifier": 1,
+        "messages": [
+            {
+                "text": "Hello? Hello?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Testing, testing…",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "If you can hear me, please respond!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 0,
+                "text": " Come in, I hear you!",
+                "destination": 2
+            },
+            {
+                "identifier": 1,
+                "text": " Who are you? ",
+                "destination": 2
+            }
+        ]
+    },
+    {
+        "identifier": 2,
+        "messages": [
+            {
+                "text": "Excellent! It appears to be working!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Excuse the short introduction.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "My name is Riley. I can explain more in a moment, but first I need your zone number first.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Where are you at?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": " prompt location",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 2,
+                "text": " You mean my location?",
+                "destination": 12
+            },
+            {
+                "identifier": 3,
+                "text": " My zone number? ",
+                "destination": 12
+            }
+        ]
+    },
+    {
+        "identifier": 3,
+        "messages": [
+            {
+                "text": "Wait, really?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Are you absolutely sure?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "No way, this can’t be real.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "If you’re from 2015, who’s the President right now?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 4,
+                "text": " Barrack Obama",
+                "destination": 5
+            },
+            {
+                "identifier": 5,
+                "text": " You’re wasting my time. ",
+                "destination": 4
+            }
+        ]
+    },
+    {
+        "identifier": 4,
+        "messages": [
+            {
+                "text": "Believe me, I know that was a strange question.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I just...",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I live in 2157.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I live in your future.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 6,
+                "text": "You’re from the future? ",
+                "destination": 6
+            },
+            {
+                "identifier": 7,
+                "text": " I don’t get it. ",
+                "destination": 6
+            }
+        ]
+    },
+    {
+        "identifier": 5,
+        "messages": [
+            {
+                "text": "...",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Let me look that up...",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Oh my gosh! Oh my gosh!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It worked!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 8,
+                "text": "What worked? ",
+                "destination": 4
+            },
+            {
+                "identifier": 9,
+                "text": "Ok, who are you?",
+                "destination": 6
+            }
+        ]
+    },
+    {
+        "identifier": 6,
+        "messages": [
+            {
+                "text": "I live in the future. Plain and simple.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "...Or more correctly, you live in the past.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’ve been working on antiphone tech for the last five years.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "(An antiphone is short for tachyonic antitelephone, in case you were wondering.)",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "And I may be the first person ever to send messages back through time!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "We’ve just made history!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I can see the headlines now ‘Hacker sends message through time!’",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 10,
+                "text": "Hacker? ",
+                "destination": 8
+            },
+            {
+                "identifier": 11,
+                "text": " Why did you contact me? ",
+                "destination": 9
+            }
+        ]
+    },
+    {
+        "identifier": 7,
+        "messages": [
+            {
+                "text": "Exactly. If we’re close enough I can text you.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "But I can’t even do that very well right now.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "*** Tachyonic sync disrupted. ***",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "*** Attempting tachyonic sync… ***",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "*** Timeline communication synchronized. ***",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "This is wiggin’ out, can you help a buddy out here?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": " prompt notifications ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 12,
+                "text": "Sure! ",
+                "destination": 11
+            },
+            {
+                "identifier": 13,
+                "text": "Um, ok... ",
+                "destination": 11
+            }
+        ]
+    },
+    {
+        "identifier": 8,
+        "messages": [
+            {
+                "text": "Well, I use the term lightly. ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "See, “hacking” refers to things like stealing bank access ID’s and biometric passes.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "What I do is downright treason. ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I got the sketches of the antiphone from the CIA.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Who knows what they were planning on using it for!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 14,
+                "text": "But why me? ",
+                "destination": 9
+            },
+            {
+                "identifier": 15,
+                "text": "You stole a time machine from the CIA?! ",
+                "destination": 10
+            }
+        ]
+    },
+    {
+        "identifier": 9,
+        "messages": [
+            {
+                "text": "You? well, I didn’t choose you for any particular reason. ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "You just happen to have the latest technology for your time.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "More likely you are in the same location of space as I am, just in the past.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "This antiphone communicates through time... Space: not so much. ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "If we get too far away from each other, we’ll probably lose connection.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 16,
+                "text": "So we have to be near each other to text? ",
+                "destination": 7
+            },
+            {
+                "identifier": 17,
+                "text": "Why would you steal a time machine? ",
+                "destination": 10
+            }
+        ]
+    },
+    {
+        "identifier": 10,
+        "messages": [
+            {
+                "text": "First of all, ‘steal’ is a harsh word in 2157. It hurts my feelings! ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Secondly, it’s not a “time machine”, it’s a time phone. ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I can’t come visit you, but I can send messages to you. ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "And I can’t even do that very well right now.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "*** Tachyonic sync disrupted. ***",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "*** Attempting tachyonic sync… ***",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "*** Timeline communication synchronized. ***",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "This is wiggin’ out, can you help a buddy out here?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "prompt notifications",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 18,
+                "text": "Yeah, sure ",
+                "destination": 11
+            },
+            {
+                "identifier": 19,
+                "text": "I guess... ",
+                "destination": 11
+            }
+        ]
+    },
+    {
+        "identifier": 11,
+        "messages": [
+            {
+                "text": "Move around a little bit",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I need to calibrate our devices.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "We can’t lose our connection",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "This might be our only shot..",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 20,
+                "text": "Sure, only shot at what? ",
+                "destination": 13
+            },
+            {
+                "identifier": 21,
+                "text": "Only if you tell me what’s going on",
+                "destination": 13
+            }
+        ]
+    },
+    {
+        "identifier": 12,
+        "messages": [
+            {
+                "text": "Yeah, your “location”. It’s called a zone.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "You did know that, right?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Can you tell me what year it is?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 22,
+                "text": " Yeah, it’s 2015",
+                "destination": 3
+            },
+            {
+                "identifier": 23,
+                "text": " Excuse me? ",
+                "destination": 4
+            }
+        ]
+    },
+    {
+        "identifier": 13,
+        "messages": [
+            {
+                "text": "This may be hard to hear so take a deep breath...",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "We don’t really know any history before 2100. Just bits and pieces",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "From what little information we were able to salvage, we know there were too many people on the planet.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Your time’s world leaders engaged in global resource wars.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Yes, they launched nukes at each other. And yes, everything is scorched for the most part.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "But even more, each side also used different forms of biological warfare.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Must humanoids -err people, were genetically altered. Few by choice, almost all by force.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Now, most people... are not people. At least not physically.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Anoms are still just like you and me on the inside though. Thoughts, feelings, fears.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 24,
+                "text": "anoms?",
+                "destination": 14
+            },
+            {
+                "identifier": 25,
+                "text": "Have you not heard of a history book?",
+                "destination": 15
+            }
+        ]
+    },
+    {
+        "identifier": 14,
+        "messages": [
+            {
+                "text": "Oh, that’s what we call them.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Anoms is short for anomalies. The Despot mandates that all ‘normal’ human survivors call them that",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "He decided to label them with such a scientific term so it’s easier to treat them like lab rats.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "He swears that they are nothing more than beasts that are lower than us in the food chain.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "He thinks the less there are of them, the better we are off.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Which is why he insists we experiment on them for our own benefit.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "He’s evil. He is the reason our world has gotten even worse!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 26,
+                "text": "Tell me more about the Despot",
+                "destination": 16
+            },
+            {
+                "identifier": 27,
+                "text": "So get rid of the Despot",
+                "destination": 17
+            }
+        ]
+    },
+    {
+        "identifier": 15,
+        "messages": [
+            {
+                "text": "Of course I have…. there are none, smart-ass.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "The Despot had all traces of human history and culture destroyed that he didn’t see as  “necessary” ...",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "He’s also why anoms (short for anomalies as he’s labeled them) are treated like lab rats and left to wither away.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "He thinks the less there are of them, the better we are off.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Which is why he insists we murdering or experimenting on them for our own benefit.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "He’s evil. He is the reason our world has gotten even worse!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 28,
+                "text": "Tell me more about The Despot",
+                "destination": 16
+            },
+            {
+                "identifier": 29,
+                "text": "So get rid of the Despot",
+                "destination": 17
+            }
+        ]
+    },
+    {
+        "identifier": 16,
+        "messages": [
+            {
+                "text": "The Despot is the most powerful man on the planet (granted there’s not many of us left)",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "He’s really old, and one of the only survivors that has knowledge from the old world. I think he was a biologist or chemist or something.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "He and his heavily armed gang control a tower - I think people from your time call it a skyscraper.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It is the only thing left that generates large-scale electricity and has a reserve of water.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "That is how he is able to control all usable technology and keep us few survivors still alive.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "In return, he expects us to scavenge or inject anoms with his chemicals.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "He calls it a “necessary hardship”.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 30,
+                "text": "What kind of chemicals?",
+                "destination": 18
+            },
+            {
+                "identifier": 31,
+                "text": "So you make anoms more sick?",
+                "destination": 19
+            }
+        ]
+    },
+    {
+        "identifier": 17,
+        "messages": [
+            {
+                "text": "Ha! I haven’t had a laugh like that in forever. No one can “get rid” of the Despot.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "He is the most powerful man on the planet (granted there’s not many of us left)",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "He’s really old, and one of the only survivors that has knowledge from the old world. I think he was a biologist or chemist or something.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "He and his gang control a tall structure - I think people from your time call it a skyscraper.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It is the only thing left that generates large-scale electricity and has a reserve of water.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "That is how he is able to control all usable technology and keep us few survivors still alive.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "In return, he expects us to scavenge or kill off anoms.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 32,
+                "text": "What kind of chemicals?",
+                "destination": 18
+            },
+            {
+                "identifier": 33,
+                "text": "So you make anoms more sick?",
+                "destination": 19
+            }
+        ]
+    },
+    {
+        "identifier": 18,
+        "messages": [
+            {
+                "text": "They’re experimental antidotes for curing the anoms and the rest of us who will likely become anoms",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "We inject an anom and study him/her for a few weeks (I refuse to refer to them as “it”).",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Then we submit our report to one of the Despot’s cronies for him to review.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "They never work, and cause even more horrible defects to whoever is injected with them",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Except...",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Except for the last anom I injected.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 34,
+                "text": "The antidote worked?",
+                "destination": 20
+            },
+            {
+                "identifier": 35,
+                "text": "You killed the anom?",
+                "destination": 20
+            }
+        ]
+    },
+    {
+        "identifier": 19,
+        "messages": [
+            {
+                "text": "Not by choice! He won’t provide power or water if I don’t.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "They’re experimental antidotes for curing the anoms and the rest of us who will likely become anoms",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "We inject an anom and study him/her for a few weeks (I refuse to refer to them as “it”).",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Then we submit our report to one of the Despot’s cronies for him to review.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "They never work, and cause even more horrible defects to whoever is injected with them",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Except...",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Except for the last anom I injected.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 36,
+                "text": "The antidote worked?",
+                "destination": 20
+            },
+            {
+                "identifier": 37,
+                "text": "You killed the anom?",
+                "destination": 20
+            }
+        ]
+    },
+    {
+        "identifier": 20,
+        "messages": [
+            {
+                "text": "The antidote is healing him. This is the first time in years an anom has responded positively.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I never sent my report for good reason.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Once the Despot finds out he produced a cure he’ll take out most anoms and save only those who he thinks is worthy.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "He fails to realize we need to cure as many anoms as soon as possible to have any chance of saving humanity.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’d tell others, but I only had a sample. The tools to make more of the right antidote is in the Despot’s tower.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m not sure if I can take a chance and just send my report...",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Or try to get the rest of the antidote to heal everyone",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 38,
+                "text": "Get the rest of the antidote",
+                "destination": 21
+            },
+            {
+                "identifier": 39,
+                "text": "Send the report",
+                "destination": 22
+            }
+        ]
+    },
+    {
+        "identifier": 21,
+        "messages": [
+            {
+                "text": "I was hoping you’d say that. ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It’s just…",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I can’t do this by myself.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "There’s so many things that have to go right in order for to pull this off",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I mean, I’m going up against a small army run by a mad scientist.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "This might sound crazy, but I want you to help me get through to the tower.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I know you have no reason to just be there when I need some advice",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "But having someone to talk to when things get tricky will keep me sane.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 40,
+                "text": "I’ll help you",
+                "destination": 25
+            },
+            {
+                "identifier": 41,
+                "text": "I don’t really have the time",
+                "destination": 26
+            }
+        ]
+    },
+    {
+        "identifier": 22,
+        "messages": [
+            {
+                "text": "OK. I’ll send it in right now. ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It usually takes about a day for the files to get processed.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "..... ",
+                "timeDelay": 14400,
+                "distanceDelay": null
+            },
+            {
+                "text": "Someone is at my door this is odd",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m not expecting any visitors",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Do you think I should I answer it?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 42,
+                "text": "Yeah, sure ",
+                "destination": 23
+            },
+            {
+                "identifier": 43,
+                "text": "No, stay away from the windows and be quiet ",
+                "destination": 24
+            }
+        ]
+    },
+    {
+        "identifier": 23,
+        "messages": [
+            {
+                "text": "Strange. I’ve never seen these men before",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I guess that they are here because I found the cure!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "....",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "***Transmission Terminated***",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 44,
+                "text": "RESTART",
+                "destination": 1
+            },
+            {
+                "identifier": 45,
+                "text": "RESTART",
+                "destination": 1
+            }
+        ]
+    },
+    {
+        "identifier": 24,
+        "messages": [
+            {
+                "text": "Ok, I’m going to hide in the closet",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "The knocking won’t stop",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It sounds like there are 2 of them at the door.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "They know that I am in here",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "They keep telling me to open the door",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m getting worried",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "The door hinges are rattling",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "They just broke down the door",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "They are in my house",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I can’t breathe",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "One just stopped right outside of the closet",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "***Transmission Terminated***",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 46,
+                "text": "RESTART",
+                "destination": 1
+            },
+            {
+                "identifier": 47,
+                "text": "RESTART",
+                "destination": 1
+            }
+        ]
+    },
+    {
+        "identifier": 25,
+        "messages": [
+            {
+                "text": "Thank you! If we can get to the antidote you’ll have helped save everyone!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It’ll take a few days to trek to the tower. I’ve never been there.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I guess the best thing to do is round up some supplies.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It’s gonna get dark soon, though",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Right now I can head out to scavenge for a few things.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "But other scavengers tend to get weary if they haven’t found anything all day.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "And let’s just say there can be a lot of cranky (and violent) folks out around sundown.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Or I gather what I have here at home and wait until morning to scavenge",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It’s usually safer in the morning, but I’ve gotten lucky finding tools and stuff before sundown",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 48,
+                "text": "Stay in and wait till morning",
+                "destination": 27
+            },
+            {
+                "identifier": 49,
+                "text": "Scavenge now",
+                "destination": 28
+            }
+        ]
+    },
+    {
+        "identifier": 26,
+        "messages": [
+            {
+                "text": "Oh, I see.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "That’s alright, I’m sure I can figure it out",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I guess I’ll just...go it alone",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 50,
+                "text": "Actually, I’ll help you",
+                "destination": 25
+            },
+            {
+                "identifier": 51,
+                "text": "Right, good luck",
+                "destination": 29
+            }
+        ]
+    },
+    {
+        "identifier": 27,
+        "messages": [
+            {
+                "text": "Alright, I’m going to take it easy for the rest of the evening",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "We have a big day ahead of us tomorrow",
+                "timeDelay": 36000,
+                "distanceDelay": null
+            },
+            {
+                "text": "Oh what a night, I barely slept last night",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I just kept thinking about this burden that I have",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I think its just starting to register in my head",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m going to head out to scavenge now",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Should I stop by the old recycling center a few miles away, it’s in the wrong direction of the tower, but I’ve found some gems there in the past?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Or should I head straight towards the tower and see what I can pick up along the way?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 52,
+                "text": "Recycling center",
+                "destination": 30
+            },
+            {
+                "identifier": 53,
+                "text": "Tower",
+                "destination": 31
+            }
+        ]
+    },
+    {
+        "identifier": 28,
+        "messages": [
+            {
+                "text": "That’s what I was thinking, though I’m a bit hesitant",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Guess I’ll just have to be hyper aware as always.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’ll be in touch. Hopefully I come across a lighter or a kitchen knife or something.",
+                "timeDelay": 14400,
+                "distanceDelay": null
+            },
+            {
+                "text": "Hey you there?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Glad I took your advice cuz I got a good haul!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I found a thing that lets you see super far away. I think people from your time called them a telescope. Wait - no, they’re binoculars!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Also got that lighter I mentioned. I’ll be able to set up my camp fire much easier now",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Whew, I’m beat. I think I need to get some rest",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Though it would be wise to study the routes through the zones",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "If I don’t I might run into the Despot’s checkpoints. Which is where his armed guards are.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 54,
+                "text": "Get some rest",
+                "destination": 32
+            },
+            {
+                "identifier": 55,
+                "text": "Study the routes",
+                "destination": 33
+            }
+        ]
+    },
+    {
+        "identifier": 29,
+        "messages": [
+            {
+                "text": "***Transmission Terminated***",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 56,
+                "text": "RESTART",
+                "destination": 1
+            },
+            {
+                "identifier": 57,
+                "text": "RESTART",
+                "destination": 1
+            }
+        ]
+    },
+    {
+        "identifier": 30,
+        "messages": [
+            {
+                "text": "Good call. I’m going to pack some food for the trip then I’ll head over; I’m kinda excited to see what I can find",
+                "timeDelay": 1800,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m here, but the gate is locked.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I have to hop the fence to get in.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Should I hop it, or wait till the junkyard opens in an hour?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 58,
+                "text": "Wait",
+                "destination": 34
+            },
+            {
+                "identifier": 59,
+                "text": "Hop the fence",
+                "destination": 35
+            }
+        ]
+    },
+    {
+        "identifier": 31,
+        "messages": [
+            {
+                "text": "I’ll admit, I’m pretty nervous about heading out. ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Really, this trip could mean the difference for millions of people... ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "...or it could be the last trip I ever make. ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Either way, there’s no sense in wasting anymore time here.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’ll get down to the transit and let you know when I’m on my way.  ",
+                "timeDelay": 600,
+                "distanceDelay": null
+            },
+            {
+                "text": "Ok, I’m on the transit. We’re en route to zone 4. ETA 40 minutes. ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I really wish I had packed more food. My stomache has been bothering me since I woke up. ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "At least I’ve got some water (minus the water I spilt on the map)",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I haven’t made a plan about getting through the next checkpoint though. By now someone will know I’m missing.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It’s risky to go around the checkpoint on foot. There might be biohazard stuff from the war lying around. Maybe even landmines.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "On the other hand, if I stay here and the checkpoint security has heard I’m missing, they might take me in for questioning.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Which do you think is the safer bet?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 60,
+                "text": "Try to go around",
+                "destination": 45
+            },
+            {
+                "identifier": 61,
+                "text": "Stay on the transit",
+                "destination": 46
+            }
+        ]
+    },
+    {
+        "identifier": 32,
+        "messages": [
+            {
+                "text": "That’s probably best, I’m exhausted.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I got more done than I thought today",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I mean, I’m somehow communicating with someone in the past BEFORE the world fell apart",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "We’re planning to save what’s left of the human race.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "And I found binoculars. Not bad, not bad at all.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "We’ve got a big day ahead of us.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’ll speak -err message you soon.",
+                "timeDelay": 14400,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’ve got some good news and not so good news.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "The good news is I feel pretty good from last night’s rest and my stuff is all packed.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "The not good news is I knocked water onto my map.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I must have done it in my sleep and it’s totally drenched.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Now all of the routes are totally unreadable",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I know of a guy that has all sorts of maps. He usually only trades for water, though.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "His shack is in the opposite direction of the tower so it’ll take about half a day to get back on track.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I can also just head in the general direction of the tower and hope for the best.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 62,
+                "text": "Go get the map",
+                "destination": 36
+            },
+            {
+                "identifier": 63,
+                "text": "Head for the tower",
+                "destination": 31
+            }
+        ]
+    },
+    {
+        "identifier": 33,
+        "messages": [
+            {
+                "text": "Ok, I’m pretty tired but I guess I can set a route now",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’ll update you in the morning",
+                "timeDelay": 36000,
+                "distanceDelay": null
+            },
+
+            {
+                "text": "Uggh I’m completely exhausted.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I must have dozed off and spilled water on my map because it is completely drenched",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Totally unreadable too.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "The way I see it, I have two options",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I know of a mapmaker that makes all sorts of, well, maps. He usually only trades for water, though.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "His shack is in the opposite direction of the tower so it’ll take about half a day to get back on track.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Or I can just head in the general direction of the tower and hope for the best.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 64,
+                "text": "Trade for a map",
+                "destination": 36
+            },
+            {
+                "identifier": 65,
+                "text": "Head for the tower",
+                "destination": 31
+            }
+        ]
+    },
+    {
+        "identifier": 34,
+        "messages": [
+            {
+                "text": "Ok I guess I’ll just sit out front.",
+                "timeDelay": 3600,
+                "distanceDelay": null
+            },
+            {
+                "text": "Finally the junkyard master showed up!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Apparently there is now an entry fee of my half eaten sandwich, *sigh*",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I probably should have just hopped the fence...",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 66,
+                "text": "Sorry, I was trying to help",
+                "destination": 35
+            },
+            {
+                "identifier": 67,
+                "text": "Ok, Mr. Know it all",
+                "destination": 35
+            }
+        ]
+    },
+    {
+        "identifier": 35,
+        "messages": [
+            {
+                "text": "Ok I’m in.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Wasn’t pretty, but I made it.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Let’s just hope that this pays off",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I see a few piles that look promising",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Since we got here nice and early, there might be some hidden gems that haven’t been picked over yet.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Oh no",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I hear barking",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Its not the junkdog",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Its not the junkdog",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Its not the junkdog",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "ITS THE JUNKDOGG!!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 68,
+                "text": "Run",
+                "destination": 41
+            },
+            {
+                "identifier": 69,
+                "text": "Fight",
+                "destination": 42
+            }
+        ]
+    },
+    {
+        "identifier": 36,
+        "messages": [
+            {
+                "text": "Ok I’m game",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I hope he doesn’t demand too much water.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’ll need most if not all of what water I have to make the journey without collapsing from heat stroke.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It’s always incredibly hot and it doesn’t rain thanks to the bombs",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Either way I need a map, so I’ll head out now.",
+                "timeDelay": 600,
+                "distanceDelay": null
+            },
+            {
+                "text": "Hey, they’re coming",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Despot’s men- they’re are heading toward my zone.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "And moving fast. I can see them riding through the valley in their patrol rigs",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "They weren’t supposed to come for another day or so",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Oh no",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "This is bad",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 70,
+                "text": "Ok, calm down",
+                "destination": 37
+            },
+            {
+                "identifier": 71,
+                "text": "Quit panicking",
+                "destination": 37
+            }
+        ]
+    },
+    {
+        "identifier": 37,
+        "messages": [
+            {
+                "text": "Sorry, it’s just that this could only mean that they’re looking for one of us ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "That is, one of us who tests the antidotes",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I can’t help but assume they might be looking for me ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 72,
+                "text": "Where are you? ",
+                "destination": 38
+            },
+            {
+                "identifier": 73,
+                "text": "You’re still in your zone??",
+                "destination": 38
+            }
+        ]
+    },
+    {
+        "identifier": 38,
+        "messages": [
+            {
+                "text": "I’m about a mile out.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "My zone is only accessible through one path. That’s how I was able to catch them",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Right now I’m up high on the hillside so they can’t see me… yet ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I could try to make my way around them by staying on the hillside and ensure they don’t see me",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "But that would take a while. I would have to trek into the night.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Which isn’t safe.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I could also move closer to the road and be as stealthy as I can",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "But they might see me",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 74,
+                "text": "Stay on the hill",
+                "destination": 39
+            },
+            {
+                "identifier": 75,
+                "text": "Use the road carefully",
+                "destination": 40
+            }
+        ]
+    },
+    {
+        "identifier": 39,
+        "messages": [
+            {
+                "text": "Ok, I’ll keep moving along the hill.  ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It’s a bit slippery so I’m going to focus on not tumbling down to my demise",
+                "timeDelay": 1200,
+                "distanceDelay": null
+            },
+            {
+                "text": "I slipped, and I think I broke my ankle. ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It’s so painful",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "And a bunch of rocks tumbled down with me",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m sure they saw something",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m hiding behind a boulder. I know they’ll be coming up-",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I can hear the rig",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "They’re coming toward me",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "what do I ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "***Transmission Terminated***",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 76,
+                "text": "RESTART",
+                "destination": 1
+            },
+            {
+                "identifier": 77,
+                "text": "RESTART",
+                "destination": 1
+            }
+        ]
+    },
+    {
+        "identifier": 40,
+        "messages": [
+            {
+                "text": "Ok. This is going to be tight timing wise",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I have to get down there fast before they get too close",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Then find some cover ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Gotta run - I’ll reach out once I’m down there ",
+                "timeDelay": 1200,
+                "distanceDelay": null
+            },
+            {
+                "text": "I took a tumble and scraped my arm up pretty bad",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Jeez this stings. Really hope it doesn’t get infected",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "But the good news is I’m down by the road and found some cover. Lots of rotting vehicles to hide behind too",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "They’ll be approaching any minute",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "What do you say I do from here?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 78,
+                "text": "Stay hidden behind a car",
+                "destination": 54
+            },
+            {
+                "identifier": 79,
+                "text": "Keep moving",
+                "destination": 55
+            }
+        ]
+    },
+    {
+        "identifier": 41,
+        "messages": [
+            {
+                "text": "Ok",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Run",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I think I can make it over the fence before he gets to me",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Oh boy he’s close",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Ahhh",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Is that a rake?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Ouch...",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "***Transmission Terminated***",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 80,
+                "text": "RESTART",
+                "destination": 1
+            },
+            {
+                "identifier": 81,
+                "text": "RESTART",
+                "destination": 1
+            }
+        ]
+    },
+    {
+        "identifier": 42,
+        "messages": [
+            {
+                "text": "OK",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "We got this, we can do this",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Focus here",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I think this rake will make a decent weapon",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I see the junkdog",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "He’s not happy",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Oh snap",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "ASDFNESVNOACNOIGF",
+                "timeDelay": 20,
+                "distanceDelay": null
+            },
+            {
+                "text": "I did it",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "He’s dead",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 82,
+                "text": "Cut him up and keep his meat as food",
+                "destination": 43
+            },
+            {
+                "identifier": 83,
+                "text": "Get back to searching",
+                "destination": 44
+            }
+        ]
+    },
+    {
+        "identifier": 43,
+        "messages": [
+            {
+                "text": "Yeah, its a good idea to collect as much food a possible",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "You never know where the next meal is going to come from",
+                "timeDelay": 300,
+                "distanceDelay": null
+            },
+            {
+                "text": "I can see a decent looking junk pile",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It looks like there might be some hidden gems",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I found two things that might be useful",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "There’s a baseball bat and a big metal shield thing",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I can only carry one",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "What do you suggest?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 84,
+                "text": "Baseball bat",
+                "destination": 47
+            },
+            {
+                "identifier": 85,
+                "text": "Shield",
+                "destination": 48
+            }
+        ]
+    },
+    {
+        "identifier": 44,
+        "messages": [
+            {
+                "text": "Good call, that meat looks gross and we don’t have all the time in the world",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I can see a decent looking junk pile",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It looks like there might be some hidden gems",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Give me a second to look around",
+                "timeDelay": 300,
+                "distanceDelay": null
+            },
+            {
+                "text": "I found two things that might be useful",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "There’s a baseball bat and a big metal shield thing",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I can only carry one",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "What do you suggest?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 86,
+                "text": "Baseball bat",
+                "destination": 47
+            },
+            {
+                "identifier": 87,
+                "text": "Shield",
+                "destination": 48
+            }
+        ]
+    },
+    {
+        "identifier": 45,
+        "messages": [
+            {
+                "text": "I’m right with you. “Questioning” never really sounded like a great learning experience.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’ll take the last exit before the zone checkpoint. ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "That way I can slip into the background and make my way into the zone on foot.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Wish me luck!",
+                "timeDelay": 1800,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m finally of the transit. I’m probably half a mile away from the zone border. ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m glad it’s still light out. Doing this at night would have been impossible.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 88,
+                "text": " empty ",
+                "destination": 1
+            },
+            {
+                "identifier": 89,
+                "text": " empty ",
+                "destination": 1
+            }
+        ]
+    },
+    {
+        "identifier": 46,
+        "messages": [
+            {
+                "text": " ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": " ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": " ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": " ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": " ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": " ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 90,
+                "text": " empty ",
+                "destination": 1
+            },
+            {
+                "identifier": 91,
+                "text": " empty ",
+                "destination": 1
+            }
+        ]
+    },
+    {
+        "identifier": 47,
+        "messages": [
+            {
+                "text": "Ok, It looks like it could deliver a decent smacking",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "If necessary of course...",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m going to head to the tower now",
+                "timeDelay": 1800,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’ve been walking along the road for a while now. It’s quite miserably hot.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "There’s a car coming towards me!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "What a rare sight",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Should I flag them down?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 92,
+                "text": "Yes",
+                "destination": 49
+            },
+            {
+                "identifier": 93,
+                "text": "No, hide",
+                "destination": 50
+            }
+        ]
+    },
+    {
+        "identifier": 48,
+        "messages": [
+            {
+                "text": "They say that the best offence is a good defence",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m going to head to the tower now",
+                "timeDelay": 1800,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’ve been walking along the road for a while now. It’s quite miserably hot.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "There’s a car coming towards me!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "What a rare sight",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Should I flag them down?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 94,
+                "text": "Yes",
+                "destination": 49
+            },
+            {
+                "identifier": 95,
+                "text": "No, hide",
+                "destination": 50
+            }
+        ]
+    },
+    {
+        "identifier": 49,
+        "messages": [
+            {
+                "text": "*sigh*",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Here goes nothing",
+                "timeDelay": 180,
+                "distanceDelay": null
+            },
+            {
+                "text": "The car is stopping",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’ve never been in a car before",
+                "timeDelay": 30,
+                "distanceDelay": null
+            },
+            {
+                "text": "They say that they will take me to the tower!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Apparently they are headed in the same direction",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 96,
+                "text": "That’s lucky",
+                "destination": 51
+            },
+            {
+                "identifier": 97,
+                "text": "Choose your words wisely",
+                "destination": 51
+            }
+        ]
+    },
+    {
+        "identifier": 50,
+        "messages": [
+            {
+                "text": "Ouch",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I think I jumped into the plants a bit too aggressively",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’ll wait here till they pass and are out of sight",
+                "timeDelay": 180,
+                "distanceDelay": null
+            },
+            {
+                "text": "Alright they are gone",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Back to walking I guess",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I could really use some water",
+                "timeDelay": 18000,
+                "distanceDelay": null
+            },
+            {
+                "text": "Can’t walk any further",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Too hot",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "***Transmission Terminated***",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 98,
+                "text": "RESTART",
+                "destination": 1
+            },
+            {
+                "identifier": 99,
+                "text": "RESTART",
+                "destination": 1
+            }
+        ]
+    },
+    {
+        "identifier": 51,
+        "messages": [
+            {
+                "text": "Alright",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "They say that it will be 2 hours until we get to the zone checkpoint",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m going to have to figure something out because I don’t have the papers to get past the checkpoint",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m just glad that I’m not walking in that heat anymore",
+                "timeDelay": 10800,
+                "distanceDelay": null
+            },
+            {
+                "text": "Ok we are coming up on the checkpoint",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Should I get out and try to sneak around the checkpoint on foot or should I hide in the trunk of the car?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 100,
+                "text": "Go by foot",
+                "destination": 52
+            },
+            {
+                "identifier": 101,
+                "text": "Stay in the car",
+                "destination": 53
+            }
+        ]
+    },
+    {
+        "identifier": 52,
+        "messages": [
+            {
+                "text": "This isn’t really the answer I was looking for, but I’ll give it a shot",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I hope that you are right about this one",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m crawling on the ground to avoid being see",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m probably going to have to crawl for a while",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’ve got a ways to go here",
+                "timeDelay": 600,
+                "distanceDelay": null
+            },
+            {
+                "text": "Shhh",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "There is a guard right near me",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Stay calm, stay calm",
+                "timeDelay": 30,
+                "distanceDelay": null
+            },
+            {
+                "text": "Wow that felt like forever",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "She’s gone",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Should I turn back or keep going?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 102,
+                "text": "Turn back",
+                "destination": 59
+            },
+            {
+                "identifier": 103,
+                "text": "Keep going",
+                "destination": 60
+            }
+        ]
+    },
+    {
+        "identifier": 53,
+        "messages": [
+            {
+                "text": "Good choice",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "We are headed through the checkpoint right now",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "We are stopped",
+                "timeDelay": 120,
+                "distanceDelay": null
+            },
+            {
+                "text": "Why haven’t we started moving?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Oh no I hear everyone getting out of the car",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Oh snap the trunk just opened",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "***Transmission Terminated***",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 104,
+                "text": "RESTART",
+                "destination": 1
+            },
+            {
+                "identifier": 105,
+                "text": "RESTART",
+                "destination": 1
+            }
+        ]
+    },
+    {
+        "identifier": 54,
+        "messages": [
+            {
+                "text": "I like that idea. That way I don’t have to focus on being quiet while also wanting to yell out in pain from this scrape (it’s actually a huge cut, but who’s counting?) ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Here they come...",
+                "timeDelay": 15,
+                "distanceDelay": null
+            },
+            {
+                "text": "Whew I think I’m in the clear",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "They’re continuing and don’t seem to have any idea I’m here",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I guess I’ll keep moving along now",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "That mapmaker better be around",
+                "timeDelay": 2400,
+                "distanceDelay": null
+            },
+            {
+                "text": "I think I’m coming up on the mapmaker’s shack",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It’s really in the middle of nowhere. Not that my zone is anything to brag about",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Come to think of it I don’t even know if this is a zone",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Dang.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "There’s no light on or any indication he’s here",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Do you think I should knock or try to find a back door to sneak in?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 106,
+                "text": "Knock first",
+                "destination": 61
+            },
+            {
+                "identifier": 107,
+                "text": "Find a way in",
+                "destination": 62
+            }
+        ]
+    },
+    {
+        "identifier": 55,
+        "messages": [
+            {
+                "text": "Risky, but I guess I’ll do it",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Ok, let’s do this",
+                "timeDelay": 15,
+                "distanceDelay": null
+            },
+            {
+                "text": "Crap, I tripped on some scrap metal or something. It made a ton of noise",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I think they heard me",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "hiding behind car",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "2 scared 2 look if they’re coming",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "they’re coming",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "quick - what do I do??",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 108,
+                "text": "Crawl under the car",
+                "destination": 56
+            },
+            {
+                "identifier": 109,
+                "text": "Stay still",
+                "destination": 57
+            }
+        ]
+    },
+    {
+        "identifier": 56,
+        "messages": [
+            {
+                "text": "Ok I’m under, just barely fit",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "There’s 3 of them. They definitely have guns. ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It’s so hard to keep my breath silent ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m terrified that they’ll find me",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Keep your fingers crossed for ",
+                "timeDelay": 30,
+                "distanceDelay": null
+            },
+            {
+                "text": "You there?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Hello Hello",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Anyone come in?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 110,
+                "text": "I’m here",
+                "destination": 58
+            },
+            {
+                "identifier": 111,
+                "text": "So you’re not dead",
+                "destination": 58
+            }
+        ]
+    },
+    {
+        "identifier": 57,
+        "messages": [
+            {
+                "text": "Ok, I can do this",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "oh no",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m breathing really loudly",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I can’t control it, I’m so scared",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "what if they hear",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "***Transmission Terminated***",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 112,
+                "text": "RESTART",
+                "destination": 1
+            },
+            {
+                "identifier": 113,
+                "text": "RESTART",
+                "destination": 1
+            }
+        ]
+    },
+    {
+        "identifier": 58,
+        "messages": [
+            {
+                "text": "Surprisingly I’m not dead",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "They poked around for a but never looked under the car ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Not sure what happened with my tachyon device either. It restarted or something",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Whew, well now that we’re past that, I guess it’s on to the mapmaker.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "He better have a map for me. This is gonna derail me even further now that I have to be extra careful.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "They’ll surely be looking for me while I’m double-backing through my zone",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "By my estimates I should be there in about 4 hours.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Talk soon",
+                "timeDelay": 2400,
+                "distanceDelay": null
+            },
+            {
+                "text": "I think I’m coming up on the mapmaker’s shack",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "It’s really in the middle of nowhere. Not that my zone is anything to brag about",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Come to think of it I don’t even know if this is a zone",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Dang.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "There’s no light on or any indication he’s here",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Do you think I should knock or try to find a back door to sneak in?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 114,
+                "text": "Knock first",
+                "destination": 61
+            },
+            {
+                "identifier": 115,
+                "text": "Find a way in",
+                "destination": 62
+            }
+        ]
+    },
+    {
+        "identifier": 59,
+        "messages": [
+            {
+                "text": "Ok good. Hopefully I can find the car and go back into the trunk. I didn’t like the thought of going alone",
+                "timeDelay": 400,
+                "distanceDelay": null
+            },
+            {
+                "text": "Wow I was lucky enough to find the car",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "They are next in line at the checkpoint",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I have to hurry!!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Come on trunk, OPEN!",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Yarrrr",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Whew I made it into the trunk just in time",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I never thought that I’d be happy to be in a stranger’s trunk",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "We are headed through the checkpoint right now",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "We are stopped",
+                "timeDelay": 120,
+                "distanceDelay": null
+            },
+            {
+                "text": "Why haven’t we started moving?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Oh no I hear everyone getting out of the car",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Oh snap the trunk just opened",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "***Transmission Terminated***",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 116,
+                "text": "RESTART",
+                "destination": 1
+            },
+            {
+                "identifier": 117,
+                "text": "RESTART",
+                "destination": 1
+            }
+        ]
+    },
+    {
+        "identifier": 60,
+        "messages": [
+            {
+                "text": "Here goes nothing",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I’m actually pretty close to the other side",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "All this crawling is going to hurt tomorrow",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I shouldn’t have listened to you...",
+                "timeDelay": 40,
+                "distanceDelay": null
+            },
+            {
+                "text": "I think I made it",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Luckily the tower isn’t too far from here",
+                "timeDelay": 300,
+                "distanceDelay": null
+            },
+            {
+                "text": "Well here we are: the gates to the tower",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "One step closer to saving the world",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Now all I have to do it get in.",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "To be continued…..",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 118,
+                "text": "RESTART",
+                "destination": 1
+            },
+            {
+                "identifier": 119,
+                "text": " RESTART",
+                "destination": 1
+            }
+        ]
+    },
+    {
+        "identifier": 61,
+        "messages": [
+            {
+                "text": "There doesn’t seem to be anyone home ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I mean, I knocked pretty loud ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Maybe he’s out scavenging ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "I can try to check the back for an open window or door",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Score! Found a cellar door that goes into the basement ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Man it’s cluttered",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Lots of mostly useless stuff",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Ok, I’m up on the main floor",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "This is insane. He’s got a huge map of not only zones, but all these other places that I’ve never even heard of",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "“Canada” It sits above an even larger place called the “United States.”",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Do you know what those names mean?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 120,
+                "text": "Those are countries in my time",
+                "destination": 63
+            },
+            {
+                "identifier": 121,
+                "text": "North America, duh",
+                "destination": 63
+            }
+        ]
+    },
+    {
+        "identifier": 62,
+        "messages": [
+            {
+                "text": "Score! Found a cellar door that goes into the basement ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Man it’s cluttered",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Lots of mostly useless stuff",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Ok, I’m up on the main floor",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "This is insane. He’s got a huge map of not only zones, but all these other places that I’ve never even heard of",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "“Canada” It sits above an even larger place called the “United States.”",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": "Do you know what those names mean?",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 122,
+                "text": "Those are countries in my time",
+                "destination": 63
+            },
+            {
+                "identifier": 123,
+                "text": "North America, duh",
+                "destination": 63
+            }
+        ]
+    },
+    {
+        "identifier": 63,
+        "messages": [
+            {
+                "text": "Wow. He somehow knows what our civilization was like before the war",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": " ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": " ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": " ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": " ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": " ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 124,
+                "text": " empty ",
+                "destination": 1
+            },
+            {
+                "identifier": 125,
+                "text": " empty ",
+                "destination": 1
+            }
+        ]
+    },
+    {
+        "identifier": 64,
+        "messages": [
+            {
+                "text": " ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": " ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": " ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": " ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": " ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            },
+            {
+                "text": " ",
+                "timeDelay": 2,
+                "distanceDelay": null
+            }
+        ],
+        "choices": [
+            {
+                "identifier": 126,
+                "text": " empty ",
+                "destination": 1
+            },
+            {
+                "identifier": 127,
+                "text": " empty ",
+                "destination": 1
+            }
+        ]
+    }
+]
