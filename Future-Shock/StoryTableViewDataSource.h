@@ -15,11 +15,10 @@
 
 @import UIKit;
 
-@interface StoryTableViewDataSource : NSObject <UITableViewDataSource>
+@interface StoryTableViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
 @property NSInteger totalNumberOfCells;
 @property (strong, nonatomic) Round *round;
 - (Round *)roundFromChoiceIdentifier:(NSInteger)choiceID;
-- (void)registerTableView:(UITableView *)tableView;
 
 @end

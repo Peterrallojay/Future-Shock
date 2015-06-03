@@ -7,6 +7,8 @@
 //
 
 #import "RoundLoader.h"
+#import "RoundServer.h"
+#import "RoundHistoryController.h"
 #import "Stack.h"
 
 //NEED CLARIFICATION use this to set static delay based on user local time (if(nighttime){set delay of 8 hours})
@@ -40,15 +42,9 @@ static NSString const *textKey = @"text";
     return sharedInstance;
 }
 
-//loads JSON dictionary to self
-- (instancetype)initWithJSONDictionary:(NSDictionary *)dictionary {
-    self = [super init];
-    [self loadJSONDictionary:dictionary];
-    return self;
-}
-
 //only loads the first time the app is launched and if app is not in background
 - (void)importIfNeeded {
+    NSLog(@"\n\nWB1: Loading rounds...");
     BOOL hasLaunched = [[NSUserDefaults standardUserDefaults] boolForKey:@"hasLaunched"];
     if (!hasLaunched) {
         NSURL *url = [[NSBundle mainBundle] URLForResource:@"story" withExtension:@"json"];
@@ -110,7 +106,7 @@ static NSString const *textKey = @"text";
         
         choice.round = round;
         
-        NSInteger destinationRoundIdentifier = [choiceDictionary[@"identifier"] integerValue];
+        NSInteger destinationRoundIdentifier = [choiceDictionary[@"destination"] integerValue];
         
         choice.destinationRound = [self roundFromRoundIdentifier:destinationRoundIdentifier];
     }
@@ -127,7 +123,7 @@ static NSString const *textKey = @"text";
     fetchRequest.predicate = predicate;
     
     NSArray *array = [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
+    NSLog(@"\n\nPrinting Array:\n\n%@",array);
     if (array.firstObject) {
         return array.firstObject;
     } else {

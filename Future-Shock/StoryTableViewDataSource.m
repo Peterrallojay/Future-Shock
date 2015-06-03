@@ -40,6 +40,7 @@
  Trogdor the Burninator  |__
  */
 #import "StoryTableViewDataSource.h"
+#import "RoundHistoryController.h"
 #import "MessageCell.h"
 #import "Round.h"
 #import "Choice.h"
@@ -57,65 +58,92 @@ static NSString * const choiceCellID = @"choiceCellID";
 @implementation StoryTableViewDataSource
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return [RoundServer sharedInstance].currentRound + 1;
+    
+    if ([RoundHistoryController sharedInstance].choiceHistory.count == 0) {
+        [[RoundServer sharedInstance] completedRound:nil withChoice:nil];
+    }
+    
+    return [RoundHistoryController sharedInstance].choiceHistory.count;
 }
 
-
-//getting data from round
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    [RoundServer allRounds];
-    UITableViewCell *cell;
-    Round *roundForCell =[RoundServer allRounds] [[RoundServer sharedInstance].currentRound ];
+
+    ChoiceHistory *choiceHistory = [RoundHistoryController sharedInstance].choiceHistory[indexPath.section];
     
-    if ([roundForCell messages].count > indexPath.row) {
-        cell = [tableView dequeueReusableCellWithIdentifier:messageCellID];
-        Message *message = [roundForCell messages][indexPath.row];
-        UIImageView *borderImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlackBorder.png"]];
-        ((MessageCell *)cell).messageTextBorder = borderImageView;
-        ((MessageCell *)cell).messageLabel.text = message.text;
+    
+    Round *sectionRound;
+    if (!choiceHistory.choiceMade) {
+        sectionRound = [[RoundLoader sharedInstance] roundFromRoundIdentifier:1];
     }
     else {
-        cell = [tableView dequeueReusableCellWithIdentifier:choiceCellID];
-        [((ChoiceCell *)cell).leftChoiceButton setTitle:[[roundForCell choices][0] text] forState:UIControlStateNormal];
-        [((ChoiceCell *)cell).rightChoiceButton setTitle:[[roundForCell choices][1] text] forState:UIControlStateNormal];
-        ((ChoiceCell *)cell).delegate = self;
+        sectionRound = choiceHistory.choiceMade.destinationRound;
     }
     
-    //integrate roundstraversed array
-    return cell;
+    
+    if (indexPath.row < sectionRound.messages.count) {
+        MessageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"messageCellID"];
+        
+        Message *message = sectionRound.messages[indexPath.row];
+        
+        [cell updateWithMessage:message];
+        
+        return cell;
+    } else {
+        ChoiceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"choiceCellID"];
+        cell.delegate = self;
+        
+        [cell updateWithRound:sectionRound];
+        
+        return cell;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[(Round *)[RoundServer allRounds][section] messages] count] + 1;
-    //return [RoundServer allmessagesForRound:(Round *)];
+    ChoiceHistory *history = [[RoundHistoryController sharedInstance].choiceHistory objectAtIndex:section];
+
+    if (!history.round) {
+        return 5;
+    }
+    
+    return history.round.messages.count + 1;
 }
 
 
-- (void)registerTableView:(UITableView *)tableView {
-    self.tableView = tableView;
-}
+//- (void)registerTableView:(UITableView *)tableView {
+//    self.tableView = tableView;
+//}
 
 - (Round *)roundFromChoiceIdentifier:(NSInteger)choiceID {
     Round *destinationRound = ((Choice *)[self.round.choices objectAtIndex:choiceID]).destinationRound;
     return destinationRound;
 }
 
--(void)leftButtonTapped:(ChoiceCell *)cell {
-    [self addRoundToStoryTableView:[self roundFromChoiceIdentifier:cell.choiceIdentifier]];
+- (void)buttonTappedWithIndex:(NSInteger)index andSender:(ChoiceCell *)cell {
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+//doesn't the round server give us the rounds, don't we want the round based on the choice made, not the next section? actually i think i figured it out -trm
+    Round *round = [[RoundLoader sharedInstance] roundFromRoundIdentifier:indexPath.section + 1];
+    
+    Round *destinationRound = [[RoundServer sharedInstance] completedRound:round withChoice:round.choices[index]];
+    
+    [self addRoundToTableView:destinationRound];
 }
 
--(void)rightButtonTapped:(ChoiceCell *)cell {
-    [self addRoundToStoryTableView:[self roundFromChoiceIdentifier:cell.choiceIdentifier]];
-}
-
-- (void)addRoundToStoryTableView:(Round *)round {
-    for (Message *currentMessage in self.round.messages) {
-//        [self.tableView insertRowsAtIndexPaths:<#(NSArray *)#> withRowAnimation:UITableViewAnimation];
+- (void)addRoundToTableView:(Round *)round {
+    
+    [self.tableView reloadData];
+//    
+//    [self.tableView beginUpdates];
+//    [self.tableView insertRowsAtIndexPaths:arrayOfIndexPaths withRowAnimation:UITableViewRowAnimationBottom];
+//    [self.tableView endUpdates];
+//    [self.tableView reloadData];
+//    NSLog(@"TDS: Round added.");
+//    
 //    }
-//    [self.tableView insertRowsAtIndexPaths:<#(NSArray *)#> withRowAnimation:UITableViewAnimation];
-        
-        
-}
+//    [self.tableView insertRowsAtIndexPaths: withRowAnimation:UITableViewAnimation];
+//        
+//        
+//}
 }
 
 @end

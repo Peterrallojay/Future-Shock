@@ -16,7 +16,7 @@
 
 @implementation RoundServer
 
-@synthesize currentRound = _currentRound;
+//@synthesize currentRound = _currentRound;
 
 + (RoundServer *)sharedInstance {
     
@@ -29,17 +29,17 @@
     return sharedInstance;
 }
 
--(int)currentRound {
-    NSNumber *returnedNumber = [[NSUserDefaults standardUserDefaults] objectForKey:@"currentRound"];
-    _currentRound = [returnedNumber intValue];
-    return _currentRound;
-}
+//-(int)currentRound {
+//    NSNumber *returnedNumber = [[NSUserDefaults standardUserDefaults] objectForKey:@"currentRound"];
+//    _currentRound = [returnedNumber intValue];
+//    return _currentRound;
+//}
 
--(void)addNewRound {
-    self.currentRound++;
-    NSNumber *conversionNumber = [[NSNumber alloc]initWithInt:self.currentRound];
-    [[NSUserDefaults standardUserDefaults] setObject:conversionNumber forKey:@"currentRound"];
-}
+//-(void)addNewRound {
+//    self.currentRound++;
+//    NSNumber *conversionNumber = [[NSNumber alloc]initWithInt:self.currentRound];
+//    [[NSUserDefaults standardUserDefaults] setObject:conversionNumber forKey:@"currentRound"];
+//}
 
 + (NSArray *)allRounds {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Round"];
@@ -47,14 +47,13 @@
     
     NSArray *sortedArray = [[RoundServer sharedInstance] sortThisArray:arrayOfRounds];
     
-    NSLog(@"%@", arrayOfRounds);
+//    NSLog(@"%@", arrayOfRounds);
     return sortedArray;
 }
 
 -(NSArray *)sortThisArray:(NSArray *)array
 {
-    //possible problem = fetch takes too long.
-    NSLog(@"%@",array);
+    NSLog(@"\n\nWB2: Loading Rounds Array...");
     NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"identifier" ascending:YES];
     NSArray *sortedArray = [array sortedArrayUsingDescriptors:@[descriptor]];
     return sortedArray;
@@ -72,36 +71,42 @@
 //    
 //}
 
-- (BOOL)isRoundComplete:(Round *)round
-{
-    NSNumber *completedRoundKey;
+//- (BOOL)isRoundComplete:(Round *)round
+//{
+//    NSNumber *completedRoundKey;
+//    
+//    //PW: NEED logic here to define how to use completed round key.
+//    
+//    if (round.identifier == completedRoundKey) {
+//        
+//        //first safely adds the round to completedRounds array
+//        NSMutableArray *mutablecompletedRounds = [self.completedRounds mutableCopy];
+//        [mutablecompletedRounds addObject:round];
+//        
+//        self.completedRounds = mutablecompletedRounds;
+//        
+//        //then returns yes
+//        return  YES;
+//    }
+//    
+//    
+//    return NO;
+//}
+//gives next round based on completed choice
+- (Round *) completedRound:(Round*)round withChoice:(Choice *)choice {
+    NSLog(@"\n\nWB3: Adding Round to History Controller...");
+//    
+//    if (!choice) {
+//        choice = XXXX;
+//    }
+        [[RoundHistoryController sharedInstance] addChoicesMade:choice withRound:choice.destinationRound];
     
-    //PW: NEED logic here to define how to use completed round key.
-    
-    if (round.identifier == completedRoundKey) {
-        
-        //first safely adds the round to completedRounds array
-        NSMutableArray *mutablecompletedRounds = [self.completedRounds mutableCopy];
-        [mutablecompletedRounds addObject:round];
-        
-        self.completedRounds = mutablecompletedRounds;
-        
-        //then returns yes
-        return  YES;
+    if (!round) {
+        return [[RoundLoader sharedInstance] roundFromRoundIdentifier:1];
+    } else {
+        return choice.destinationRound;
     }
     
-    
-    return NO;
 }
-//gives next round based on completed choice
-//- (Round*) completedRound:(Round*)round withChoice:(Choice *)choice {
-//    
-//    
-////    if ([self isRoundComplete:round]) {
-////        if (choice == ) {
-////            <#statements#>
-////        }
-////    }
-//}
 
 @end

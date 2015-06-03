@@ -18,4 +18,6 @@ IB_DESIGNABLE
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 @property (weak, nonatomic) IBOutlet UIView *messageTextBorder;
 
+- (void)updateWithMessage:(Message *)message;
+
 @end

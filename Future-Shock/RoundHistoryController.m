@@ -8,8 +8,10 @@
 
 #import "RoundHistoryController.h"
 #import "RoundLoader.h"
+#import "RoundServer.h"
 #import "Choice.h"
 #import "Stack.h"
+#import "Round.h"
 
 @implementation RoundHistoryController
 
@@ -19,54 +21,34 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[RoundHistoryController alloc] init];
-        sharedInstance.roundsUserTraversed = [sharedInstance loadFirstRoundIfNeeded];
-        
     });
     return sharedInstance;
 }
 
 -(NSArray *)choiceHistory {
     // create fetch request
-    //executed by managed object. go to the stack for the choiceHistory
+    // executed by managed object. go to the stack for the choiceHistory
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"ChoiceHistory"];
     
-    NSArray *allChoices = [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]initWithKey:@"choiceCreatedAt" ascending:YES];
     
-    return allChoices;
+    fetchRequest.sortDescriptors = @[sortDescriptor];
     
+    return [[Stack sharedInstance].managedObjectContext executeFetchRequest:fetchRequest error:nil];
 }
 
-- (NSArray *)loadFirstRoundIfNeeded {
-    NSMutableArray *mutableRoundsUserTraversed = [self.roundsUserTraversed mutableCopy];
-    
-    [mutableRoundsUserTraversed addObject:[[RoundLoader sharedInstance] roundFromRoundIdentifier:0]];
-    
-    for (ChoiceHistory *choiceHistory in self.choiceHistory) {
-        
-        int choiceMadeIndex = [choiceHistory.choiceMade intValue];
-        
-        Choice *choiceMade = [choiceHistory.round.choices objectAtIndex:choiceMadeIndex];
-        
-        [mutableRoundsUserTraversed addObject:choiceMade.destinationRound];
-    }
-    
-    self.roundsUserTraversed = [mutableRoundsUserTraversed copy];
-    
-    return self.roundsUserTraversed;
-}
-
-
-- (void)addChoicesMade:(NSNumber *)choicemade withRound:(Round *)round {
+- (void)addChoicesMade:(Choice *)choicemade withRound:(Round *)round {
     //record how many choices were made by user
     
     ChoiceHistory *choiceHistoryObj = [NSEntityDescription insertNewObjectForEntityForName:@"ChoiceHistory" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
     
-    
+    choiceHistoryObj.choiceCreatedAt = [NSDate date];
     choiceHistoryObj.choiceMade = choicemade;
     choiceHistoryObj.round = round;
+    NSLog(@"RHC: Created new history object: %@",choiceHistoryObj);
+    
     
     [self save];
-    
 }
 
 - (void)save

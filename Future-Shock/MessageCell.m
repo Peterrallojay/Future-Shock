@@ -12,13 +12,13 @@ static NSString * const messageCellID = @"messageCellID";
 
 @interface MessageCell ()
 
-
 @end
 
 @implementation MessageCell
 
-
-
+- (void)updateWithMessage:(Message *)message {
+    self.messageLabel.text = message.text;
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

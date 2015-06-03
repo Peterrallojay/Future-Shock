@@ -2,17 +2,19 @@
 //  ChoiceHistory.m
 //  Future-Shock
 //
-//  Created by Peter Woodrow on 5/29/15.
+//  Created by Peter Woodrow on 6/1/15.
 //  Copyright (c) 2015 Peter Woodrow. All rights reserved.
 //
 
 #import "ChoiceHistory.h"
+#import "Choice.h"
 #import "Round.h"
 
 
 @implementation ChoiceHistory
 
-@dynamic choiceMade;
+@dynamic choiceCreatedAt;
 @dynamic round;
+@dynamic choiceMade;
 
 @end
